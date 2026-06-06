@@ -1030,6 +1030,59 @@ footer {
 }
 .footer-domains a:hover { color: var(--saffron-light); }
 
+/* ========== TEAM DUO ========== */
+.team-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-duo-photo-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.team-duo-photo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px;
+  right: 8px; bottom: 8px;
+  border: 1px solid rgba(196,144,21,0.3);
+  border-radius: 2px;
+  z-index: 0;
+}
+.team-duo-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 8px 32px rgba(46,26,8,0.15);
+}
+
+.team-duo-bios {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.team-bio-card {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(140,104,72,0.15);
+}
+.team-bio-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 /* ========== SCROLL REVEAL ========== */
 .reveal {
   opacity: 0;
@@ -1086,6 +1139,7 @@ footer {
   .concepts-row { grid-template-columns: 1fr; }
   .concept-item { border-right: none; border-bottom: 1px solid rgba(140,104,72,0.15); }
   .concept-item:last-child { border-bottom: none; }
+  .team-duo { grid-template-columns: 1fr; gap: 2.5rem; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -1173,9 +1227,10 @@ footer {
       <div class="about-visual reveal">
         <div class="about-portrait-frame">
           <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunicdining/main/img_yuli_portrait.png"
-            alt="Yuli — Founder of Yunic Hospitality, Bali"
+            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic.png"
+            alt="Yuli and Nic — Founder and Executive Chef, Yunic Hospitality Bali"
             class="about-portrait-img"
+            style="aspect-ratio:4/5; object-position: top center;"
           >
           <div class="about-badge">
             <span class="about-badge-num">17K+</span>
@@ -1389,34 +1444,29 @@ footer {
       Yunic Hospitality was built by two people with very different backgrounds and one shared obsession — Indonesian food and what it can mean for the people who taste it.
     </p>
 
-    <div class="team-grid">
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-photo-wrap">
-          <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunicdining/main/img_yuli_portrait.png"
-            alt="Yuli — Founder & Owner, Yunic Hospitality Bali"
-            class="team-photo"
-          >
-        </div>
-        <div class="team-name">Yuli</div>
-        <div class="team-role">Founder & Owner</div>
-        <p class="team-bio">
-          Yuli grew up in Indonesia, surrounded by food that was cooked with care and eaten with family. She founded Yunic Hospitality to share that culture — not as a tourist version, but as it really is. She hosts every private dinner personally and makes sure every guest feels like they belong there.
-        </p>
+    <div class="team-duo reveal reveal-delay-1">
+      <div class="team-duo-photo-wrap">
+        <img
+          src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic.png"
+          alt="Yuli and Nic — Founder and Executive Chef, Yunic Hospitality Bali"
+          class="team-duo-photo"
+        >
       </div>
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-photo-wrap">
-          <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunicdining/main/assets/img13.jpg"
-            alt="Nic — Executive Chef & Culinary Director, Yunic Hospitality Bali"
-            class="team-photo"
-          >
+      <div class="team-duo-bios">
+        <div class="team-bio-card">
+          <div class="team-name">Yuli</div>
+          <div class="team-role">Founder & Owner</div>
+          <p class="team-bio">
+            Yuli grew up in Indonesia, surrounded by food that was cooked with care and eaten with family. She founded Yunic Hospitality to share that culture — not as a tourist version, but as it really is. She hosts every private dinner personally and makes sure every guest feels like they belong there.
+          </p>
         </div>
-        <div class="team-name">Nic</div>
-        <div class="team-role">Executive Chef & Culinary Director</div>
-        <p class="team-bio">
-          Nic has cooked in kitchens across Europe and Asia. At Yunic, he works with Indonesian ingredients and flavour traditions — not to replicate traditional dishes, but to understand them deeply and cook from that place honestly. The result is food that tastes like Indonesia, with a technique that makes every element count.
-        </p>
+        <div class="team-bio-card">
+          <div class="team-name">Nic</div>
+          <div class="team-role">Executive Chef & Culinary Director</div>
+          <p class="team-bio">
+            Nic has cooked in kitchens across Europe and Asia. At Yunic, he works with Indonesian ingredients and flavour traditions — not to replicate traditional dishes, but to understand them deeply and cook from that place honestly. The result is food that tastes like Indonesia, with a technique that makes every element count.
+          </p>
+        </div>
       </div>
     </div>
   </div>
