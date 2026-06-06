@@ -15,21 +15,22 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --parchment:      #f4e8cc;
-  --parchment-mid:  #ecdbb0;
-  --parchment-dark: #d6c28e;
-  --terracotta:     #b8522a;
-  --terra-light:    #d4714a;
-  --terra-pale:     #f0c4aa;
-  --saffron:        #c49015;
-  --saffron-light:  #e0b840;
-  --green:          #637a55;
-  --green-light:    #8aad72;
-  --green-pale:     #c8ddb4;
-  --brown:          #2e1a08;
-  --brown-mid:      #5c3a1e;
-  --brown-muted:    #8c6848;
-  --cream-text:     #4a3018;
+  /* Yunic Palette — Indonesian Roots */
+  --parchment:      #f5f0e8;       /* coconut white — clean, warm, not yellowy */
+  --parchment-mid:  #ede5d8;       /* slightly warmer for alternating sections */
+  --parchment-dark: #d8cfc0;       /* dividers, borders */
+  --terracotta:     #2d5a4e;       /* deep jungle green — primary accent */
+  --terra-light:    #3d7a6a;       /* lighter jungle green for hovers */
+  --terra-pale:     #c2dbd5;       /* very light teal for soft backgrounds */
+  --saffron:        #b5763a;       /* turmeric / warm spice — replaces saffron gold */
+  --saffron-light:  #d4944e;       /* lighter turmeric for highlights */
+  --green:          #1a3a32;       /* dark forest / volcanic — for dark sections */
+  --green-light:    #4a7c6e;       /* mid green */
+  --green-pale:     #daeae6;       /* very pale teal */
+  --brown:          #1c1c1c;       /* near-black — refined, not warm brown */
+  --brown-mid:      #3a3a3a;       /* dark grey-charcoal */
+  --brown-muted:    #7a7a72;       /* warm grey for body text */
+  --cream-text:     #2a2a28;       /* almost-black for main text — sharp and readable */
   --serif:          'Playfair Display', Georgia, serif;
   --cormorant:      'Cormorant Garamond', Georgia, serif;
   --sans:           'Lato', system-ui, sans-serif;
@@ -53,9 +54,9 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image:
-    radial-gradient(ellipse 80% 50% at 10% 20%, rgba(196,144,21,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 70%, rgba(184,82,42,0.06) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 50% 90%, rgba(99,122,85,0.05) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 50% at 10% 20%, rgba(181,118,58,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 70%, rgba(45,90,78,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 90%, rgba(26,58,50,0.04) 0%, transparent 60%);
 }
 
 /* ========== ANIMATIONS ========== */
@@ -222,9 +223,9 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(46,26,8,0.1); }
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(244,232,204,0.15) 0%,
-    rgba(244,232,204,0.05) 40%,
-    rgba(244,232,204,0.35) 100%
+    rgba(245,240,232,0.12) 0%,
+    rgba(245,240,232,0.04) 40%,
+    rgba(245,240,232,0.30) 100%
   );
 }
 
@@ -354,13 +355,13 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(46,26,8,0.1); }
 .hero-scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--saffron), transparent);
+  background: linear-gradient(to bottom, var(--saffron-light), transparent);
   animation: scrollPulse 2.4s ease-in-out infinite;
 }
 
 /* ========== BRAND IDENTITY STRIP ========== */
 .identity-strip {
-  background: var(--brown);
+  background: var(--green);
   padding: 4.5rem 6vw;
   text-align: center;
   position: relative;
@@ -370,7 +371,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(46,26,8,0.1); }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(196,144,21,0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(181,118,58,0.15) 0%, transparent 70%);
 }
 
 .identity-strip-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
@@ -481,7 +482,7 @@ section { padding: 6rem 6vw; position: relative; }
   bottom: -1.5rem;
   right: -1.5rem;
   z-index: 2;
-  background: var(--brown);
+  background: var(--green);
   color: var(--parchment);
   padding: 1.2rem 1.4rem;
   text-align: center;
@@ -558,7 +559,7 @@ section { padding: 6rem 6vw; position: relative; }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--terracotta), var(--saffron));
+  background: linear-gradient(90deg, var(--terracotta), var(--saffron-light));
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -618,7 +619,7 @@ section { padding: 6rem 6vw; position: relative; }
 
 /* ========== PRIVATE DINING FEATURE ========== */
 .dining-section {
-  background: var(--brown);
+  background: var(--green);
   color: var(--parchment);
   padding: 7rem 6vw !important;
   overflow: hidden;
@@ -939,7 +940,7 @@ section { padding: 6rem 6vw; position: relative; }
 
 /* ========== FOOTER ========== */
 footer {
-  background: var(--brown);
+  background: #141414;
   padding: 4rem 6vw 2.5rem;
   position: relative;
 }
