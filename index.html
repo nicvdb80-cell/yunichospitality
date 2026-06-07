@@ -331,9 +331,22 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 .nav-logo {
   text-decoration: none;
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
   flex-shrink: 0;
+}
+.nav-logo-img {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
 }
 .nav-logo-main {
   font-family: var(--serif);
@@ -351,7 +364,8 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--saffron);
+  color: var(--saffron) !important;
+  -webkit-text-fill-color: var(--saffron) !important;
 }
 
 /* Hamburger */
@@ -360,16 +374,18 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  padding: 10px;
-  background: none;
+  padding: 10px 12px;
+  background: var(--terracotta);
   border: none;
+  border-radius: 3px;
   z-index: 310;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
-  width: 26px;
+  width: 22px;
   height: 2px;
-  background: var(--brown);
+  background: var(--parchment);
   border-radius: 1px;
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
   transform-origin: center;
@@ -678,15 +694,36 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
   .hero-actions { flex-direction:column; align-items:center; }
   .footer-grid { grid-template-columns:1fr; }
 }
+
+/* Footer logo */
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+.footer-logo-img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  /* Logo has black bg — add subtle filter to blend on dark footer */
+  border-radius: 4px;
+  opacity: 0.92;
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-main">Yunic</span>
-    <span class="nav-logo-sub">Hospitality</span>
+  <a href="#" class="nav-logo" aria-label="Yunic Hospitality — Home">
+    <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.png"
+         alt="Yunic Hospitality Logo"
+         class="nav-logo-img">
+    <span class="nav-logo-text">
+      <span class="nav-logo-main">Yunic</span>
+      <span class="nav-logo-sub">Hospitality</span>
+    </span>
   </a>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -1098,7 +1135,12 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
 <footer>
   <div class="footer-grid">
     <div>
-      <span class="footer-brand-name">Yunic Hospitality</span>
+      <div class="footer-brand-logo">
+        <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.png"
+             alt="Yunic Hospitality"
+             class="footer-logo-img">
+        <span class="footer-brand-name">Yunic Hospitality</span>
+      </div>
       <span class="footer-brand-tagline">Indonesian Food Culture, Shared with the World</span>
       <p class="footer-about">
         Yunic Hospitality is a Bali-based culinary company founded by Yuli and led in the kitchen by Executive Chef Nic. We run private dining, culinary events, consulting, chef collaborations, and pop-up dinners, all rooted in the food and flavour of Indonesia.
