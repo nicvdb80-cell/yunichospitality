@@ -1499,6 +1499,111 @@ h1 em, h2 em, .section-title em {
   scroll-margin-top: 68px;
 }
 
+
+/* ══════════════════════════════════════
+   HAMBURGER DROPDOWN MENU
+══════════════════════════════════════ */
+
+/* Dark overlay behind menu */
+#menuOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,8,0.45);
+  z-index: 198;
+  cursor: pointer;
+}
+#menuOverlay.open { display: block; }
+
+/* Dropdown panel — falls from the nav bar */
+#menuDrawer {
+  position: fixed;
+  top: 68px;
+  right: 0;
+  width: 280px;
+  background: #F5F0E6;
+  border-left: 1px solid #D5CFC2;
+  border-bottom: 1px solid #D5CFC2;
+  border-bottom-left-radius: 6px;
+  padding: 0.5rem 0 1.5rem;
+  z-index: 199;
+  box-shadow: 0 8px 32px rgba(13,44,34,0.15);
+  /* Hidden state — slides up and fades out */
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
+              opacity   0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Open state — drops down and fades in */
+#menuDrawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Section label at top of menu */
+#menuDrawer::before {
+  content: 'MENU';
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  color: #A3704C;
+  font-weight: 600;
+  padding: 1.2rem 2rem 0.8rem;
+  border-bottom: 1px solid rgba(140,104,72,0.12);
+  margin-bottom: 0.5rem;
+}
+
+/* Menu links */
+#menuDrawer a {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4A4642 !important;
+  -webkit-text-fill-color: #4A4642 !important;
+  background: none !important;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-bottom: 1px solid rgba(140,104,72,0.08);
+  font-weight: 400;
+  transition: background 0.15s, color 0.15s;
+}
+#menuDrawer a:last-child { border-bottom: none; }
+#menuDrawer a:hover {
+  background: rgba(163,112,76,0.08) !important;
+  color: #0D2C22 !important;
+  -webkit-text-fill-color: #0D2C22 !important;
+}
+
+/* Get in Touch — highlighted CTA */
+#menuDrawer a.drawer-cta {
+  margin: 0.8rem 1.5rem 0;
+  padding: 0.8rem 1.5rem;
+  background: #0D2C22 !important;
+  color: #F5F0E6 !important;
+  -webkit-text-fill-color: #F5F0E6 !important;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  border-bottom: none !important;
+  transition: background 0.2s !important;
+}
+#menuDrawer a.drawer-cta:hover {
+  background: #1A4535 !important;
+}
+
+/* Hamburger ✕ animation */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 </style>
 </head>
 <body>
