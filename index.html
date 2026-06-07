@@ -1631,6 +1631,62 @@ h2.section-title,
   color: var(--saffron);
 }
 
+
+/* ── NAV LINK BRONZE FIX — reset background-clip inheritance ── */
+.nav-links a,
+.nav-links a:hover,
+.mobile-menu a,
+.mobile-menu a:hover,
+.nav-cta,
+.nav-cta:hover {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+.nav-links a         { color: var(--brown-muted); }
+.nav-links a:hover   { color: var(--terracotta); }
+.nav-cta             { color: var(--parchment) !important; background: var(--terracotta) !important; }
+.nav-cta:hover       { background: var(--terra-light) !important; }
+.mobile-menu a       { color: var(--brown-muted); }
+.mobile-menu a.cta   { color: var(--terracotta); }
+
+/* ── Also reset body text, labels, eyebrows, section-body ── */
+.section-eyebrow,
+.section-body,
+.hero-tagline,
+.hero-eyebrow,
+.hero-hospitality,
+.identity-strip-meta,
+.service-body,
+.service-link,
+.about-text p,
+.about-sig-title,
+.dining-features li,
+.team-bio,
+.team-role,
+.concept-desc,
+.concept-tag,
+.contact-alt-label,
+.footer-about,
+.footer-col-title,
+.footer-links a,
+.footer-copy,
+.footer-domains a,
+.footer-brand-tagline,
+p, li, span:not(.bronze):not(.section-title):not(.about-signature):not(.nav-logo):not(.footer-brand-name) {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+/* ── HAMBURGER BELT-AND-BRACES ── */
+@media (max-width: 900px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
+}
+
 </style>
 </head>
 <body>
