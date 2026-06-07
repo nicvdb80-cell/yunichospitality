@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" fill="none">
+  <defs>
+    <!-- Brushed gold gradient — matches the logo's 3D metallic look -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#8C5A14"/>
+      <stop offset="15%"  stop-color="#C8941E"/>
+      <stop offset="28%"  stop-color="#E8C048"/>
+      <stop offset="38%"  stop-color="#F5DC80"/>
+      <stop offset="50%"  stop-color="#FFFBE0"/>
+      <stop offset="62%"  stop-color="#F5DC80"/>
+      <stop offset="75%"  stop-color="#D4A030"/>
+      <stop offset="88%"  stop-color="#A07018"/>
+      <stop offset="100%" stop-color="#7A4E10"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#7A4E10"/>
+      <stop offset="20%"  stop-color="#C8941E"/>
+      <stop offset="45%"  stop-color="#F5DC80"/>
+      <stop offset="55%"  stop-color="#FFFBE0"/>
+      <stop offset="80%"  stop-color="#C8941E"/>
+      <stop offset="100%" stop-color="#7A4E10"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#A07018"/>
+      <stop offset="20%"  stop-color="#D4A030"/>
+      <stop offset="40%"  stop-color="#F5DC80"/>
+      <stop offset="50%"  stop-color="#FFFBE0"/>
+      <stop offset="65%"  stop-color="#E8C048"/>
+      <stop offset="80%"  stop-color="#C8941E"/>
+      <stop offset="100%" stop-color="#8C5A14"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- ═══ OUTER CIRCLE ═══ -->
+  <circle cx="200" cy="195" r="155" stroke="url(#gold)" stroke-width="9" fill="none" filter="url(#glow)"/>
+
+  <!-- ═══ INNER DECORATIVE RING (partial arcs giving the segmented look) ═══ -->
+  <circle cx="200" cy="195" r="138" stroke="url(#gold2)" stroke-width="3" fill="none" stroke-dasharray="30 12 45 12 30 12 45 12 30 12 45 12" stroke-linecap="round"/>
+
+  <!-- ═══ TOP ARC BREAK — the gap at top where cloche sits ═══ -->
+  <!-- Covered by cloche element above -->
+
+  <!-- ═══ CLOCHE / SERVING DISH at top ═══ -->
+  <!-- Cloche dome -->
+  <path d="M168 72 Q200 44 232 72" stroke="url(#gold)" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- Cloche base plate -->
+  <path d="M158 76 Q200 80 242 76" stroke="url(#gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Lid handle/knob -->
+  <ellipse cx="200" cy="57" rx="8" ry="5" fill="url(#gold)"/>
+  <!-- Steam wisps -->
+  <path d="M192 38 Q188 28 193 20 Q197 13 193 5" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M200 40 Q196 30 200 22 Q204 14 200 6" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M208 38 Q212 28 207 20 Q203 13 207 5" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- ═══ Y LETTERFORM (stylised, fills the circle) ═══ -->
+  <!-- Left arm of Y — sweeps from top-left down to center -->
+  <path d="M118 105 L155 155 L155 255" stroke="url(#gold)" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right arm of Y — sweeps from top-right down to center -->
+  <path d="M282 105 L245 155 L245 255" stroke="url(#gold)" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Center stem connector -->
+  <path d="M155 155 Q200 175 245 155" stroke="url(#gold)" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+  <!-- ═══ FLAME (left side, inside Y left arm) ═══ -->
+  <path d="M152 260 
+           Q138 235 145 210 
+           Q150 195 143 178
+           Q160 195 158 215
+           Q170 195 165 170
+           Q185 195 178 230
+           Q185 215 190 205
+           Q188 235 172 260
+           Q165 270 152 260 Z" 
+        fill="url(#gold)" opacity="0.9"/>
+
+  <!-- ═══ FORK (right side, inside Y right arm) ═══ -->
+  <!-- Fork handle -->
+  <rect x="226" y="205" width="8" height="65" rx="4" fill="url(#gold)"/>
+  <!-- Fork tines -->
+  <rect x="218" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
+  <rect x="224" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
+  <rect x="230" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
+  <rect x="236" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
+  <!-- Fork neck -->
+  <path d="M218 197 Q230 205 242 197" stroke="url(#gold)" stroke-width="3" fill="none"/>
+
+  <!-- ═══ KNIFE (right of fork) ═══ -->
+  <rect x="248" y="165" width="7" height="105" rx="3.5" fill="url(#gold)" opacity="0.85"/>
+  <path d="M248 165 Q258 175 255 195 L248 195 Z" fill="url(#gold)"/>
+
+  <!-- ═══ DIAGONAL DECORATIVE STROKES (the cross-hatching in the Y) ═══ -->
+  <line x1="130" y1="130" x2="175" y2="170" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <line x1="145" y1="115" x2="195" y2="155" stroke="url(#gold2)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <line x1="270" y1="130" x2="225" y2="170" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <line x1="255" y1="115" x2="205" y2="155" stroke="url(#gold2)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- ═══ YUNIC TEXT ═══ -->
+  <!-- Using geometric letterforms hand-drawn as paths for the bold serif look -->
+  <!-- Y -->
+  <path d="M30 360 L62 390 L94 360 M62 390 L62 430" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- U -->
+  <path d="M106 360 L106 408 Q106 432 128 432 Q150 432 150 408 L150 360" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- N -->
+  <path d="M164 432 L164 360 L208 432 L208 360" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- I -->
+  <line x1="222" y1="360" x2="222" y2="432" stroke="url(#goldText)" stroke-width="14" stroke-linecap="square"/>
+  <!-- C -->
+  <path d="M368 375 Q350 358 326 360 Q295 362 290 396 Q285 430 310 434 Q334 438 356 422" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square"/>
+
+</svg>
