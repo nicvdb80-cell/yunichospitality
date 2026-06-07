@@ -370,7 +370,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 }
 
 .nav-links {
-  display: flex;
+  display: none;
   list-style: none;
   gap: 0;
 }
@@ -399,7 +399,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 .nav-cta:hover { background: var(--terra-light) !important; }
 
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -1347,8 +1347,8 @@ footer {
 
 /* ========== MOBILE ========== */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
+  .nav-links { display: none !important; }
+  .hamburger { display: flex !important; }
   nav { height: 60px; }
 
   .mobile-menu {
@@ -1399,134 +1399,72 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
 }
 
-/* ========== BRUSHED BRONZE HEADINGS ========== */
-/*
-  Bronze palette from the logo:
-  — Highlight:   #E8C97A  (warm bright gold)
-  — Mid-bright:  #C9913D  (saffron-amber)
-  — Mid:         #A3704C  (terracotta bronze)
-  — Shadow:      #7A4E2D  (deep warm brown)
-  — Sheen:       #F0DFA0  (pale gold shimmer streak)
 
-  Technique: angled linear-gradient simulates the directional
-  brush-stroke reflection typical of brushed metal/bronze.
-  background-clip:text renders it only on glyph shapes.
-*/
+/* ═══════════════════════════════════════════════════════
+   BRUSHED BRONZE — ALL SERIF HEADINGS
+   Palette: deep shadow #6B3F1F → amber #B8722A → 
+            bright gold #E8B84B → sheen #F5DFA0 → back
+   Angle 115° = diagonal brush stroke left-to-right
+═══════════════════════════════════════════════════════ */
 
-.bronze {
-  background: linear-gradient(
-    118deg,
-    #7A4E2D 0%,
-    #A3704C 12%,
-    #C9913D 24%,
-    #E8C97A 33%,
-    #F0DFA0 38%,
-    #E8C97A 43%,
-    #C9913D 55%,
-    #A3704C 66%,
-    #B8803E 76%,
-    #D4A55A 84%,
-    #C9913D 90%,
-    #8C5E35 100%
+/* The gradient mixin — strong, dark enough to read clearly */
+:root {
+  --bronze-grad: linear-gradient(
+    115deg,
+    #6B3F1F  0%,
+    #8C5228 10%,
+    #B8722A 22%,
+    #D4953C 32%,
+    #E8B84B 40%,
+    #F5DFA0 47%,
+    #FFFBE8 50%,
+    #F5DFA0 53%,
+    #E8B84B 60%,
+    #D4953C 68%,
+    #B8722A 78%,
+    #8C5228 88%,
+    #6B3F1F 100%
   );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline;
+  /* Brighter variant for dark backgrounds */
+  --bronze-grad-bright: linear-gradient(
+    115deg,
+    #8C5228  0%,
+    #B8722A 12%,
+    #D4953C 24%,
+    #E8B84B 34%,
+    #F5DFA0 43%,
+    #FFFBE8 50%,
+    #F5DFA0 57%,
+    #E8B84B 66%,
+    #D4953C 76%,
+    #B8722A 88%,
+    #8C5228 100%
+  );
 }
 
-/* Apply to all serif headings automatically */
+/* Apply to every serif heading */
 h1,
-h2.section-title,
+h2,
+h3,
 .section-title,
-.hero h1,
+.service-title,
 .team-name,
 .concept-name,
-.service-title,
-.footer-brand-name {
-  background: linear-gradient(
-    118deg,
-    #7A4E2D 0%,
-    #A3704C 12%,
-    #C9913D 24%,
-    #E8C97A 33%,
-    #F0DFA0 38%,
-    #E8C97A 43%,
-    #C9913D 55%,
-    #A3704C 66%,
-    #B8803E 76%,
-    #D4A55A 84%,
-    #C9913D 90%,
-    #8C5E35 100%
-  );
+.about-signature,
+.footer-brand-name,
+.nav-logo {
+  background: var(--bronze-grad);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-/* Hero h1 — lighter sheen, pops on dark bg */
-.hero h1 {
-  background: linear-gradient(
-    118deg,
-    #9A6835 0%,
-    #C9913D 14%,
-    #E8C97A 26%,
-    #F8EDB8 36%,
-    #FFFADC 42%,
-    #F0DFA0 47%,
-    #E8C97A 53%,
-    #C9913D 64%,
-    #B8803E 74%,
-    #D4A55A 83%,
-    #C9913D 90%,
-    #8C5E35 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none; /* disable old text-shadow — incompatible with clip */
-}
-
-/* hero h1 em (italic word) — slightly warmer tint */
-.hero h1 em {
-  background: linear-gradient(
-    118deg,
-    #8C5E35 0%,
-    #B8803E 15%,
-    #D4A55A 28%,
-    #F0DFA0 38%,
-    #FFFADC 43%,
-    #F0DFA0 48%,
-    #D4A55A 58%,
-    #B8803E 70%,
-    #C9913D 82%,
-    #A3704C 92%,
-    #7A4E2D 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: italic;
-  display: inline;
-}
-
-/* section-title em (italic accent words) */
+/* em inside headings — same bronze */
+h1 em,
+h2 em,
 .section-title em {
-  background: linear-gradient(
-    118deg,
-    #8C5E35 0%,
-    #B8803E 18%,
-    #D4A55A 32%,
-    #EDD078 42%,
-    #F5E8A8 48%,
-    #EDD078 54%,
-    #D4A55A 64%,
-    #B8803E 76%,
-    #A3704C 88%,
-    #7A4E2D 100%
-  );
+  background: var(--bronze-grad);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1534,132 +1472,82 @@ h2.section-title,
   display: inline;
 }
 
-/* Dark-bg sections — dining (green bg), footer */
+/* Hero h1 — brighter on dark photo bg */
+.hero h1,
+.hero h1 em {
+  background: var(--bronze-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+.hero h1 em { font-style: italic; display: inline; }
+
+/* Dining section (dark green bg) — bright variant */
 .dining-text .section-title,
 .dining-text .section-title em {
-  background: linear-gradient(
-    118deg,
-    #9A6835 0%,
-    #C9913D 14%,
-    #E8C97A 26%,
-    #F8EDB8 36%,
-    #FFFADC 42%,
-    #F0DFA0 47%,
-    #E8C97A 53%,
-    #C9913D 64%,
-    #B8803E 74%,
-    #D4A55A 83%,
-    #C9913D 90%,
-    #8C5E35 100%
-  );
+  background: var(--bronze-grad-bright);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.footer-brand-name {
-  background: linear-gradient(
-    118deg,
-    #9A6835 0%,
-    #C9913D 18%,
-    #E8C97A 32%,
-    #F8EDB8 42%,
-    #E8C97A 52%,
-    #C9913D 66%,
-    #B8803E 80%,
-    #8C5E35 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* concept-item.highlight (dark bg) */
+/* Highlighted concept card (dark bg) */
 .concept-item.highlight .concept-name {
-  background: linear-gradient(
-    118deg,
-    #C9913D 0%,
-    #E8C97A 22%,
-    #F8EDB8 35%,
-    #E8C97A 48%,
-    #C9913D 62%,
-    #B8803E 80%,
-    #C9913D 100%
-  );
+  background: var(--bronze-grad-bright);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* about-signature */
-.about-signature {
-  background: linear-gradient(
-    118deg,
-    #7A4E2D 0%,
-    #A3704C 18%,
-    #C9913D 32%,
-    #E8C97A 44%,
-    #C9913D 56%,
-    #A3704C 72%,
-    #8C5E35 100%
-  );
+/* Footer brand name on dark bg */
+.footer-brand-name {
+  background: var(--bronze-grad-bright);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* nav logo */
+/* Nav logo */
 .nav-logo {
-  background: linear-gradient(
-    118deg,
-    #7A4E2D 0%,
-    #A3704C 18%,
-    #C9913D 32%,
-    #E8C97A 44%,
-    #C9913D 56%,
-    #A3704C 72%,
-    #8C5E35 100%
-  );
+  background: var(--bronze-grad);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .nav-logo-sub {
-  /* keep the saffron eyebrow as-is — it's small uppercase, not a heading */
-  background: none;
-  -webkit-text-fill-color: var(--saffron);
-  color: var(--saffron);
-}
-
-
-/* ── NAV LINK BRONZE FIX — reset background-clip inheritance ── */
-.nav-links a,
-.nav-links a:hover,
-.mobile-menu a,
-.mobile-menu a:hover,
-.nav-cta,
-.nav-cta:hover {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  -webkit-text-fill-color: unset !important;
+  -webkit-text-fill-color: var(--saffron) !important;
+  color: var(--saffron) !important;
 }
-.nav-links a         { color: var(--brown-muted); }
-.nav-links a:hover   { color: var(--terracotta); }
-.nav-cta             { color: var(--parchment) !important; background: var(--terracotta) !important; }
-.nav-cta:hover       { background: var(--terra-light) !important; }
-.mobile-menu a       { color: var(--brown-muted); }
-.mobile-menu a.cta   { color: var(--terracotta); }
 
-/* ── Also reset body text, labels, eyebrows, section-body ── */
+/* ═══ HARD RESET — everything that is NOT a heading ═══ */
+/* This block must come AFTER the heading rules */
+a,
+p,
+li,
+span,
+label,
+select,
+input,
+textarea,
+button,
+blockquote,
+.nav-links a,
+.mobile-menu a,
+.nav-cta,
 .section-eyebrow,
 .section-body,
 .hero-tagline,
 .hero-eyebrow,
 .hero-hospitality,
+.hero-scroll,
 .identity-strip-meta,
 .service-body,
 .service-link,
+.service-number,
 .about-text p,
 .about-sig-title,
 .dining-features li,
@@ -1667,25 +1555,51 @@ h2.section-title,
 .team-role,
 .concept-desc,
 .concept-tag,
+.concept-arrow,
+.dining-label,
 .contact-alt-label,
+.contact-alt-value,
 .footer-about,
 .footer-col-title,
 .footer-links a,
 .footer-copy,
 .footer-domains a,
 .footer-brand-tagline,
-p, li, span:not(.bronze):not(.section-title):not(.about-signature):not(.nav-logo):not(.footer-brand-name) {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  -webkit-text-fill-color: unset;
+.about-badge-num,
+.about-badge-label,
+.identity-strip blockquote,
+.identity-strip blockquote em {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
 }
 
-/* ── HAMBURGER BELT-AND-BRACES ── */
-@media (max-width: 900px) {
-  .nav-links { display: none !important; }
-  .hamburger { display: flex !important; }
-}
+/* Restore specific colours after the reset */
+.nav-links a            { color: var(--brown-muted); }
+.nav-links a:hover      { color: var(--terracotta); }
+.nav-cta                { background: var(--terracotta) !important; color: var(--parchment) !important; }
+.nav-cta:hover          { background: var(--terra-light) !important; }
+.mobile-menu a          { color: var(--brown-muted); }
+.mobile-menu a.cta      { color: var(--terracotta); }
+.section-eyebrow        { color: var(--saffron); }
+.service-link           { color: var(--terracotta); }
+.team-role              { color: var(--terracotta); }
+.concept-tag            { color: var(--saffron); }
+.about-badge-num        { color: var(--saffron-light); }
+.hero-hospitality       { color: rgba(245,240,230,0.45); }
+.hero-tagline           { color: rgba(245,240,230,0.65); }
+.identity-strip blockquote     { color: #ffffff; }
+.identity-strip blockquote em  { color: var(--saffron-light); font-style: normal; }
+.dining-features li     { color: rgba(244,232,204,0.75); }
+.concept-item.highlight .concept-desc { color: rgba(244,232,204,0.7); }
+.concept-item.highlight .concept-tag  { color: rgba(244,232,204,0.6); }
+.footer-col-title       { color: var(--saffron); }
+.footer-links a         { color: rgba(244,232,204,0.5); }
+.footer-copy            { color: rgba(244,232,204,0.25); }
+.footer-domains a       { color: rgba(244,232,204,0.3); }
+.footer-brand-tagline   { color: rgba(244,232,204,0.35); }
+.footer-about           { color: rgba(244,232,204,0.45); }
 
 </style>
 </head>
