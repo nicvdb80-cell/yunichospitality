@@ -352,13 +352,12 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--brown);
-  text-decoration: none;
   letter-spacing: 0.05em;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  text-decoration: none;
 }
 .nav-logo-sub {
   font-family: var(--cormorant);
@@ -366,54 +365,94 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--saffron);
+  color: var(--saffron) !important;
+  -webkit-text-fill-color: var(--saffron) !important;
+  background: none !important;
 }
 
-.nav-links {
-  display: none;
-  list-style: none;
-  gap: 0;
-}
-.nav-links a {
-  display: block;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brown-muted);
-  text-decoration: none;
-  font-weight: 400;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-.nav-links a:hover { color: var(--terracotta); }
-
-.nav-cta {
-  background: var(--terracotta);
-  color: var(--parchment) !important;
-  padding: 0.48rem 1.15rem !important;
-  border-radius: 2px;
-  font-weight: 700 !important;
-  transition: background 0.2s !important;
-}
-.nav-cta:hover { background: var(--terra-light) !important; }
-
+/* HAMBURGER — always visible top-right */
 .hamburger {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
   background: none;
   border: none;
+  margin-left: auto;
+  z-index: 210;
 }
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 1.5px;
+  width: 26px;
+  height: 2px;
   background: var(--brown);
-  transition: all 0.3s;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
 }
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* MOBILE MENU DRAWER */
+.mobile-menu {
+  position: fixed;
+  top: 68px; right: 0;
+  width: 280px;
+  height: calc(100vh - 68px);
+  background: rgba(245,240,230,0.99);
+  backdrop-filter: blur(16px);
+  border-left: 1px solid var(--parchment-dark);
+  padding: 2.5rem 2rem;
+  z-index: 199;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: -8px 0 32px rgba(13,44,34,0.08);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu a {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown-muted) !important;
+  -webkit-text-fill-color: var(--brown-muted) !important;
+  background: none !important;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(140,104,72,0.1);
+  font-weight: 400;
+  font-family: var(--sans);
+  transition: color 0.2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover {
+  color: var(--saffron) !important;
+  -webkit-text-fill-color: var(--saffron) !important;
+}
+.mobile-menu a.cta {
+  margin-top: 1.5rem;
+  color: var(--terracotta) !important;
+  -webkit-text-fill-color: var(--terracotta) !important;
+  font-weight: 700;
+  border-bottom: none;
+  letter-spacing: 0.22em;
+}
+
+/* Overlay when menu open */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,8,0.25);
+  z-index: 198;
+}
+.menu-overlay.open { display: block; }
+
 
 /* ========== BATIK DIVIDER ========== */
 .batik-divider {
@@ -1402,50 +1441,42 @@ footer {
 
 /* ═══════════════════════════════════════════════════════
    BRUSHED BRONZE — ALL SERIF HEADINGS
-   Palette: deep shadow #6B3F1F → amber #B8722A → 
-            bright gold #E8B84B → sheen #F5DFA0 → back
-   Angle 115° = diagonal brush stroke left-to-right
+   Dark amber palette — fully visible on light parchment bg
+   No near-white stops (those vanish on parchment)
 ═══════════════════════════════════════════════════════ */
 
-/* The gradient mixin — strong, dark enough to read clearly */
 :root {
+  /* Light-bg bronze: deep brown → rich amber → warm gold → back */
   --bronze-grad: linear-gradient(
     115deg,
-    #6B3F1F  0%,
-    #8C5228 10%,
-    #B8722A 22%,
-    #D4953C 32%,
-    #E8B84B 40%,
-    #F5DFA0 47%,
-    #FFFBE8 50%,
-    #F5DFA0 53%,
-    #E8B84B 60%,
-    #D4953C 68%,
-    #B8722A 78%,
-    #8C5228 88%,
-    #6B3F1F 100%
+    #5C2E0A  0%,
+    #7A3F12 10%,
+    #A0581C 20%,
+    #C07828 32%,
+    #D4953C 44%,
+    #C8882E 52%,
+    #A86420 62%,
+    #8C4E18 72%,
+    #C07828 82%,
+    #A0581C 90%,
+    #6B3810 100%
   );
-  /* Brighter variant for dark backgrounds */
+  /* Dark-bg bronze: brighter but still rich, no whites */
   --bronze-grad-bright: linear-gradient(
     115deg,
-    #8C5228  0%,
-    #B8722A 12%,
-    #D4953C 24%,
-    #E8B84B 34%,
-    #F5DFA0 43%,
-    #FFFBE8 50%,
-    #F5DFA0 57%,
-    #E8B84B 66%,
-    #D4953C 76%,
-    #B8722A 88%,
-    #8C5228 100%
+    #7A3F12  0%,
+    #A0581C 12%,
+    #C07828 24%,
+    #D4953C 36%,
+    #E8B050 48%,
+    #D4953C 60%,
+    #C07828 72%,
+    #A0581C 84%,
+    #7A3F12 100%
   );
 }
 
-/* Apply to every serif heading */
-h1,
-h2,
-h3,
+h1, h2, h3,
 .section-title,
 .service-title,
 .team-name,
@@ -1460,10 +1491,7 @@ h3,
   color: transparent;
 }
 
-/* em inside headings — same bronze */
-h1 em,
-h2 em,
-.section-title em {
+h1 em, h2 em, .section-title em {
   background: var(--bronze-grad);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1472,9 +1500,8 @@ h2 em,
   display: inline;
 }
 
-/* Hero h1 — brighter on dark photo bg */
-.hero h1,
-.hero h1 em {
+/* Hero — on the dark photo bg, use brighter */
+.hero h1, .hero h1 em {
   background: var(--bronze-grad-bright);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1483,24 +1510,9 @@ h2 em,
 }
 .hero h1 em { font-style: italic; display: inline; }
 
-/* Dining section (dark green bg) — bright variant */
 .dining-text .section-title,
-.dining-text .section-title em {
-  background: var(--bronze-grad-bright);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Highlighted concept card (dark bg) */
-.concept-item.highlight .concept-name {
-  background: var(--bronze-grad-bright);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Footer brand name on dark bg */
+.dining-text .section-title em,
+.concept-item.highlight .concept-name,
 .footer-brand-name {
   background: var(--bronze-grad-bright);
   -webkit-background-clip: text;
@@ -1508,90 +1520,41 @@ h2 em,
   -webkit-text-fill-color: transparent;
 }
 
-/* Nav logo */
-.nav-logo {
-  background: var(--bronze-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.nav-logo-sub {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-  -webkit-text-fill-color: var(--saffron) !important;
-  color: var(--saffron) !important;
-}
-
-/* ═══ HARD RESET — everything that is NOT a heading ═══ */
-/* This block must come AFTER the heading rules */
-a,
-p,
-li,
-span,
-label,
-select,
-input,
-textarea,
-button,
-blockquote,
-.nav-links a,
-.mobile-menu a,
-.nav-cta,
+/* ── HARD RESET on everything that is NOT a heading ── */
+a, p, li, span, label, select, input, textarea,
+button, blockquote, div, small, strong, em,
+.nav-logo-sub,
 .section-eyebrow,
 .section-body,
-.hero-tagline,
-.hero-eyebrow,
-.hero-hospitality,
-.hero-scroll,
+.hero-tagline, .hero-eyebrow, .hero-hospitality, .hero-scroll,
 .identity-strip-meta,
-.service-body,
-.service-link,
-.service-number,
-.about-text p,
-.about-sig-title,
-.dining-features li,
-.team-bio,
-.team-role,
-.concept-desc,
-.concept-tag,
-.concept-arrow,
-.dining-label,
-.contact-alt-label,
-.contact-alt-value,
-.footer-about,
-.footer-col-title,
-.footer-links a,
-.footer-copy,
-.footer-domains a,
-.footer-brand-tagline,
-.about-badge-num,
-.about-badge-label,
-.identity-strip blockquote,
-.identity-strip blockquote em {
+.service-body, .service-link, .service-number,
+.about-text p, .about-sig-title,
+.dining-features li, .team-bio, .team-role,
+.concept-desc, .concept-tag, .concept-arrow, .dining-label,
+.contact-alt-label, .contact-alt-value,
+.footer-about, .footer-col-title, .footer-links a,
+.footer-copy, .footer-domains a, .footer-brand-tagline,
+.about-badge-num, .about-badge-label,
+.mobile-menu a, .menu-overlay,
+.identity-strip blockquote, .identity-strip blockquote em {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
   -webkit-text-fill-color: unset !important;
 }
 
-/* Restore specific colours after the reset */
-.nav-links a            { color: var(--brown-muted); }
-.nav-links a:hover      { color: var(--terracotta); }
-.nav-cta                { background: var(--terracotta) !important; color: var(--parchment) !important; }
-.nav-cta:hover          { background: var(--terra-light) !important; }
-.mobile-menu a          { color: var(--brown-muted); }
-.mobile-menu a.cta      { color: var(--terracotta); }
+/* Restore colours after reset */
 .section-eyebrow        { color: var(--saffron); }
 .service-link           { color: var(--terracotta); }
 .team-role              { color: var(--terracotta); }
 .concept-tag            { color: var(--saffron); }
 .about-badge-num        { color: var(--saffron-light); }
-.hero-hospitality       { color: rgba(245,240,230,0.45); }
-.hero-tagline           { color: rgba(245,240,230,0.65); }
+.hero-hospitality       { color: rgba(245,240,230,0.5); }
+.hero-tagline           { color: rgba(245,240,230,0.7); }
 .identity-strip blockquote     { color: #ffffff; }
 .identity-strip blockquote em  { color: var(--saffron-light); font-style: normal; }
-.dining-features li     { color: rgba(244,232,204,0.75); }
+.dining-features li     { color: rgba(244,232,204,0.8); }
 .concept-item.highlight .concept-desc { color: rgba(244,232,204,0.7); }
 .concept-item.highlight .concept-tag  { color: rgba(244,232,204,0.6); }
 .footer-col-title       { color: var(--saffron); }
@@ -1600,6 +1563,8 @@ blockquote,
 .footer-domains a       { color: rgba(244,232,204,0.3); }
 .footer-brand-tagline   { color: rgba(244,232,204,0.35); }
 .footer-about           { color: rgba(244,232,204,0.45); }
+.nav-logo-sub           { color: var(--saffron) !important; -webkit-text-fill-color: var(--saffron) !important; }
+
 
 </style>
 </head>
@@ -1611,18 +1576,13 @@ blockquote,
     Yunic
     <span class="nav-logo-sub">Hospitality</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#about">Our Story</a></li>
-    <li><a href="#services">What We Do</a></li>
-    <li><a href="#dining">Private Dining</a></li>
-    <li><a href="#team">The Team</a></li>
-    <li><a href="#concepts">Our Brands</a></li>
-    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-  </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMobile()"></div>
 
 <!-- MOBILE MENU -->
 <nav class="mobile-menu" id="mobileMenu">
@@ -2076,14 +2036,23 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Hamburger
+// Hamburger — slide-in from right
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+
 hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  menuOverlay.classList.toggle('open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
+
 function closeMobile() {
   mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  menuOverlay.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 // Scroll reveal
