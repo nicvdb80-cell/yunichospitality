@@ -1,113 +1,134 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" fill="none">
   <defs>
-    <!-- Brushed gold gradient — matches the logo's 3D metallic look -->
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#8C5A14"/>
-      <stop offset="15%"  stop-color="#C8941E"/>
-      <stop offset="28%"  stop-color="#E8C048"/>
-      <stop offset="38%"  stop-color="#F5DC80"/>
-      <stop offset="50%"  stop-color="#FFFBE0"/>
-      <stop offset="62%"  stop-color="#F5DC80"/>
-      <stop offset="75%"  stop-color="#D4A030"/>
-      <stop offset="88%"  stop-color="#A07018"/>
-      <stop offset="100%" stop-color="#7A4E10"/>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6B3D0A"/>
+      <stop offset="18%"  stop-color="#B8780E"/>
+      <stop offset="32%"  stop-color="#D4A020"/>
+      <stop offset="44%"  stop-color="#ECC84A"/>
+      <stop offset="52%"  stop-color="#FAE88A"/>
+      <stop offset="60%"  stop-color="#ECC84A"/>
+      <stop offset="74%"  stop-color="#C89018"/>
+      <stop offset="88%"  stop-color="#9A6010"/>
+      <stop offset="100%" stop-color="#6B3D0A"/>
     </linearGradient>
-    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#7A4E10"/>
-      <stop offset="20%"  stop-color="#C8941E"/>
-      <stop offset="45%"  stop-color="#F5DC80"/>
-      <stop offset="55%"  stop-color="#FFFBE0"/>
-      <stop offset="80%"  stop-color="#C8941E"/>
-      <stop offset="100%" stop-color="#7A4E10"/>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#7A4A0C"/>
+      <stop offset="20%"  stop-color="#C89018"/>
+      <stop offset="38%"  stop-color="#ECC84A"/>
+      <stop offset="50%"  stop-color="#FAF0B0"/>
+      <stop offset="62%"  stop-color="#ECC84A"/>
+      <stop offset="80%"  stop-color="#C08010"/>
+      <stop offset="100%" stop-color="#7A4A0C"/>
     </linearGradient>
-    <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#A07018"/>
-      <stop offset="20%"  stop-color="#D4A030"/>
-      <stop offset="40%"  stop-color="#F5DC80"/>
-      <stop offset="50%"  stop-color="#FFFBE0"/>
-      <stop offset="65%"  stop-color="#E8C048"/>
-      <stop offset="80%"  stop-color="#C8941E"/>
-      <stop offset="100%" stop-color="#8C5A14"/>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#7A4A0C"/>
+      <stop offset="25%"  stop-color="#D4A020"/>
+      <stop offset="50%"  stop-color="#FAF0B0"/>
+      <stop offset="75%"  stop-color="#D4A020"/>
+      <stop offset="100%" stop-color="#7A4A0C"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
   </defs>
 
-  <!-- ═══ OUTER CIRCLE ═══ -->
-  <circle cx="200" cy="195" r="155" stroke="url(#gold)" stroke-width="9" fill="none" filter="url(#glow)"/>
+  <!-- ══════════════════════════════════
+       OUTER CIRCLE — thick bold ring
+  ══════════════════════════════════ -->
+  <circle cx="250" cy="230" r="195" stroke="url(#g1)" stroke-width="14" fill="none"/>
+  <circle cx="250" cy="230" r="178" stroke="url(#g1)" stroke-width="3"  fill="none" opacity="0.4"/>
 
-  <!-- ═══ INNER DECORATIVE RING (partial arcs giving the segmented look) ═══ -->
-  <circle cx="200" cy="195" r="138" stroke="url(#gold2)" stroke-width="3" fill="none" stroke-dasharray="30 12 45 12 30 12 45 12 30 12 45 12" stroke-linecap="round"/>
+  <!-- ══════════════════════════════════
+       CLOCHE AT TOP — serving dish lid
+  ══════════════════════════════════ -->
+  <!-- Steam lines -->
+  <path d="M232 32 Q226 18 232 6"  stroke="url(#g1)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M250 28 Q244 14 250 2"  stroke="url(#g1)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M268 32 Q274 18 268 6"  stroke="url(#g1)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Dome -->
+  <path d="M190 92 Q250 46 310 92" stroke="url(#g1)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <!-- Base plate -->
+  <path d="M175 100 L325 100"      stroke="url(#g1)" stroke-width="9"  stroke-linecap="round" fill="none"/>
+  <!-- Knob -->
+  <ellipse cx="250" cy="55" rx="14" ry="9" fill="url(#g1)"/>
 
-  <!-- ═══ TOP ARC BREAK — the gap at top where cloche sits ═══ -->
-  <!-- Covered by cloche element above -->
+  <!-- ══════════════════════════════════
+       Y LETTERFORM — bold strokes
+       Left arm: top-left → centre-join
+       Right arm: top-right → centre-join
+       Stem: centre-join → bottom
+  ══════════════════════════════════ -->
+  <!-- Left arm of Y -->
+  <path d="M108 118 Q148 168 170 210" stroke="url(#g1)" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <!-- Right arm of Y -->
+  <path d="M392 118 Q352 168 330 210" stroke="url(#g1)" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <!-- Y stem down -->
+  <path d="M170 210 Q210 228 250 222 Q290 228 330 210 L330 348" stroke="url(#g1)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M170 210 L170 348" stroke="url(#g1)" stroke-width="24" stroke-linecap="round" fill="none"/>
 
-  <!-- ═══ CLOCHE / SERVING DISH at top ═══ -->
-  <!-- Cloche dome -->
-  <path d="M168 72 Q200 44 232 72" stroke="url(#gold)" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <!-- Cloche base plate -->
-  <path d="M158 76 Q200 80 242 76" stroke="url(#gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <!-- Lid handle/knob -->
-  <ellipse cx="200" cy="57" rx="8" ry="5" fill="url(#gold)"/>
-  <!-- Steam wisps -->
-  <path d="M192 38 Q188 28 193 20 Q197 13 193 5" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M200 40 Q196 30 200 22 Q204 14 200 6" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M208 38 Q212 28 207 20 Q203 13 207 5" stroke="url(#gold)" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <!-- Inner cross-hatching on Y arms (decorative diagonals from original) -->
+  <line x1="120" y1="136" x2="180" y2="186" stroke="url(#g1)" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+  <line x1="138" y1="118" x2="200" y2="168" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  <line x1="380" y1="136" x2="320" y2="186" stroke="url(#g1)" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+  <line x1="362" y1="118" x2="300" y2="168" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
 
-  <!-- ═══ Y LETTERFORM (stylised, fills the circle) ═══ -->
-  <!-- Left arm of Y — sweeps from top-left down to center -->
-  <path d="M118 105 L155 155 L155 255" stroke="url(#gold)" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Right arm of Y — sweeps from top-right down to center -->
-  <path d="M282 105 L245 155 L245 255" stroke="url(#gold)" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Center stem connector -->
-  <path d="M155 155 Q200 175 245 155" stroke="url(#gold)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <!-- ══════════════════════════════════
+       FLAME — left side inside circle
+  ══════════════════════════════════ -->
+  <path d="
+    M138 355
+    Q118 318 128 278
+    Q134 252 122 225
+    Q148 250 145 278
+    Q162 248 156 210
+    Q185 242 176 290
+    Q190 265 200 248
+    Q196 292 174 332
+    Q162 358 138 355 Z"
+    fill="url(#g2)"/>
 
-  <!-- ═══ FLAME (left side, inside Y left arm) ═══ -->
-  <path d="M152 260 
-           Q138 235 145 210 
-           Q150 195 143 178
-           Q160 195 158 215
-           Q170 195 165 170
-           Q185 195 178 230
-           Q185 215 190 205
-           Q188 235 172 260
-           Q165 270 152 260 Z" 
-        fill="url(#gold)" opacity="0.9"/>
-
-  <!-- ═══ FORK (right side, inside Y right arm) ═══ -->
+  <!-- ══════════════════════════════════
+       FORK — right side inside circle
+  ══════════════════════════════════ -->
+  <!-- 4 tines -->
+  <rect x="288" y="192" width="7" height="52" rx="3.5" fill="url(#g2)"/>
+  <rect x="302" y="192" width="7" height="52" rx="3.5" fill="url(#g2)"/>
+  <rect x="316" y="192" width="7" height="52" rx="3.5" fill="url(#g2)"/>
+  <rect x="330" y="192" width="7" height="52" rx="3.5" fill="url(#g2)"/>
+  <!-- Fork neck curve -->
+  <path d="M288 244 Q312 260 344 244" stroke="url(#g2)" stroke-width="5" fill="none" stroke-linecap="round"/>
   <!-- Fork handle -->
-  <rect x="226" y="205" width="8" height="65" rx="4" fill="url(#gold)"/>
-  <!-- Fork tines -->
-  <rect x="218" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
-  <rect x="224" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
-  <rect x="230" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
-  <rect x="236" y="165" width="3.5" height="32" rx="1.5" fill="url(#gold)"/>
-  <!-- Fork neck -->
-  <path d="M218 197 Q230 205 242 197" stroke="url(#gold)" stroke-width="3" fill="none"/>
+  <rect x="305" y="258" width="14" height="92" rx="7" fill="url(#g2)"/>
 
-  <!-- ═══ KNIFE (right of fork) ═══ -->
-  <rect x="248" y="165" width="7" height="105" rx="3.5" fill="url(#gold)" opacity="0.85"/>
-  <path d="M248 165 Q258 175 255 195 L248 195 Z" fill="url(#gold)"/>
+  <!-- ══════════════════════════════════
+       KNIFE — beside fork
+  ══════════════════════════════════ -->
+  <rect x="352" y="192" width="12" height="158" rx="6" fill="url(#g2)" opacity="0.85"/>
+  <!-- Blade tip -->
+  <path d="M352 192 Q368 208 364 240 L352 240 Z" fill="url(#g2)"/>
 
-  <!-- ═══ DIAGONAL DECORATIVE STROKES (the cross-hatching in the Y) ═══ -->
-  <line x1="130" y1="130" x2="175" y2="170" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
-  <line x1="145" y1="115" x2="195" y2="155" stroke="url(#gold2)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-  <line x1="270" y1="130" x2="225" y2="170" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
-  <line x1="255" y1="115" x2="205" y2="155" stroke="url(#gold2)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <!-- ══════════════════════════════════
+       YUNIC — bold serif wordmark
+       Each letter drawn as thick strokes
+  ══════════════════════════════════ -->
+  <!-- Letterform stroke-width = 18, caps height ~90px -->
 
-  <!-- ═══ YUNIC TEXT ═══ -->
-  <!-- Using geometric letterforms hand-drawn as paths for the bold serif look -->
   <!-- Y -->
-  <path d="M30 360 L62 390 L94 360 M62 390 L62 430" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M22 450 L68 500 L114 450" stroke="url(#g3)" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="68" y1="500" x2="68" y2="548" stroke="url(#g3)" stroke-width="18" stroke-linecap="round"/>
+
   <!-- U -->
-  <path d="M106 360 L106 408 Q106 432 128 432 Q150 432 150 408 L150 360" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M128 450 L128 516 Q128 550 160 550 Q192 550 192 516 L192 450" stroke="url(#g3)" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
   <!-- N -->
-  <path d="M164 432 L164 360 L208 432 L208 360" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
+  <line x1="208" y1="548" x2="208" y2="450" stroke="url(#g3)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M208 450 L264 548" stroke="url(#g3)" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <line x1="264" y1="548" x2="264" y2="450" stroke="url(#g3)" stroke-width="18" stroke-linecap="round"/>
+
   <!-- I -->
-  <line x1="222" y1="360" x2="222" y2="432" stroke="url(#goldText)" stroke-width="14" stroke-linecap="square"/>
+  <line x1="286" y1="450" x2="286" y2="548" stroke="url(#g3)" stroke-width="18" stroke-linecap="round"/>
+  <!-- Serifs on I -->
+  <line x1="272" y1="450" x2="300" y2="450" stroke="url(#g3)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="272" y1="548" x2="300" y2="548" stroke="url(#g3)" stroke-width="10" stroke-linecap="round"/>
+
   <!-- C -->
-  <path d="M368 375 Q350 358 326 360 Q295 362 290 396 Q285 430 310 434 Q334 438 356 422" stroke="url(#goldText)" stroke-width="14" fill="none" stroke-linecap="square"/>
+  <path d="M478 468 Q460 448 432 448 Q392 448 384 499 Q376 550 410 556 Q438 560 464 540" stroke="url(#g3)" stroke-width="18" fill="none" stroke-linecap="round"/>
 
 </svg>
