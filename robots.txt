@@ -1,0 +1,10 @@
+# Yunic Hospitality — yunichospitality.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yunichospitality.com/sitemap.xml
+
+# Block common crawler traps
+Disallow: /cdn-cgi/
+Disallow: /.git/
