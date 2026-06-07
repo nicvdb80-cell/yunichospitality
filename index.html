@@ -349,16 +349,28 @@ nav {
 nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 
 .nav-logo {
+  text-decoration: none;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.1;
+}
+.nav-logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.nav-logo-wordmark {
+  display: flex;
+  flex-direction: column;
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--brown);
-  text-decoration: none;
   letter-spacing: 0.05em;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
 }
 .nav-logo-sub {
   font-family: var(--cormorant);
@@ -1403,6 +1415,89 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
 }
 
+
+
+/* ══ BRONZE HEADINGS ══ */
+:root {
+  --bronze-on-light: linear-gradient(115deg,
+    #5C2E0A 0%, #8C4A14 12%, #B07020 24%, #C88828 38%,
+    #D09030 50%, #C88828 62%, #A05818 76%, #5C2E0A 100%);
+  --bronze-on-dark: linear-gradient(115deg,
+    #8C5218 0%, #B87828 14%, #D4A030 28%, #EAC84A 42%,
+    #F5E070 50%, #EAC84A 58%, #D4A030 72%, #8C5218 100%);
+}
+h1, h2,
+.section-title,
+.service-title,
+.team-name,
+.concept-name,
+.about-signature,
+.footer-brand-name {
+  background: var(--bronze-on-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 em, h2 em, .section-title em {
+  background: var(--bronze-on-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  display: inline;
+}
+/* Brighter on dark backgrounds */
+.hero h1,
+.hero h1 em,
+.dining-text .section-title,
+.dining-text .section-title em,
+.concept-item.highlight .concept-name,
+.footer-brand-name {
+  background: var(--bronze-on-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero h1 { text-shadow: none; }
+.hero h1 em { font-style: italic; display: inline; }
+
+/* Prevent bronze bleeding into nav and body text */
+.nav-links a,
+.nav-links a:hover,
+.mobile-menu a,
+.nav-logo-wordmark,
+.nav-logo-sub {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+.nav-logo-sub { color: var(--saffron) !important; }
+.nav-links a { color: var(--brown-muted); }
+.nav-links a:hover { color: var(--terracotta); }
+.nav-cta {
+  background: var(--terracotta) !important;
+  color: var(--parchment) !important;
+  -webkit-text-fill-color: var(--parchment) !important;
+}
+/* Identity strip quote — white on black background */
+.identity-strip blockquote { color: #ffffff; }
+.identity-strip blockquote em {
+  color: #C4936A !important;
+  -webkit-text-fill-color: #C4936A !important;
+  background: none !important;
+}
+/* Drawer links */
+#menuDrawer a {
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  color: #6B6860 !important;
+}
+#menuDrawer a.drawer-cta { color: #0D2C22 !important; }
+/* Scroll offset for fixed nav */
+#about, #services, #dining, #team, #concepts, #contact {
+  scroll-margin-top: 68px;
+}
 
 </style>
 </head>
