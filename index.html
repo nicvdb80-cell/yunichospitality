@@ -337,8 +337,8 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   flex-shrink: 0;
 }
 .nav-logo-img {
-  height: 44px;
-  width: 44px;
+  height: 56px;
+  width: auto;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
@@ -374,10 +374,10 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  padding: 9px 11px;
-  background: #0D2C22;
+  padding: 10px 12px;
+  background: var(--terracotta);
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   z-index: 310;
   flex-shrink: 0;
 }
@@ -385,7 +385,7 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
   display: block;
   width: 22px;
   height: 2px;
-  background: #F5F0E6;
+  background: var(--parchment);
   border-radius: 1px;
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
   transform-origin: center;
@@ -703,10 +703,9 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
   margin-bottom: 0.3rem;
 }
 .footer-logo-img {
-  height: 48px;
-  width: 48px;
+  height: 64px;
+  width: auto;
   object-fit: contain;
-
 }
 </style>
 </head>
@@ -723,8 +722,8 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
       <span class="nav-logo-sub">Hospitality</span>
     </span>
   </a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" style="background:#1A3D2A!important;display:flex!important;">
+    <span style="background:#F5F0E6!important;"></span><span style="background:#F5F0E6!important;"></span><span style="background:#F5F0E6!important;"></span>
   </button>
 </nav>
 
