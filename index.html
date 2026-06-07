@@ -309,7 +309,7 @@ body {
 @keyframes drift    { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
 
 /* ════════════════════════════════════════
-   NAV — logo left, hamburger right always
+   NAV — logo left, hamburger right
 ════════════════════════════════════════ */
 nav#mainNav {
   position: fixed;
@@ -317,32 +317,34 @@ nav#mainNav {
   z-index: 300;
   background: rgba(245,240,230,0.97);
   border-bottom: 1px solid var(--parchment-dark);
-  padding: 0 4vw;
+  padding: 0 3vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
-  backdrop-filter: blur(10px);
+  height: 72px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: box-shadow 0.3s;
 }
 nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 
-/* Logo */
+/* Logo wrapper */
 .nav-logo {
   text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.75rem;
+  gap: 10px;
   flex-shrink: 0;
 }
+/* Logo image — the actual PNG */
 .nav-logo-img {
-  height: 56px;
+  height: 54px;
   width: auto;
-  object-fit: contain;
   display: block;
   flex-shrink: 0;
 }
+/* Text beside logo */
 .nav-logo-text {
   display: flex;
   flex-direction: column;
@@ -350,7 +352,7 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 }
 .nav-logo-main {
   font-family: var(--serif);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   background: var(--bronze);
@@ -360,46 +362,50 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 }
 .nav-logo-sub {
   font-family: var(--cormorant);
-  font-size: 0.52rem;
+  font-size: 0.5rem;
   font-weight: 400;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--saffron) !important;
   -webkit-text-fill-color: var(--saffron) !important;
+  background: none !important;
 }
 
-/* Hamburger */
+/* ── HAMBURGER — always visible, dark pill ── */
 .hamburger {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  gap: 6px;
+  justify-content: center;
+  gap: 5px;
   cursor: pointer;
-  padding: 10px 12px;
-  background: var(--terracotta);
+  padding: 10px 13px;
+  background: #1C3A2A !important;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   z-index: 310;
   flex-shrink: 0;
+  min-width: 46px;
+  min-height: 42px;
 }
 .hamburger span {
-  display: block;
+  display: block !important;
   width: 22px;
   height: 2px;
-  background: var(--parchment);
+  background: #F5F0E6 !important;
   border-radius: 1px;
   transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
   transform-origin: center;
 }
-.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Overlay */
 #menuOverlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(10,10,8,0.3);
+  background: rgba(10,10,8,0.35);
   z-index: 290;
 }
 #menuOverlay.open { display: block; }
@@ -407,44 +413,46 @@ nav#mainNav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
 /* Drawer — slides in from RIGHT */
 #mobileMenu {
   position: fixed;
-  top: 68px; right: 0;
+  top: 72px; right: 0;
   width: 280px;
-  height: calc(100vh - 68px);
+  height: calc(100vh - 72px);
   background: var(--parchment);
   border-left: 1px solid var(--parchment-dark);
-  padding: 2rem 2rem;
+  padding: 2.5rem 2rem;
   z-index: 295;
   display: flex;
   flex-direction: column;
   gap: 0;
   transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: -6px 0 32px rgba(13,44,34,0.1);
+  transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: -6px 0 32px rgba(13,44,34,0.12);
 }
 #mobileMenu.open { transform: translateX(0); }
-
 #mobileMenu a {
   font-family: var(--sans);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--brown-muted);
+  color: var(--brown-muted) !important;
+  -webkit-text-fill-color: var(--brown-muted) !important;
+  background: none !important;
   text-decoration: none;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(140,104,72,0.1);
   font-weight: 400;
   transition: color 0.2s;
-  background: none !important;
-  -webkit-text-fill-color: unset !important;
 }
 #mobileMenu a:last-child { border-bottom: none; }
-#mobileMenu a:hover { color: var(--saffron); }
+#mobileMenu a:hover {
+  color: var(--saffron) !important;
+  -webkit-text-fill-color: var(--saffron) !important;
+}
 #mobileMenu a.cta {
   margin-top: 1.5rem;
-  color: var(--terracotta);
+  color: var(--terracotta) !important;
+  -webkit-text-fill-color: var(--terracotta) !important;
   font-weight: 700;
   border-bottom: none;
-  font-size: 0.7rem;
 }
 
 /* ════════════════════════════════════════
@@ -703,9 +711,10 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
   margin-bottom: 0.3rem;
 }
 .footer-logo-img {
-  height: 64px;
+  height: 60px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 </style>
 </head>
@@ -713,20 +722,24 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="#" class="nav-logo" aria-label="Yunic Hospitality — Home">
-    <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.svg"
-         alt="Yunic Hospitality Logo"
-         class="nav-logo-img">
+  <a href="#" class="nav-logo" aria-label="Yunic Hospitality">
+    <img
+      src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.png"
+      alt="Yunic logo"
+      class="nav-logo-img"
+      loading="eager"
+    >
     <span class="nav-logo-text">
       <span class="nav-logo-main">Yunic</span>
       <span class="nav-logo-sub">Hospitality</span>
     </span>
   </a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" style="background:#1A3D2A!important;display:flex!important;">
-    <span style="background:#F5F0E6!important;"></span><span style="background:#F5F0E6!important;"></span><span style="background:#F5F0E6!important;"></span>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 </nav>
-
 <!-- OVERLAY -->
 <div id="menuOverlay"></div>
 
@@ -1133,7 +1146,7 @@ footer { background:var(--terracotta); padding:4rem 6vw 2.5rem; }
   <div class="footer-grid">
     <div>
       <div class="footer-brand-logo">
-        <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.svg"
+        <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.png"
              alt="Yunic Hospitality"
              class="footer-logo-img">
         <span class="footer-brand-name">Yunic Hospitality</span>
