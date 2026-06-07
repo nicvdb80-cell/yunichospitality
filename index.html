@@ -2,210 +2,1640 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yunic Hospitality — Coming Soon</title>
-<meta name="description" content="Yunic Hospitality — Indonesian food culture, shared with the world. Based in Bali. Coming soon.">
-<meta name="robots" content="noindex, nofollow">
+<title>Yunic Hospitality — Private Dining, Culinary Events & Consulting in Bali</title>
+<meta name="description" content="Yunic Hospitality — Events, Private Dining, Consulting, Collaborations & Pop-Ups rooted in the flavours and spirit of the Indonesian Archipelago.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #f5f0e8;
-  --dark:     #1a3a32;
-  --spice:    #b5763a;
-  --green:    #2d5a4e;
-  --muted:    #7a7a72;
-  --text:     #1c1c1c;
-  --serif:    'Playfair Display', Georgia, serif;
-  --sans:     'Lato', system-ui, sans-serif;
+  --parchment:      #F5F0E6;
+  --parchment-mid:  #EDE8DA;
+  --parchment-dark: #D5CFC2;
+  --terracotta:     #0D2C22;
+  --terra-light:    #1A4535;
+  --terra-pale:     #C8DDD7;
+  --saffron:        #A3704C;
+  --saffron-light:  #C4936A;
+  --green:          #0D2C22;
+  --green-light:    #2A6650;
+  --green-pale:     #E8F0ED;
+  --brown:          #0A0A08;
+  --brown-mid:      #1A1A18;
+  --brown-muted:    #6B6860;
+  --cream-text:     #0D0D0B;
+  --serif:          'Cormorant Garamond', Georgia, serif;
+  --cormorant:      'Cormorant Garamond', Georgia, serif;
+  --sans:           'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-html, body {
-  height: 100%;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--parchment);
+  color: var(--cream-text);
   font-family: var(--sans);
   font-weight: 300;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
-  text-align: center;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
+body::before { display: none; }
+
+/* ========== ANIMATIONS ========== */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes pulse {
-  0%, 100% { opacity: 0.35; transform: scaleY(0.7); }
-  50%       { opacity: 1; transform: scaleY(1); }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.8); }
+  50%       { opacity: 1;   transform: scaleY(1); }
+}
+@keyframes drift {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
-.logo-mark {
+/* ========== NAV ========== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(245,240,230,0.97);
+  border-bottom: 1px solid var(--parchment-dark);
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  transition: box-shadow 0.3s;
+  backdrop-filter: blur(10px);
+}
+nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--brown);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  animation: fadeUp 0.8s ease both;
+  line-height: 1.1;
 }
-
-.logo-line {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, transparent, var(--spice), transparent);
-  animation: pulse 2.5s ease-in-out infinite;
-}
-
-.logo-eyebrow {
-  font-size: 0.62rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: var(--spice);
+.nav-logo-sub {
+  font-family: var(--cormorant);
+  font-size: 0.52rem;
   font-weight: 400;
-}
-
-.logo-name {
-  font-family: var(--serif);
-  font-size: clamp(2.8rem, 8vw, 5rem);
-  font-weight: 400;
-  color: var(--dark);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-
-.logo-name em {
-  font-style: italic;
-  color: var(--green);
-}
-
-.logo-sub {
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 0.3rem;
+  color: var(--saffron);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+}
+.nav-links a {
   display: block;
-  animation: fadeUp 0.8s 0.2s ease both;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-muted);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--terracotta); }
+
+.nav-cta {
+  background: var(--terracotta);
+  color: var(--parchment) !important;
+  padding: 0.48rem 1.15rem !important;
+  border-radius: 2px;
+  font-weight: 700 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--terra-light) !important; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--brown);
+  transition: all 0.3s;
 }
 
-.divider {
+/* ========== BATIK DIVIDER ========== */
+.batik-divider {
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  margin: 0.5rem 0;
+  opacity: 0.12;
+}
+
+.section-divider {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 2.5rem auto;
-  width: 200px;
-  animation: fadeUp 0.8s 0.3s ease both;
+  max-width: 280px;
+  justify-content: center;
 }
-.divider::before, .divider::after {
+.section-divider::before, .section-divider::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--spice);
-  opacity: 0.3;
+  background: linear-gradient(to right, transparent, var(--parchment-dark));
 }
-.divider-diamond {
-  width: 6px; height: 6px;
-  background: var(--spice);
+.section-divider::after { background: linear-gradient(to left, transparent, var(--parchment-dark)); }
+.sd-diamond {
+  width: 5px; height: 5px;
+  background: var(--saffron);
   transform: rotate(45deg);
   flex-shrink: 0;
 }
 
-.tagline {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  color: var(--dark);
-  font-weight: 400;
-  line-height: 1.6;
-  max-width: 42ch;
-  margin: 0 auto 1.5rem;
-  animation: fadeUp 0.8s 0.35s ease both;
-}
-
-.body-text {
-  font-size: 0.95rem;
-  color: var(--muted);
-  max-width: 40ch;
-  margin: 0 auto 3rem;
-  line-height: 1.85;
-  animation: fadeUp 0.8s 0.45s ease both;
-}
-
-.contact-link {
-  display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--bg);
-  background: var(--green);
-  padding: 0.9rem 2.2rem;
-  text-decoration: none;
-  border-radius: 2px;
-  transition: background 0.2s;
-  animation: fadeUp 0.8s 0.55s ease both;
-}
-.contact-link:hover { background: var(--dark); }
-
-.footer-mark {
-  position: fixed;
-  bottom: 2rem;
-  left: 0; right: 0;
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted);
-  opacity: 0.5;
+  padding: 9rem 6vw 6rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-mark a {
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("https://raw.githubusercontent.com/nicvdb80-cell/yunicdining/main/assets/img10.png") center center / cover no-repeat;
+  opacity: 0.88;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245,240,232,0.12) 0%,
+    rgba(245,240,232,0.04) 40%,
+    rgba(245,240,232,0.30) 100%
+  );
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero-brand-mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease both;
+}
+.hero-brand-mark-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--saffron), transparent);
+  animation: drift 3s ease-in-out infinite;
+}
+.hero-eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(245,240,230,0.45);
+  font-weight: 500;
+  font-family: var(--sans);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3.4rem, 9vw, 7rem);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--parchment);
+  margin-bottom: 0.3rem;
+  animation: fadeUp 1s 0.1s ease both;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.4);
+}
+
+.hero h1 em {
+  font-style: normal;
+  font-style: italic;
+  color: var(--saffron-light);
+  font-weight: 300;
+}
+
+.hero-hospitality {
+  font-family: var(--cormorant);
+  font-style: normal;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  color: rgba(245,240,230,0.45);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: block;
+  animation: fadeUp 1s 0.2s ease both;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: rgba(245,240,230,0.65);
+  max-width: 52ch;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+  line-height: 1.85;
+  animation: fadeUp 1s 0.35s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 1s 0.5s ease both;
+}
+
+.btn-terra {
+  background: var(--parchment);
+  color: var(--cream-text);
+  padding: 0.9rem 2.4rem;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid var(--saffron);
+  border-radius: 0;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-terra:hover { background: var(--saffron-light); border-color: var(--saffron-light); }
+
+.btn-outline {
+  background: transparent;
+  color: rgba(245,240,230,0.75);
+  padding: 0.9rem 2.4rem;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid rgba(245,240,230,0.25);
+  border-radius: 0;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: rgba(245,240,230,0.5); color: var(--parchment); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brown-muted);
+  animation: fadeUp 1s 0.9s ease both;
+  z-index: 2;
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--saffron-light), transparent);
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+/* ========== BRAND IDENTITY STRIP ========== */
+.identity-strip {
+  background: #000000;
+  padding: 4.5rem 6vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.identity-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: none;
+}
+
+.identity-strip-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+
+.identity-strip blockquote {
+  font-family: var(--cormorant);
+  font-style: normal;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+}
+.identity-strip blockquote em {
+  font-style: normal;
+  color: #ffffff;
+  color: var(--saffron-light);
+}
+
+.identity-strip-meta {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(245,240,230,0.25);
+  font-family: var(--sans);
+}
+
+/* ========== SECTION COMMONS ========== */
+section { padding: 6rem 6vw; position: relative; }
+.inner { max-width: 1100px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 0.58rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 0.8rem;
+  display: block;
+  font-weight: 600;
+  font-family: var(--sans);
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--terracotta);
+  line-height: 1.08;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+.section-title em { font-style: normal; font-style: italic; color: var(--saffron); font-weight: 300; }
+.section-body {
+  font-size: 0.95rem;
+  color: var(--brown-muted);
+  max-width: 58ch;
+  line-height: 1.9;
+}
+
+/* ========== ABOUT / WHO WE ARE ========== */
+.about-section {
+  background: var(--parchment);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-visual { position: relative; }
+
+.about-portrait-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.about-portrait-frame::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px;
+  right: 8px; bottom: 8px;
+  border: 1px solid rgba(163,112,76,0.4);
+  z-index: 0;
+}
+.about-portrait-frame::after {
+  display: none;
+}
+
+.about-portrait-img {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  background: var(--parchment-mid);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  z-index: 2;
+  background: var(--terracotta);
+  color: var(--parchment);
+  padding: 1.2rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(13,44,34,0.2);
+}
+.about-badge-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--saffron-light);
+  display: block;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.about-badge-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,240,230,0.45);
+  margin-top: 0.3rem;
+  display: block;
+  font-family: var(--sans);
+}
+
+.about-text p { color: var(--brown-muted); margin-bottom: 1.2rem; line-height: 1.9; font-size: 0.95rem; }
+.about-text p strong { color: var(--brown); font-weight: 600; }
+
+.about-signature {
+  font-family: var(--cormorant);
+  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--terracotta);
+  margin-top: 1.5rem;
+  display: block;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.about-sig-title {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brown-muted);
+  margin-top: 0.2rem;
+  display: block;
+  font-family: var(--sans);
+}
+
+/* ========== WHAT WE DO ========== */
+.services-section {
+  background: var(--parchment-mid);
+  padding: 6rem 8vw !important;
+}
+
+.services-header { text-align: center; margin-bottom: 4rem; }
+.services-header .section-body { margin: 0 auto; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: rgba(244,232,204,0.92);
+  border: 1px solid rgba(140,104,72,0.18);
+  border-radius: 4px;
+  padding: 2.2rem 1.8rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
   color: inherit;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--saffron-light));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(46,26,8,0.12); }
+.service-card:hover::before { opacity: 1; }
+
+.service-icon {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--terra-pale), var(--parchment-mid));
+  border: 1px solid rgba(184,82,42,0.2);
+  margin-bottom: 1.3rem;
+}
+.service-icon svg { width: 26px; height: 26px; }
+
+.service-number {
+  font-family: var(--cormorant);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgba(184,82,42,0.1);
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  line-height: 1;
+  font-style: italic;
+}
+
+.service-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+.service-body {
+  font-size: 0.88rem;
+  color: var(--brown-muted);
+  line-height: 1.75;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 700;
   text-decoration: none;
 }
-.footer-mark a:hover { opacity: 1; color: var(--spice); }
+.service-link svg { width: 12px; transition: transform 0.2s; }
+.service-card:hover .service-link svg { transform: translateX(4px); }
+
+/* ========== PRIVATE DINING FEATURE ========== */
+.dining-section {
+  background: var(--green);
+  color: var(--parchment);
+  padding: 7rem 6vw !important;
+  overflow: hidden;
+}
+
+.dining-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dining-text .section-eyebrow { color: var(--saffron-light); }
+.dining-text .section-title { color: var(--parchment); }
+.dining-text .section-body { color: rgba(244,232,204,0.65); }
+
+.dining-features {
+  list-style: none;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dining-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: rgba(244,232,204,0.75);
+}
+.dining-features li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--saffron-light);
+  flex-shrink: 0;
+  margin-top: 0.55rem;
+}
+
+.dining-visual {
+  position: relative;
+}
+
+.dining-img-stack {
+  position: relative;
+  height: 520px;
+}
+
+.dining-img {
+  position: absolute;
+  border-radius: 3px;
+  overflow: hidden;
+  background: rgba(92,58,30,0.4);
+}
+.dining-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+}
+.dining-img.main {
+  width: 78%;
+  height: 85%;
+  top: 0; right: 0;
+}
+.dining-img.accent {
+  width: 52%;
+  height: 52%;
+  bottom: 0; left: 0;
+  border: 3px solid var(--brown);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.dining-label {
+  position: absolute;
+  bottom: 3rem;
+  right: -1rem;
+  background: var(--terracotta);
+  color: var(--parchment);
+  padding: 0.8rem 1.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-radius: 2px;
+}
+
+/* ========== TEAM / FACES ========== */
+.team-section {
+  background: var(--parchment);
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3.5rem;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-photo {
+  width: 180px;
+  height: 220px;
+  border-radius: 2px;
+  object-fit: cover;
+  background: var(--parchment-mid);
+  box-shadow: 4px 6px 24px rgba(46,26,8,0.15);
+  position: relative;
+  display: block;
+}
+
+.team-photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+.team-photo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -6px; left: -6px;
+  right: 6px; bottom: 6px;
+  border: 1px solid rgba(196,144,21,0.3);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.team-name {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--brown);
+}
+.team-role {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+.team-bio {
+  font-size: 0.88rem;
+  color: var(--brown-muted);
+  line-height: 1.75;
+  max-width: 30ch;
+  text-align: center;
+}
+
+/* ========== VENUES / CONCEPT MAP ========== */
+.concepts-section { padding: 6rem 6vw !important; }
+
+.concepts-header { text-align: center; margin-bottom: 4rem; }
+
+.concepts-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(140,104,72,0.18);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.concept-item {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid rgba(140,104,72,0.15);
+  position: relative;
+  transition: background 0.3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.concept-item:last-child { border-right: none; }
+.concept-item:hover { background: rgba(184,82,42,0.04); }
+
+.concept-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.concept-name {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--brown);
+  margin-bottom: 0.6rem;
+}
+.concept-desc {
+  font-size: 0.85rem;
+  color: var(--brown-muted);
+  line-height: 1.75;
+}
+.concept-arrow {
+  position: absolute;
+  bottom: 1.8rem; right: 1.8rem;
+  color: var(--terracotta);
+  opacity: 0;
+  transition: opacity 0.25s, transform 0.25s;
+  font-size: 1.2rem;
+}
+.concept-item:hover .concept-arrow { opacity: 1; transform: translateX(4px); }
+
+.concept-item.highlight {
+  background: var(--terracotta);
+}
+.concept-item.highlight .concept-tag { color: rgba(244,232,204,0.6); }
+.concept-item.highlight .concept-name { color: var(--parchment); }
+.concept-item.highlight .concept-desc { color: rgba(244,232,204,0.7); }
+.concept-item.highlight .concept-arrow { color: var(--parchment); }
+.concept-item.highlight:hover { background: var(--terra-light); }
+.concept-item.highlight:hover .concept-arrow { opacity: 1; }
+
+/* ========== CONTACT / CONNECT ========== */
+.contact-section {
+  background: var(--parchment);
+  position: relative;
+}
+.contact-section::before {
+  display: none;
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(140,104,72,0.3);
+  background: rgba(244,232,204,0.9);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--cream-text);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--terracotta);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--brown-muted);
+  opacity: 0.7;
+}
+.form-field textarea { height: 130px; resize: vertical; }
+
+.form-submit {
+  align-self: center;
+  margin-top: 0.5rem;
+}
+
+.contact-alt {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.contact-alt-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+.contact-alt-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--brown-muted);
+  font-weight: 700;
+}
+.contact-alt-value {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--brown);
+  text-decoration: none;
+}
+.contact-alt-value:hover { color: var(--terracotta); }
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--terracotta);
+  padding: 4rem 6vw 2.5rem;
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.footer-brand-name {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--parchment);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.footer-brand-tagline {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(244,232,204,0.35);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+.footer-about {
+  font-size: 0.85rem;
+  color: rgba(244,232,204,0.45);
+  line-height: 1.75;
+}
+
+.footer-col-title {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: rgba(244,232,204,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--parchment); }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(244,232,204,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(244,232,204,0.25);
+  letter-spacing: 0.05em;
+}
+.footer-domains {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-domains a {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: rgba(244,232,204,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-domains a:hover { color: var(--saffron-light); }
+
+/* ========== TEAM DUO ========== */
+.team-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-duo-photo-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.team-duo-photo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px;
+  right: 8px; bottom: 8px;
+  border: 1px solid rgba(196,144,21,0.3);
+  border-radius: 2px;
+  z-index: 0;
+}
+.team-duo-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 8px 32px rgba(46,26,8,0.15);
+}
+
+.team-duo-bios {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.team-bio-card {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--parchment-dark);
+}
+.team-bio-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========== MOBILE ========== */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  nav { height: 60px; }
+
+  .mobile-menu {
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(244,232,204,0.98);
+    backdrop-filter: blur(12px);
+    padding: 1.5rem 6vw 2rem;
+    border-bottom: 1px solid var(--parchment-dark);
+    z-index: 199;
+    display: none;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brown-muted);
+    text-decoration: none;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(140,104,72,0.08);
+    font-weight: 400;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a.cta { color: var(--terracotta); font-weight: 700; }
+
+  .hero h1 { font-size: clamp(2.8rem, 11vw, 4.5rem); }
+  .about-grid, .dining-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-portrait-frame { max-width: 100%; }
+  .about-portrait-img { max-width: 100%; }
+  .dining-img-stack { height: 320px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .concepts-row { grid-template-columns: 1fr; }
+  .concept-item { border-right: none; border-bottom: 1px solid var(--parchment-dark); }
+  .concept-item:last-child { border-bottom: none; }
+  .team-duo { grid-template-columns: 1fr; gap: 2.5rem; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 540px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<div class="logo-mark">
-  <div class="logo-line"></div>
-  <span class="logo-eyebrow">Bali, Indonesia</span>
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    Yunic
+    <span class="nav-logo-sub">Hospitality</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#services">What We Do</a></li>
+    <li><a href="#dining">Private Dining</a></li>
+    <li><a href="#team">The Team</a></li>
+    <li><a href="#concepts">Our Brands</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">Our Story</a>
+  <a href="#services" onclick="closeMobile()">What We Do</a>
+  <a href="#dining" onclick="closeMobile()">Private Dining</a>
+  <a href="#team" onclick="closeMobile()">The Team</a>
+  <a href="#concepts" onclick="closeMobile()">Our Brands</a>
+  <a href="#contact" class="cta" onclick="closeMobile()">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-brand-mark">
+      <div class="hero-brand-mark-line"></div>
+      <span class="hero-eyebrow">Bali, Indonesia · Since 2026</span>
+    </div>
+    <h1>Yunic<br><em>Hospitality</em></h1>
+    <span class="hero-hospitality">Indonesian Food Culture, Shared with the World</span>
+    <p class="hero-tagline">
+      We are a Bali-based hospitality company working across private dining, culinary events, chef collaborations, pop-ups, and consulting, all rooted in the food and flavour of the Indonesian archipelago.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-terra">What We Do</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- IDENTITY STRIP -->
+<div class="identity-strip">
+  <div class="identity-strip-inner">
+    <blockquote>
+      "Indonesian food has 17,000 islands worth of stories.<br>
+      We think the world deserves to taste <em>all of them.</em>"
+    </blockquote>
+    <span class="identity-strip-meta">Yunic Hospitality &nbsp;·&nbsp; Bali, Indonesia &nbsp;·&nbsp; Since 2026</span>
+  </div>
 </div>
 
-<h1 class="logo-name">Yunic<br><em>Hospitality</em></h1>
-<span class="logo-sub">Something is coming</span>
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-portrait-frame">
+          <img
+            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png"
+            alt="Yuli and Nic — Founder and Executive Chef, Yunic Hospitality Bali"
+            class="about-portrait-img"
+            style="aspect-ratio:4/5; object-position: top center;"
+          >
+          <div class="about-badge">
+            <span class="about-badge-num">17K+</span>
+            <span class="about-badge-label">Islands of<br>Inspiration</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="section-title">Born from a love of<br><em>Indonesian food</em></h2>
+        <div class="section-divider"><div class="sd-diamond"></div></div>
+        <p>
+          Yunic Hospitality started with a simple idea — that Indonesian cuisine is one of the most layered, diverse, and generous food cultures in the world, and not enough people outside of Indonesia really know it yet.
+        </p>
+        <p>
+          Founded by Yuli, who grew up surrounded by the food traditions of the archipelago, and led in the kitchen by Executive Chef Nic, whose cooking career has taken him across Europe and Asia. Yunic brings these two worlds together in a way that feels honest and personal.
+        </p>
+        <p>
+          We are based in Bali and work across private dining, culinary events, pop-ups, chef collaborations, and consulting. Everything we do is built around one question: how do we share Indonesian food culture in a way that genuinely connects with people?
+        </p>
+        <span class="about-signature">Yuli & Nic</span>
+        <span class="about-sig-title">Founder & Executive Chef, Yunic Hospitality · Bali</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="divider"><div class="divider-diamond"></div></div>
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-header reveal">
+    <span class="section-eyebrow">What We Do</span>
+    <h2 class="section-title">Six ways we work<br>with <em>food and people</em></h2>
+    <p class="section-body">
+      Yunic Hospitality is a Bali-based culinary company. We run private dining experiences, produce food events, consult for restaurants and hotels, host chef collaborations, create pop-up dinners, and sell Indonesian pantry products through Yunic Shop.
+    </p>
+  </div>
 
-<p class="tagline">
-  Indonesian food culture,<br>shared with the world.
-</p>
+  <div class="services-grid">
+    <!-- Events -->
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <span class="service-number">01</span>
+      <div class="service-title">Culinary Events</div>
+      <p class="service-body">
+        We plan and produce food events in Bali and beyond, from small dinner series to larger culinary festivals. Every event is built around Indonesian flavours, good storytelling, and the kind of hosting that makes guests feel genuinely welcome.
+      </p>
+      <a href="#contact" class="service-link">
+        Enquire
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
 
-<p class="body-text">
-  We are putting the finishing touches on something we are proud of. In the meantime, get in touch — we are already open for enquiries.
-</p>
+    <!-- Private Dining -->
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+        </svg>
+      </div>
+      <span class="service-number">02</span>
+      <div class="service-title">Private Dining</div>
+      <p class="service-body">
+        Yunic Dining is our private dining experience in Bali. Yuli and Nic soul cooking — Indonesian dishes rooted in memory and place, cooked together for small groups in intimate settings across Bali.
+      </p>
+      <a href="https://yunicdining.com" class="service-link" target="_blank">
+        Visit Yunic Dining
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
 
-<a href="mailto:hello@yunichospitality.com" class="contact-link">
-  Get in Touch
-</a>
+    <!-- Consulting -->
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <span class="service-number">03</span>
+      <div class="service-title">Culinary Consulting</div>
+      <p class="service-body">
+        We work with restaurants, hotels, and food businesses in Bali and across Indonesia, helping with menu development, concept creation, kitchen operations, and team training. If you want to do Indonesian food well and honestly, we can help with that.
+      </p>
+      <a href="#contact" class="service-link">
+        Let's Talk
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
 
-<div class="footer-mark">
-  <a href="https://yunicdining.com" target="_blank">yunicdining.com</a>
-  &nbsp;·&nbsp;
-  <a href="https://yunicshop.com" target="_blank">yunicshop.com</a>
-</div>
+    <!-- Culinary Journeys -->
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+      </div>
+      <span class="service-number">04</span>
+      <div class="service-title">Culinary Journeys</div>
+      <p class="service-body">
+        Join Nic on a small-group culinary journey through a specific city or province in Indonesia. Each trip explores local street food, markets, and restaurants together — eating, asking questions, and understanding the food from the inside. During the journey, Nic cooks one private dinner for the group using what was found along the way, and hosts one hands-on cooking class rooted in the flavours of that region.
+      </p>
+      <a href="#contact" class="service-link">
+        Join a Journey
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
 
+    <!-- Food Tours -->
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <path d="M3 12h18M3 6h18M3 18h12"/>
+          <circle cx="19" cy="18" r="2"/>
+          <path d="M17 18V9"/>
+        </svg>
+      </div>
+      <span class="service-number">05</span>
+      <div class="service-title">Bali Food Tours</div>
+      <p class="service-body">
+        Small-group food tours around Bali, led by Yuli and sometimes Nic. We visit the wet market and fish market in the early morning, walk through the stalls, talk about what we see, and end with a proper meal at a local warung. Other tours take you to farms we work with directly, finishing with babi guling or whatever is best that day. Or up to Kintamani to visit coffee farms and understand where the flavour actually starts. Real Bali, no tourist filter.
+      </p>
+      <a href="#contact" class="service-link">
+        Book a Tour
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Shop -->
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </div>
+      <span class="service-number">06</span>
+      <div class="service-title">Yunic Shop</div>
+      <p class="service-body">
+        A small, carefully chosen selection of Indonesian spices, pantry staples, and food products, things we actually use and believe in. Sourced from across the archipelago and available through Yunic Shop.
+      </p>
+      <a href="https://yunicshop.com" class="service-link" target="_blank">
+        Visit Yunic Shop
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 6h10M7 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVATE DINING FEATURE -->
+<section class="dining-section" id="dining">
+  <div class="dining-grid">
+    <div class="dining-text reveal">
+      <span class="section-eyebrow">Private Dining in Bali</span>
+      <h2 class="section-title">Yunic Dining —<br><em>Yuli & Nic, soul cooking</em></h2>
+      <div class="section-divider" style="margin-left:0; justify-content:flex-start; max-width:200px;">
+        <div class="sd-diamond" style="background:var(--saffron-light);"></div>
+        <div style="flex:1;height:1px;background:rgba(244,232,204,0.2);"></div>
+      </div>
+      <p class="section-body">
+        Yunic Dining is our private dining experience based in Bali. Chef Nic designs multi-course menus that draw on Indonesian ingredients and cooking traditions, shaped by his background in European technique. Yuli hosts — and she makes everyone feel at home from the first moment. Seats are limited. The food is personal. There is nothing quite like it in Bali.
+      </p>
+      <ul class="dining-features">
+        <li>Multi-course menus built around Indonesian ingredients and seasonal produce from Bali</li>
+        <li>Soul cooking by Yuli and Nic — Indonesian dishes rooted in memory, cooked with heart in intimate private settings</li>
+        <li>Wine pairings available — natural wines and Indonesian-friendly selections</li>
+        <li>Available for private occasions, corporate dinners, and small group experiences</li>
+        <li>Based in Bali, with select international dates throughout the year</li>
+      </ul>
+      <a href="https://yunicdining.com" class="btn-terra" target="_blank" style="margin-top:1rem; display:inline-block;">
+        Visit Yunic Dining
+      </a>
+    </div>
+    <div class="dining-visual reveal reveal-delay-2">
+      <div class="dining-img-stack">
+        <div class="dining-img main">
+          <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/market-main.png" alt="Indonesian market — Yunic Hospitality Bali">
+        </div>
+        <div class="dining-img accent">
+          <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/market.png" alt="Indonesian market — fresh ingredients for Yunic Dining Bali">
+        </div>
+        <span class="dining-label">Private Dining</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="team">
+  <div class="inner">
+    <span class="section-eyebrow reveal">The People Behind Yunic</span>
+    <h2 class="section-title reveal reveal-delay-1">A founder who knows<br>the food. A chef who <em>loves it.</em></h2>
+    <p class="section-body reveal reveal-delay-2" style="margin: 0 auto; text-align:center;">
+      Yunic Hospitality was built by two people with very different backgrounds and one shared obsession — Indonesian food and what it can mean for the people who taste it.
+    </p>
+
+    <div class="team-grid">
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-photo-wrap">
+          <img
+            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-portrait.png"
+            alt="Yuli — Founder & Owner, Yunic Hospitality Bali"
+            class="team-photo"
+          >
+        </div>
+        <div class="team-name">Yuli</div>
+        <div class="team-role">Founder & Owner</div>
+        <p class="team-bio">
+          Yuli grew up in Indonesia, surrounded by food that was cooked with care and eaten with family. She founded Yunic Hospitality to share that culture, not as a tourist version, but as it really is. She hosts every private dinner personally and makes sure every guest feels like they belong there.
+        </p>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-photo-wrap">
+          <img
+            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/nic-portrait.png"
+            alt="Nic — Executive Chef & Culinary Director, Yunic Hospitality Bali"
+            class="team-photo"
+          >
+        </div>
+        <div class="team-name">Nic</div>
+        <div class="team-role">Executive Chef & Culinary Director</div>
+        <p class="team-bio">
+          Nic has cooked in kitchens across Europe and Asia. At Yunic, he works with Indonesian ingredients and flavour traditions, not to replicate traditional dishes, but to understand them deeply and cook from that place honestly. The result is food that tastes like Indonesia, with a technique that makes every element count.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR CONCEPTS -->
+<section class="concepts-section" id="concepts">
+  <div class="inner">
+    <div class="concepts-header reveal">
+      <span class="section-eyebrow">The Yunic Family</span>
+      <h2 class="section-title">One idea,<br><em>three ways to experience it</em></h2>
+      <p class="section-body" style="margin: 0 auto;">
+        Yunic Hospitality is the parent brand behind three connected concepts, each one a different entry point into Indonesian food culture, all built around the same commitment to quality and honesty.
+      </p>
+    </div>
+
+    <div class="concepts-row reveal reveal-delay-1">
+      <div class="concept-item" style="background: rgba(184,82,42,0.04);">
+        <span class="concept-tag">You Are Here</span>
+        <div class="concept-name">Yunic Hospitality</div>
+        <p class="concept-desc">The main brand. We run culinary events, private dining, consulting, chef collaborations, and pop-up dinners, all rooted in Indonesian food and based in Bali.</p>
+        <span class="concept-arrow">→</span>
+      </div>
+      <div class="concept-item highlight">
+        <span class="concept-tag">Private Dining · Bali</span>
+        <div class="concept-name">Yunic Dining</div>
+        <p class="concept-desc">Multi-course private dining experiences in Bali. Indonesian ingredients, European technique, and genuine hospitality, cooked by Chef Nic, hosted by Yuli.</p>
+        <a href="https://yunicdining.com" target="_blank" class="concept-arrow" style="opacity:1; text-decoration:none; position:absolute; bottom:1.8rem; right:1.8rem;">→</a>
+      </div>
+      <div class="concept-item">
+        <span class="concept-tag">Indonesian Pantry</span>
+        <div class="concept-name">Yunic Shop</div>
+        <p class="concept-desc">Indonesian spices, cooking staples, and pantry products sourced from across the archipelago, for home cooks who want the real thing.</p>
+        <a href="https://yunicshop.com" target="_blank" class="concept-arrow" style="position:absolute; bottom:1.8rem; right:1.8rem; text-decoration:none; opacity:1;">→</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <span class="section-eyebrow reveal">Get in Touch</span>
+    <h2 class="section-title reveal reveal-delay-1">Tell us what<br>you're <em>thinking about</em></h2>
+    <p class="section-body reveal reveal-delay-2" style="margin: 0 auto; text-align:center;">
+      Whether you want to book a private dinner in Bali, talk about a collaboration, or find out what we can do for your restaurant or event — just send us a message. We'll get back to you personally.
+    </p>
+
+    <form class="contact-form reveal reveal-delay-3" onsubmit="handleForm(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-field">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <select>
+          <option value="" disabled selected>What are you interested in?</option>
+          <option>Private Dining in Bali</option>
+          <option>Culinary Event Production</option>
+          <option>Restaurant or Hotel Consulting</option>
+          <option>Chef Collaboration</option>
+          <option>Bali Food Tour</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <textarea placeholder="Tell us a bit about what you have in mind — dates, location, group size, or whatever is relevant…"></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-terra">Send Message</button>
+      </div>
+      <div id="formMsg" style="display:none; text-align:center; margin-top:1rem; font-family:var(--serif); font-style:italic; color:var(--terracotta);">
+        Thank you, Yuli or Nic will be in touch soon. ✦
+      </div>
+    </form>
+
+    <div class="contact-alt reveal">
+      <div class="contact-alt-item">
+        <span class="contact-alt-label">Email</span>
+        <a href="mailto:hello@yunichospitality.com" class="contact-alt-value">hello@yunichospitality.com</a>
+      </div>
+      <div class="contact-alt-item">
+        <span class="contact-alt-label">Based In</span>
+        <span class="contact-alt-value">Bali, Indonesia</span>
+      </div>
+      <div class="contact-alt-item">
+        <span class="contact-alt-label">Instagram</span>
+        <a href="https://instagram.com/yunichospitality" target="_blank" class="contact-alt-value">@yunichospitality</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-brand-name">Yunic Hospitality</span>
+      <span class="footer-brand-tagline">Indonesian Food Culture, Shared with the World</span>
+      <p class="footer-about">
+        Yunic Hospitality is a Bali-based culinary company founded by Yuli and led in the kitchen by Executive Chef Nic. We run private dining, culinary events, consulting, chef collaborations, and pop-up dinners, all rooted in the food and flavour of Indonesia.
+      </p>
+    </div>
+    <div>
+      <span class="footer-col-title">Navigate</span>
+      <ul class="footer-links">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#dining">Private Dining</a></li>
+        <li><a href="#team">The Team</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Our Brands</span>
+      <ul class="footer-links">
+        <li><a href="https://yunicdining.com" target="_blank">Yunic Dining</a></li>
+        <li><a href="https://yunicshop.com" target="_blank">Yunic Shop</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title">Connect</span>
+      <ul class="footer-links">
+        <li><a href="mailto:hello@yunichospitality.com">Email Us</a></li>
+        <li><a href="https://instagram.com/yunichospitality" target="_blank">Instagram</a></li>
+        <li><a href="#contact">Send an Enquiry</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Yunic Hospitality. All rights reserved.</span>
+    <div class="footer-domains">
+      <a href="https://yunichospitality.com">yunichospitality.com</a>
+      <a href="https://yunicdining.com">yunicdining.com</a>
+      <a href="https://yunicshop.com">yunicshop.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+}
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// Form
+function handleForm(e) {
+  e.preventDefault();
+  document.getElementById('formMsg').style.display = 'block';
+  e.target.querySelectorAll('input,select,textarea').forEach(f => f.value = '');
+}
+</script>
 </body>
 </html>
