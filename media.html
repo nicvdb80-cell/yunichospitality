@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Media — Yunic Hospitality</title>
+<meta name="description" content="Behind the scenes at Yunic Hospitality — pop-ups, people, places and events across Bali and Indonesia.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yunichospitality.com/media">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #F6F4EF; color: #344147; font-family: 'DM Sans', sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+.cg { font-family: 'Cormorant SC', serif; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(246,244,239,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(52,65,71,0.1);
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 6vw;
+}
+.nav-back {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: #344147;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: color 200ms;
+}
+.nav-back:hover { color: #A48760; }
+.nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
+.nav-title { font-family: 'Cormorant SC', serif; font-size: 18px; font-weight: 400; color: #1F2C32; letter-spacing: 0.08em; }
+
+/* ── HERO STRIP ── */
+.media-hero {
+  padding: 56px 6vw 40px;
+  border-bottom: 1px solid rgba(52,65,71,0.1);
+}
+.media-eyebrow {
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: #A48760; margin-bottom: 16px;
+}
+.media-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 300; color: #1F2C32;
+  letter-spacing: -0.01em; line-height: 1.05;
+  margin-bottom: 20px;
+}
+.media-sub {
+  font-size: 14px; font-weight: 300; color: #6B7A82;
+  max-width: 52ch; line-height: 1.7;
+}
+
+/* ── FILTER TABS ── */
+.filter-bar {
+  display: flex; gap: 0;
+  padding: 0 6vw;
+  border-bottom: 1px solid rgba(52,65,71,0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+.filter-btn {
+  flex-shrink: 0;
+  padding: 18px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #6B7A82; background: none; border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer; transition: all 200ms;
+  white-space: nowrap;
+}
+.filter-btn:hover { color: #1F2C32; }
+.filter-btn.active { color: #1F2C32; border-bottom-color: #A48760; }
+
+/* ── GRID ── */
+.media-grid {
+  padding: 40px 6vw 80px;
+  columns: 3;
+  column-gap: 16px;
+}
+@media (max-width: 900px) { .media-grid { columns: 2; } }
+@media (max-width: 540px) { .media-grid { columns: 1; } }
+
+.media-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+.media-item img {
+  width: 100%; display: block;
+  transition: transform 500ms ease;
+}
+.media-item:hover img { transform: scale(1.03); }
+.media-item-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(31,44,50,0.7) 0%, transparent 50%);
+  opacity: 0; transition: opacity 300ms;
+  display: flex; align-items: flex-end; padding: 16px;
+}
+.media-item:hover .media-item-overlay { opacity: 1; }
+.media-item-label {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(246,244,239,0.85);
+}
+
+/* Placeholder tiles */
+.media-placeholder {
+  background: rgba(52,65,71,0.06);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 10px;
+  color: rgba(52,65,71,0.3);
+  cursor: default;
+}
+.media-placeholder svg { width: 28px; height: 28px; stroke: currentColor; fill: none; opacity: 0.4; }
+.media-placeholder span { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; }
+
+/* ── LIGHTBOX ── */
+#lightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(10,12,14,0.95);
+  align-items: center; justify-content: center;
+}
+#lightbox.open { display: flex; }
+#lightbox img {
+  max-width: 90vw; max-height: 90vh;
+  object-fit: contain; border-radius: 2px;
+}
+.lb-close {
+  position: absolute; top: 24px; right: 28px;
+  font-size: 28px; color: rgba(246,244,239,0.6);
+  cursor: pointer; background: none; border: none;
+  transition: color 200ms; line-height: 1;
+}
+.lb-close:hover { color: #F6F4EF; }
+.lb-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: none;
+  color: rgba(246,244,239,0.5); font-size: 32px;
+  cursor: pointer; padding: 16px;
+  transition: color 200ms;
+}
+.lb-arrow:hover { color: #F6F4EF; }
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+.lb-caption {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(246,244,239,0.45); white-space: nowrap;
+}
+
+/* ── FOOTER ── */
+.media-footer {
+  border-top: 1px solid rgba(52,65,71,0.1);
+  padding: 28px 6vw;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(52,65,71,0.4); flex-wrap: wrap; gap: 12px;
+}
+.media-footer a { color: #A48760; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-back">
+    <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back
+  </a>
+  <span class="nav-title">Yunic Hospitality</span>
+  <a href="/#contact" style="text-decoration:none;font-size:10px;letter-spacing:0.16em;color:#344147;">PLAN AN EXPERIENCE&nbsp;↗</a>
+</nav>
+
+<!-- HERO -->
+<div class="media-hero">
+  <div class="media-eyebrow">Yunic Hospitality</div>
+  <h1 class="media-title">Behind the table.</h1>
+  <p class="media-sub">Pop-ups, people, places and events. A look at what we do and where we do it.</p>
+</div>
+
+<!-- FILTER TABS -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterGrid('all', this)">All</button>
+  <button class="filter-btn" onclick="filterGrid('people', this)">People</button>
+  <button class="filter-btn" onclick="filterGrid('places', this)">Places</button>
+  <button class="filter-btn" onclick="filterGrid('events', this)">Events</button>
+</div>
+
+<!-- GRID -->
+<div class="media-grid" id="mediaGrid">
+
+  <!-- PLACEHOLDER TILES — replace src="" with real image paths when ready -->
+  <!-- Each item has data-cat for filtering and data-label for lightbox caption -->
+
+  <!-- People -->
+  <div class="media-item" data-cat="people" data-label="People · Yunic Hospitality" data-src="" onclick="openLb(this)" style="aspect-ratio:4/5;">
+    <div class="media-placeholder" style="height:300px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>People</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">People</span></div>
+  </div>
+
+  <!-- Places -->
+  <div class="media-item" data-cat="places" data-label="Places · Yunic Hospitality" data-src="" onclick="openLb(this)" style="aspect-ratio:3/4;">
+    <div class="media-placeholder" style="height:360px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Places</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Places</span></div>
+  </div>
+
+  <!-- Events -->
+  <div class="media-item" data-cat="events" data-label="Events · Yunic Hospitality" data-src="" onclick="openLb(this)" style="aspect-ratio:1/1;">
+    <div class="media-placeholder" style="height:280px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Events</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Events</span></div>
+  </div>
+
+  <!-- People 2 -->
+  <div class="media-item" data-cat="people" data-label="People · Yunic Hospitality" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:340px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>People</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">People</span></div>
+  </div>
+
+  <!-- Places 2 -->
+  <div class="media-item" data-cat="places" data-label="Places · Yunic Hospitality" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:260px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Places</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Places</span></div>
+  </div>
+
+  <!-- Events 2 -->
+  <div class="media-item" data-cat="events" data-label="Events · Yunic Hospitality" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:320px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Events</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Events</span></div>
+  </div>
+
+  <!-- People 3 -->
+  <div class="media-item" data-cat="people" data-label="People · Yunic Hospitality" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:290px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>People</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">People</span></div>
+  </div>
+
+  <!-- Places 3 -->
+  <div class="media-item" data-cat="places" data-label="Places · Bali" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:380px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span>Places</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Places · Bali</span></div>
+  </div>
+
+  <!-- Events 3 -->
+  <div class="media-item" data-cat="events" data-label="Pop-up · Yunic Hospitality" data-src="" onclick="openLb(this)">
+    <div class="media-placeholder" style="height:310px;">
+      <svg viewBox="0 0 24 24" stroke-width="1"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Pop-up Event</span>
+    </div>
+    <div class="media-item-overlay"><span class="media-item-label">Pop-up Event</span></div>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLb(event)">
+  <button class="lb-close" onclick="closeLb()">×</button>
+  <button class="lb-arrow lb-prev" onclick="lbNav(-1,event)">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" onclick="lbNav(1,event)">›</button>
+  <span class="lb-caption" id="lbCaption"></span>
+</div>
+
+<!-- FOOTER -->
+<div class="media-footer">
+  <span>© 2026 Yunic Hospitality</span>
+  <a href="/">yunichospitality.com</a>
+</div>
+
+<script>
+// ── FILTER ──
+function filterGrid(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.media-item').forEach(function(item) {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// ── LIGHTBOX ──
+var lbItems = [];
+var lbIndex = 0;
+
+function openLb(el) {
+  var src = el.dataset.src;
+  if (!src) return; // placeholder — no image yet
+  lbItems = Array.from(document.querySelectorAll('.media-item[data-src]'))
+    .filter(function(i){ return i.style.display !== 'none' && i.dataset.src; });
+  lbIndex = lbItems.indexOf(el);
+  showLb();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLb() {
+  document.getElementById('lbImg').src = lbItems[lbIndex].dataset.src;
+  document.getElementById('lbCaption').textContent = lbItems[lbIndex].dataset.label || '';
+}
+
+function lbNav(dir, e) {
+  if (e) e.stopPropagation();
+  lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length;
+  showLb();
+}
+
+function closeLb(e) {
+  if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lb-close')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  var lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft')  lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
+</script>
+
+</body>
+</html>
