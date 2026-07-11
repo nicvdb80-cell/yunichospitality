@@ -1,6 +1,10 @@
 {
   "routes": [
-    { "src": "/media", "dest": "/media.html" },
-    { "src": "/", "dest": "/index.html" }
+    { "src": "/private-chef",   "dest": "/private-chef.html"   },
+    { "src": "/dive-and-dine",  "dest": "/dive-and-dine.html"  },
+    { "src": "/private-dinner", "dest": "/private-dinner.html" },
+    { "src": "/consulting",     "dest": "/consulting.html"     },
+    { "src": "/media",          "dest": "/media.html"          },
+    { "src": "/",               "dest": "/index.html"          }
   ]
 }
