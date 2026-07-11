@@ -1,2178 +1,2335 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
+"use strict";
+(() => {
+  var __defProp = Object.defineProperty;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+  var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 
-<!-- ═══ PRIMARY SEO ═══ -->
-<title>Yunic Hospitality — Private Dining, Culinary Events & Consulting in Bali</title>
-<meta name="description" content="Yunic Hospitality is a Bali-based culinary company offering private dining, Indonesian culinary events, restaurant consulting, chef collaborations, pop-up dinners, food tours, and culinary journeys across the Indonesian archipelago.">
-<meta name="keywords" content="private dining Bali, culinary events Bali, Indonesian food experience, culinary consulting Bali, pop-up dinner Bali, chef collaboration Indonesia, Bali food tour, Yunic Hospitality, Indonesian cuisine Bali, Yunic Dining">
-<link rel="canonical" href="https://yunichospitality.com/">
+  // src/react.ts
+  function getReact() {
+    const R = window.React;
+    if (!R) throw new Error("dc-runtime: window.React is not available yet");
+    return R;
+  }
+  function getReactDOM() {
+    const RD = window.ReactDOM;
+    if (!RD) throw new Error("dc-runtime: window.ReactDOM is not available yet");
+    return RD;
+  }
+  var h = ((...args) => getReact().createElement(
+    ...args
+  ));
 
-<!-- ═══ GEO / LOCAL SEO ═══ -->
-<meta name="geo.region" content="ID-BA">
-<meta name="geo.placename" content="Bali, Indonesia">
-<meta name="geo.position" content="-8.4095;115.1889">
-<meta name="ICBM" content="-8.4095, 115.1889">
-<meta name="language" content="English">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="Yunic Hospitality">
-<meta name="copyright" content="© 2026 Yunic Hospitality">
-
-<!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp previews) ═══ -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yunichospitality.com/">
-<meta property="og:site_name" content="Yunic Hospitality">
-<meta property="og:title" content="Yunic Hospitality — Private Dining, Culinary Events & Consulting in Bali">
-<meta property="og:description" content="A Bali-based hospitality company sharing Indonesian food culture through private dining, culinary events, consulting, chef collaborations, and pop-up dinners.">
-<meta property="og:image" content="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Yuli and Nic — Founders of Yunic Hospitality, Bali">
-<meta property="og:locale" content="en_US">
-
-<!-- ═══ TWITTER / X CARD ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@yunichospitality">
-<meta name="twitter:title" content="Yunic Hospitality — Private Dining & Culinary Events in Bali">
-<meta name="twitter:description" content="Indonesian food culture shared through private dining, culinary events, consulting, and pop-ups in Bali.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png">
-<meta name="twitter:image:alt" content="Yunic Hospitality — Bali">
-
-<!-- ═══ JSON-LD STRUCTURED DATA (AEO / GEO) ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://yunichospitality.com/#organization",
-      "name": "Yunic Hospitality",
-      "url": "https://yunichospitality.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png",
-        "width": 400,
-        "height": 400
-      },
-      "description": "Yunic Hospitality is a Bali-based culinary company offering private dining, culinary events, consulting, chef collaborations, pop-up dinners, food tours, and culinary journeys rooted in Indonesian food culture.",
-      "foundingDate": "2026",
-      "founder": [
-        {
-          "@type": "Person",
-          "name": "Yuli",
-          "jobTitle": "Founder & Owner",
-          "worksFor": { "@id": "https://yunichospitality.com/#organization" }
-        },
-        {
-          "@type": "Person",
-          "name": "Nic",
-          "jobTitle": "Culinary Director",
-          "worksFor": { "@id": "https://yunichospitality.com/#organization" }
-        }
-      ],
-      "email": "yunicdining@gmail.com",
-      "telephone": "+6281994807407",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bali",
-        "addressCountry": "ID",
-        "addressRegion": "Bali"
-      },
-      "areaServed": [
-        { "@type": "Country", "name": "Indonesia" },
-        { "@type": "Place", "name": "Bali" }
-      ],
-      "sameAs": [
-        "https://instagram.com/yunichospitality",
-        "https://yunicdining.com",
-        "https://yunicshop.com"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Yunic Hospitality Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Private Dining in Bali",
-              "description": "Multi-course private dining experiences in Bali featuring Indonesian ingredients and European technique, cooked by Chef Nic and hosted by Yuli.",
-              "url": "https://yunicdining.com"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Culinary Events",
-              "description": "Planning and production of food events in Bali and beyond, from intimate dinner series to larger culinary festivals rooted in Indonesian flavours."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Culinary Consulting",
-              "description": "Menu development, concept creation, kitchen operations, and team training for restaurants, hotels, and food businesses in Bali and Indonesia."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Chef Collaborations & Pop-Up Dinners",
-              "description": "Creative chef collaborations and pop-up dining experiences celebrating Indonesian food culture in Bali and internationally."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dive &amp; Dine",
-              "description": "Dive & Dine is a Yunic concept for divers who appreciate good food, connecting dive operators and local restaurants across the Indonesian archipelago."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Bali Food Tours",
-              "description": "Small-group food tours around Bali led by Yuli, visiting wet markets, fish markets, farms, and local warungs."
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://yunichospitality.com/#localbusiness",
-      "name": "Yunic Hospitality",
-      "image": "https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png",
-      "url": "https://yunichospitality.com",
-      "telephone": "+6281994807407",
-      "email": "yunicdining@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bali",
-        "addressCountry": "ID",
-        "addressRegion": "Bali"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -8.4095,
-        "longitude": 115.1889
-      },
-      "priceRange": "$$$$",
-      "servesCuisine": ["Indonesian", "Modern Indonesian", "Archipelago"],
-      "currenciesAccepted": "IDR, USD",
-      "paymentAccepted": "Cash, Bank Transfer",
-      "openingHours": "Mo-Su 09:00-21:00",
-      "hasMap": "https://maps.google.com/?q=Bali,Indonesia",
-      "parentOrganization": { "@id": "https://yunichospitality.com/#organization" }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://yunichospitality.com/#website",
-      "url": "https://yunichospitality.com",
-      "name": "Yunic Hospitality",
-      "description": "Bali-based culinary company sharing Indonesian food culture through private dining, events, consulting, and collaborations.",
-      "publisher": { "@id": "https://yunichospitality.com/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://yunichospitality.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://yunichospitality.com/#webpage",
-      "url": "https://yunichospitality.com",
-      "name": "Yunic Hospitality — Private Dining, Culinary Events & Consulting in Bali",
-      "description": "Yunic Hospitality is a Bali-based culinary company offering private dining, Indonesian culinary events, restaurant consulting, chef collaborations, pop-up dinners, food tours, and culinary journeys.",
-      "isPartOf": { "@id": "https://yunichospitality.com/#website" },
-      "about": { "@id": "https://yunichospitality.com/#organization" },
-      "datePublished": "2026-01-01",
-      "dateModified": "2026-06-07",
-      "inLanguage": "en-US",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://yunichospitality.com"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does Yunic Hospitality do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yunic Hospitality is a Bali-based culinary company that offers private dining experiences, culinary event production, restaurant and hotel consulting, chef collaborations, pop-up dinners, Bali food tours, and culinary journeys through Indonesia — all rooted in Indonesian food culture."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Yunic Hospitality based?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yunic Hospitality is based in Bali, Indonesia. We operate across Bali and Indonesia, with select international pop-up dates throughout the year."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I book a private dining experience with Yunic in Bali?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can enquire about private dining in Bali through yunichospitality.com or by visiting yunicdining.com. You can also reach us by email at yunicdining@gmail.com or via WhatsApp at +6281994807407."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Yunic Hospitality offer culinary consulting for restaurants and hotels in Bali?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Yunic Hospitality provides culinary consulting for restaurants, hotels, and food businesses in Bali and across Indonesia, including menu development, concept creation, kitchen operations, and team training."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who are the founders of Yunic Hospitality?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yunic Hospitality was founded by Yuli, an Indonesian who grew up surrounded by the food traditions of the archipelago, and is led in the kitchen by Culinary Director Nic, whose cooking career spans Europe and Asia. Together they share Indonesian food culture through honest, personal hospitality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What kind of food does Yunic serve at private dining events?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yunic Dining serves multi-course menus built around Indonesian ingredients and seasonal produce from Bali. Chef Nic combines Indonesian flavour traditions with European technique to create food that is deeply rooted in the archipelago yet refined and personal."
-          }
-        }
-      ]
+  // src/parse.ts
+  function parseDcDocument(doc) {
+    const dc = doc.querySelector("x-dc");
+    if (!dc) return null;
+    const scriptEl = doc.querySelector("script[data-dc-script]");
+    const { props, preview } = parseDataProps(
+      scriptEl?.getAttribute("data-props") ?? null
+    );
+    return {
+      template: dc.innerHTML,
+      js: scriptEl ? scriptEl.textContent || "" : "",
+      props,
+      preview
+    };
+  }
+  function parseDcText(src) {
+    const openMatch = /<x-dc(?:\s[^>]*)?>/.exec(src);
+    if (!openMatch) return null;
+    const close = src.lastIndexOf("</x-dc>");
+    if (close === -1 || close < openMatch.index) return null;
+    const template = src.slice(openMatch.index + openMatch[0].length, close);
+    const doc = new DOMParser().parseFromString(src, "text/html");
+    const scriptEl = doc.querySelector("script[data-dc-script]");
+    const { props, preview } = parseDataProps(
+      scriptEl?.getAttribute("data-props") ?? null
+    );
+    return {
+      template,
+      js: scriptEl ? scriptEl.textContent || "" : "",
+      props,
+      preview
+    };
+  }
+  function parseDataProps(raw) {
+    if (!raw) return { props: null, preview: null };
+    let parsed;
+    try {
+      parsed = JSON.parse(raw);
+    } catch {
+      return { props: null, preview: null };
     }
-  ]
-}
-</script>
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return { props: null, preview: null };
+    }
+    const obj = parsed;
+    const preview = obj.$preview && typeof obj.$preview === "object" ? obj.$preview : null;
+    const rest = {};
+    for (const k of Object.keys(obj)) {
+      if (k[0] !== "$") rest[k] = obj[k];
+    }
+    return { props: Object.keys(rest).length ? rest : null, preview };
+  }
+  function dcNameFromPath(pathname) {
+    let p = pathname || "";
+    try {
+      p = decodeURIComponent(p);
+    } catch {
+    }
+    const base = p.split("/").pop() || "Root";
+    return base.replace(/\.dc\.html$/, "").replace(/\.html?$/, "") || "Root";
+  }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  // src/boot.ts
+  var BASE_CSS = `
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts \u2014 keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  `;
+  var FULL_PAGE_CSS = "html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}";
+  function rootNameForDocument(doc, loc) {
+    let bootPath = loc.pathname || "";
+    if (!/\.dc\.html?$/i.test(safeDecode(bootPath))) {
+      try {
+        bootPath = new URL(doc.baseURI || "/").pathname;
+      } catch {
+      }
+    }
+    return dcNameFromPath(bootPath);
+  }
+  function safeDecode(s) {
+    try {
+      return decodeURIComponent(s);
+    } catch {
+      return s;
+    }
+  }
+  function boot(runtime, doc = document) {
+    const parsed = parseDcDocument(doc);
+    if (!parsed) return null;
+    const React = getReact();
+    const rootName = rootNameForDocument(doc, location);
+    runtime.markFetched(rootName);
+    runtime.setRootName(rootName);
+    runtime.adoptParsed(rootName, parsed);
+    if (!window.__resources) {
+      fetch(location.href).then((res) => res.ok ? res.text() : "").then((t) => {
+        const raw = t ? parseDcText(t) : null;
+        if (raw?.template) runtime.updateHtml(rootName, raw.template);
+      }).catch(() => {
+      });
+    }
+    const dc = doc.querySelector("x-dc");
+    const hostEl = doc.createElement("div");
+    hostEl.id = "dc-root";
+    dc.replaceWith(hostEl);
+    if (!parsed.preview) {
+      const s = doc.createElement("style");
+      s.textContent = FULL_PAGE_CSS;
+      doc.head.appendChild(s);
+    }
+    const Root = runtime.getDC(rootName);
+    const entry = runtime.registry.get(rootName);
+    function StandaloneRoot() {
+      const [, setTick] = React.useState(0);
+      React.useEffect(() => {
+        const sub = () => setTick((n) => n + 1);
+        entry.subs.add(sub);
+        return () => {
+          entry.subs.delete(sub);
+        };
+      }, []);
+      const defaults = React.useMemo(() => {
+        const d = {};
+        for (const k in entry.propsMeta || {}) {
+          const v = entry.propsMeta?.[k]?.default;
+          if (v !== void 0) d[k] = v;
+        }
+        return d;
+      }, [entry.propsMeta]);
+      return h(Root, { ...defaults, ...entry.propOverrides || {} });
+    }
+    const ReactDOM = getReactDOM();
+    if (ReactDOM.createRoot)
+      ReactDOM.createRoot(hostEl).render(h(StandaloneRoot));
+    else ReactDOM.render(h(StandaloneRoot), hostEl);
+    return rootName;
+  }
 
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  // src/expr.ts
+  var IDENT_RE = /^[A-Za-z_$][A-Za-z0-9_$]*/;
+  var NUMBER_RE = /^-?\d+(\.\d+)?$/;
+  function resolve(vals, src) {
+    const expr = String(src).trim();
+    if (!expr) return void 0;
+    if (expr[0] === "(" && expr[expr.length - 1] === ")" && parensWrapWhole(expr)) {
+      return resolve(vals, expr.slice(1, -1));
+    }
+    const eq = findTopLevelEquality(expr);
+    if (eq) {
+      const lv = resolve(vals, expr.slice(0, eq.index));
+      const rv = resolve(vals, expr.slice(eq.index + eq.op.length));
+      switch (eq.op) {
+        case "===":
+          return lv === rv;
+        case "!==":
+          return lv !== rv;
+        case "==":
+          return lv == rv;
+        default:
+          return lv != rv;
+      }
+    }
+    if (expr[0] === "!") return !resolve(vals, expr.slice(1));
+    if (expr === "true") return true;
+    if (expr === "false") return false;
+    if (expr === "null") return null;
+    if (expr === "undefined") return void 0;
+    if (NUMBER_RE.test(expr)) return Number(expr);
+    if (expr.length >= 2 && (expr[0] === '"' || expr[0] === "'") && expr[expr.length - 1] === expr[0]) {
+      return expr.slice(1, -1);
+    }
+    return resolvePath(vals, expr);
+  }
+  function parensWrapWhole(expr) {
+    let depth = 0;
+    for (let i = 0; i < expr.length - 1; i++) {
+      if (expr[i] === "(") depth++;
+      else if (expr[i] === ")") {
+        depth--;
+        if (depth === 0) return false;
+      }
+    }
+    return true;
+  }
+  function findTopLevelEquality(expr) {
+    let depth = 0;
+    for (let i = 0; i < expr.length; i++) {
+      const c = expr[i];
+      if (c === "[" || c === "(") depth++;
+      else if (c === "]" || c === ")") depth--;
+      else if (depth === 0 && (c === "=" || c === "!") && expr[i + 1] === "=") {
+        if (i > 0 && (expr[i - 1] === "=" || expr[i - 1] === "!")) continue;
+        if (!expr.slice(0, i).trim()) continue;
+        const op = expr[i + 2] === "=" ? c + "==" : c + "=";
+        return { index: i, op };
+      }
+    }
+    return null;
+  }
+  function resolvePath(vals, expr) {
+    const head = expr.match(IDENT_RE);
+    if (!head) return void 0;
+    let cur = vals == null ? void 0 : vals[head[0]];
+    let i = head[0].length;
+    while (i < expr.length) {
+      if (expr[i] === ".") {
+        const m = expr.slice(i + 1).match(IDENT_RE) || expr.slice(i + 1).match(/^\d+/);
+        if (!m) return void 0;
+        cur = cur == null ? void 0 : cur[m[0]];
+        i += 1 + m[0].length;
+      } else if (expr[i] === "[") {
+        let depth = 1;
+        let j = i + 1;
+        while (j < expr.length && depth > 0) {
+          if (expr[j] === "[") depth++;
+          else if (expr[j] === "]") {
+            depth--;
+            if (depth === 0) break;
+          }
+          j++;
+        }
+        if (depth !== 0) return void 0;
+        const key = resolve(vals, expr.slice(i + 1, j));
+        cur = cur == null ? void 0 : cur[key];
+        i = j + 1;
+      } else {
+        return void 0;
+      }
+    }
+    return cur;
+  }
 
-:root {
-  --parchment:      #F5F0E6;
-  --parchment-mid:  #EDE8DA;
-  --parchment-dark: #D5CFC2;
-  --terracotta:     #0D2C22;
-  --terra-light:    #1A4535;
-  --terra-pale:     #C8DDD7;
-  --saffron:        #A3704C;
-  --saffron-light:  #C4936A;
-  --green:          #0D2C22;
-  --green-light:    #2A6650;
-  --green-pale:     #E8F0ED;
-  --brown:          #0A0A08;
-  --brown-mid:      #1A1A18;
-  --brown-muted:    #6B6860;
-  --cream-text:     #0D0D0B;
-  --serif:          'Cormorant Garamond', Georgia, serif;
-  --cormorant:      'Cormorant Garamond', Georgia, serif;
-  --sans:           'Plus Jakarta Sans', system-ui, sans-serif;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--parchment);
-  color: var(--cream-text);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.75;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-body::before { display: none; }
-
-/* ========== ANIMATIONS ========== */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.4; transform: scaleY(0.8); }
-  50%       { opacity: 1;   transform: scaleY(1); }
-}
-@keyframes drift {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-8px); }
-}
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-/* ========== NAV ========== */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 200;
-  background: rgba(245,240,230,0.97);
-  border-bottom: 1px solid var(--parchment-dark);
-  padding: 0 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 68px;
-  transition: box-shadow 0.3s;
-  backdrop-filter: blur(10px);
-}
-nav.scrolled { box-shadow: 0 2px 24px rgba(13,44,34,0.1); }
-
-.nav-logo {
-  text-decoration: none;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  line-height: 1.1;
-}
-.nav-logo-img {
-  height: 46px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-.nav-logo-wordmark {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--brown);
-  letter-spacing: 0.05em;
-}
-.nav-logo-sub {
-  font-family: var(--cormorant);
-  font-size: 0.52rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--saffron);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0;
-}
-.nav-links a {
-  display: block;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brown-muted);
-  text-decoration: none;
-  font-weight: 400;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-.nav-links a:hover { color: var(--terracotta); }
-
-.nav-cta {
-  background: var(--terracotta);
-  color: var(--parchment) !important;
-  padding: 0.48rem 1.15rem !important;
-  border-radius: 2px;
-  font-weight: 700 !important;
-  transition: background 0.2s !important;
-}
-.nav-cta:hover { background: var(--terra-light) !important; }
-
-.hamburger {
-  display: flex !important;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 9px 12px;
-  background: #1C3A2A;
-  border: none;
-  border-radius: 4px;
-  z-index: 210;
-  flex-shrink: 0;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #F5F0E6;
-  border-radius: 1px;
-  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  transform-origin: center;
-}
-
-/* ========== BATIK DIVIDER ========== */
-.batik-divider {
-  width: 100%;
-  height: 1px;
-  background: #000000;
-  margin: 0.5rem 0;
-  opacity: 0.12;
-}
-
-.section-divider {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 2.5rem auto;
-  max-width: 280px;
-  justify-content: center;
-}
-.section-divider::before, .section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--parchment-dark));
-}
-.section-divider::after { background: linear-gradient(to left, transparent, var(--parchment-dark)); }
-.sd-diamond {
-  width: 5px; height: 5px;
-  background: var(--saffron);
-  transform: rotate(45deg);
-  flex-shrink: 0;
-}
-
-/* ========== HERO ========== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 9rem 6vw 6rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url("https://raw.githubusercontent.com/nicvdb80-cell/yunicdining/main/assets/img10.png") center center / cover no-repeat;
-  opacity: 0.88;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(245,240,232,0.12) 0%,
-    rgba(245,240,232,0.04) 40%,
-    rgba(245,240,232,0.30) 100%
+  // src/encode.ts
+  var CAMEL_ATTR = "sc-camel-";
+  var INLINE_TEXT_TAGS = new Set(
+    "a abbr b bdi bdo br cite code del dfn em i ins kbd mark q s samp small span strike strong sub sup u var wbr".split(
+      " "
+    )
   );
-}
-
-.hero-content { position: relative; z-index: 2; }
-
-.hero-brand-mark {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 2rem;
-  animation: fadeUp 0.8s ease both;
-}
-.hero-brand-mark-line {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, transparent, var(--saffron), transparent);
-  animation: drift 3s ease-in-out infinite;
-}
-.hero-eyebrow {
-  font-size: 0.6rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: rgba(245,240,230,0.45);
-  font-weight: 500;
-  font-family: var(--sans);
-}
-
-.hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(3.4rem, 9vw, 7rem);
-  font-weight: 700;
-  line-height: 1.0;
-  color: var(--parchment);
-  margin-bottom: 0.3rem;
-  animation: fadeUp 1s 0.1s ease both;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.4);
-}
-
-.hero h1 em {
-  font-style: normal;
-  font-style: italic;
-  color: var(--saffron-light);
-  font-weight: 300;
-}
-
-.hero-hospitality {
-  font-family: var(--cormorant);
-  font-style: normal;
-  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-  color: rgba(245,240,230,0.45);
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  display: block;
-  animation: fadeUp 1s 0.2s ease both;
-}
-
-.hero-tagline {
-  font-size: 1rem;
-  color: rgba(245,240,230,0.65);
-  max-width: 52ch;
-  margin: 0 auto 2.5rem;
-  font-weight: 300;
-  line-height: 1.85;
-  animation: fadeUp 1s 0.35s ease both;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeUp 1s 0.5s ease both;
-}
-
-.btn-terra {
-  background: var(--parchment);
-  color: var(--cream-text);
-  padding: 0.9rem 2.4rem;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1.5px solid var(--saffron);
-  border-radius: 0;
-  transition: all 0.2s;
-  display: inline-block;
-}
-.btn-terra:hover { background: var(--saffron-light); border-color: var(--saffron-light); }
-
-.btn-outline {
-  background: transparent;
-  color: rgba(245,240,230,0.75);
-  padding: 0.9rem 2.4rem;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1.5px solid rgba(245,240,230,0.25);
-  border-radius: 0;
-  transition: all 0.2s;
-  display: inline-block;
-}
-.btn-outline:hover { border-color: rgba(245,240,230,0.5); color: var(--parchment); }
-
-.hero-scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--brown-muted);
-  animation: fadeUp 1s 0.9s ease both;
-  z-index: 2;
-}
-.hero-scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--saffron-light), transparent);
-  animation: scrollPulse 2.4s ease-in-out infinite;
-}
-
-/* ========== BRAND IDENTITY STRIP ========== */
-.identity-strip {
-  background: #000000;
-  padding: 4.5rem 6vw;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.identity-strip::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: none;
-}
-
-.identity-strip-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
-
-.identity-strip blockquote {
-  font-family: var(--cormorant);
-  font-style: normal;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  color: #ffffff;
-  font-weight: 300;
-  line-height: 1.75;
-  letter-spacing: 0.08em;
-  margin-bottom: 2rem;
-}
-.identity-strip blockquote em {
-  font-style: normal;
-  color: #ffffff;
-  color: var(--saffron-light);
-}
-
-.identity-strip-meta {
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(245,240,230,0.25);
-  font-family: var(--sans);
-}
-
-/* ========== SECTION COMMONS ========== */
-section { padding: 6rem 6vw; position: relative; }
-.inner { max-width: 1100px; margin: 0 auto; }
-
-.section-eyebrow {
-  font-size: 0.58rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: var(--saffron);
-  margin-bottom: 0.8rem;
-  display: block;
-  font-weight: 600;
-  font-family: var(--sans);
-}
-.section-title {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--terracotta);
-  line-height: 1.08;
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.01em;
-}
-.section-title em { font-style: normal; font-style: italic; color: var(--saffron); font-weight: 300; }
-.section-body {
-  font-size: 0.95rem;
-  color: var(--brown-muted);
-  max-width: 58ch;
-  line-height: 1.9;
-}
-
-/* ========== ABOUT / WHO WE ARE ========== */
-.about-section {
-  background: var(--parchment);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.about-visual { position: relative; }
-
-.about-portrait-frame {
-  position: relative;
-  display: inline-block;
-}
-
-.about-portrait-frame::before {
-  content: '';
-  position: absolute;
-  top: -8px; left: -8px;
-  right: 8px; bottom: 8px;
-  border: 1px solid rgba(163,112,76,0.4);
-  z-index: 0;
-}
-.about-portrait-frame::after {
-  display: none;
-}
-
-.about-portrait-img {
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 1;
-  border-radius: 2px;
-  background: var(--parchment-mid);
-}
-
-.about-badge {
-  position: absolute;
-  bottom: -1.5rem;
-  right: -1.5rem;
-  z-index: 2;
-  background: var(--terracotta);
-  color: var(--parchment);
-  padding: 1.2rem 1.4rem;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(13,44,34,0.2);
-}
-.about-badge-num {
-  font-family: var(--serif);
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--saffron-light);
-  display: block;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-.about-badge-label {
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(245,240,230,0.45);
-  margin-top: 0.3rem;
-  display: block;
-  font-family: var(--sans);
-}
-
-.about-text p { color: var(--brown-muted); margin-bottom: 1.2rem; line-height: 1.9; font-size: 0.95rem; }
-.about-text p strong { color: var(--brown); font-weight: 600; }
-
-.about-signature {
-  font-family: var(--cormorant);
-  font-style: normal;
-  font-size: 1.1rem;
-  color: var(--terracotta);
-  margin-top: 1.5rem;
-  display: block;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
-.about-sig-title {
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--brown-muted);
-  margin-top: 0.2rem;
-  display: block;
-  font-family: var(--sans);
-}
-
-/* ========== WHAT WE DO ========== */
-.services-section {
-  background: var(--parchment-mid);
-  padding: 6rem 8vw !important;
-}
-
-.services-header { text-align: center; margin-bottom: 4rem; }
-.services-header .section-body { margin: 0 auto; }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: rgba(244,232,204,0.92);
-  border: 1px solid rgba(140,104,72,0.18);
-  border-radius: 4px;
-  padding: 2.2rem 1.8rem;
-  transition: transform 0.25s, box-shadow 0.25s;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  color: inherit;
-}
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--saffron), var(--saffron-light));
-  opacity: 0;
-  transition: opacity 0.25s;
-}
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(46,26,8,0.12); }
-.service-card:hover::before { opacity: 1; }
-
-.service-icon {
-  width: 54px; height: 54px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--terra-pale), var(--parchment-mid));
-  border: 1px solid rgba(184,82,42,0.2);
-  margin-bottom: 1.3rem;
-}
-.service-icon svg { width: 26px; height: 26px; }
-
-.service-number {
-  font-family: var(--cormorant);
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: rgba(184,82,42,0.1);
-  position: absolute;
-  top: 1rem; right: 1.5rem;
-  line-height: 1;
-  font-style: italic;
-}
-
-.service-title {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--brown);
-  margin-bottom: 0.5rem;
-}
-.service-body {
-  font-size: 0.88rem;
-  color: var(--brown-muted);
-  line-height: 1.75;
-}
-
-.service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 1.2rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--terracotta);
-  font-weight: 700;
-  text-decoration: none;
-}
-.service-link svg { width: 12px; transition: transform 0.2s; }
-.service-card:hover .service-link svg { transform: translateX(4px); }
-
-/* ========== PRIVATE DINING FEATURE ========== */
-.dining-section {
-  background: var(--green);
-  color: var(--parchment);
-  padding: 7rem 6vw !important;
-  overflow: hidden;
-}
-
-.dining-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.dining-text .section-eyebrow { color: var(--saffron-light); }
-.dining-text .section-title { color: var(--parchment); }
-.dining-text .section-body { color: rgba(244,232,204,0.65); }
-
-.dining-features {
-  list-style: none;
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.dining-features li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  font-size: 0.9rem;
-  color: rgba(244,232,204,0.75);
-}
-.dining-features li::before {
-  content: '';
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--saffron-light);
-  flex-shrink: 0;
-  margin-top: 0.55rem;
-}
-
-.dining-visual {
-  position: relative;
-}
-
-.dining-img-stack {
-  position: relative;
-  height: 520px;
-}
-
-.dining-img {
-  position: absolute;
-  border-radius: 3px;
-  overflow: hidden;
-  background: rgba(92,58,30,0.4);
-}
-.dining-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0.85;
-}
-.dining-img.main {
-  width: 78%;
-  height: 85%;
-  top: 0; right: 0;
-}
-.dining-img.accent {
-  width: 52%;
-  height: 52%;
-  bottom: 0; left: 0;
-  border: 3px solid var(--brown);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-}
-
-.dining-label {
-  position: absolute;
-  bottom: 3rem;
-  right: -1rem;
-  background: var(--terracotta);
-  color: var(--parchment);
-  padding: 0.8rem 1.2rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  border-radius: 2px;
-}
-
-/* ========== TEAM / FACES ========== */
-.team-section {
-  background: var(--parchment);
-  text-align: center;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 3.5rem;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.team-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.team-photo {
-  width: 180px;
-  height: 220px;
-  border-radius: 2px;
-  object-fit: cover;
-  background: var(--parchment-mid);
-  box-shadow: 4px 6px 24px rgba(46,26,8,0.15);
-  position: relative;
-  display: block;
-}
-
-.team-photo-wrap {
-  position: relative;
-  display: inline-block;
-}
-.team-photo-wrap::before {
-  content: '';
-  position: absolute;
-  top: -6px; left: -6px;
-  right: 6px; bottom: 6px;
-  border: 1px solid rgba(196,144,21,0.3);
-  border-radius: 2px;
-  z-index: 0;
-}
-
-.team-name {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--brown);
-}
-.team-role {
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--terracotta);
-  font-weight: 700;
-}
-.team-bio {
-  font-size: 0.88rem;
-  color: var(--brown-muted);
-  line-height: 1.75;
-  max-width: 30ch;
-  text-align: center;
-}
-
-/* ========== VENUES / CONCEPT MAP ========== */
-.concepts-section { padding: 6rem 6vw !important; }
-
-.concepts-header { text-align: center; margin-bottom: 4rem; }
-
-.concepts-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid rgba(140,104,72,0.18);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.concept-item {
-  padding: 2.5rem 2rem;
-  border-right: 1px solid rgba(140,104,72,0.15);
-  position: relative;
-  transition: background 0.3s;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.concept-item:last-child { border-right: none; }
-.concept-item:hover { background: rgba(184,82,42,0.04); }
-
-.concept-tag {
-  font-size: 0.6rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--saffron);
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  display: block;
-}
-.concept-name {
-  font-family: var(--serif);
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: var(--brown);
-  margin-bottom: 0.6rem;
-}
-.concept-desc {
-  font-size: 0.85rem;
-  color: var(--brown-muted);
-  line-height: 1.75;
-}
-.concept-arrow {
-  position: absolute;
-  bottom: 1.8rem; right: 1.8rem;
-  color: var(--terracotta);
-  opacity: 0;
-  transition: opacity 0.25s, transform 0.25s;
-  font-size: 1.2rem;
-}
-.concept-item:hover .concept-arrow { opacity: 1; transform: translateX(4px); }
-
-.concept-item.highlight {
-  background: var(--terracotta);
-}
-.concept-item.highlight .concept-tag { color: rgba(244,232,204,0.6); }
-.concept-item.highlight .concept-name { color: var(--parchment); }
-.concept-item.highlight .concept-desc { color: rgba(244,232,204,0.7); }
-.concept-item.highlight .concept-arrow { color: var(--parchment); }
-.concept-item.highlight:hover { background: var(--terra-light); }
-.concept-item.highlight:hover .concept-arrow { opacity: 1; }
-
-/* ========== CONTACT / CONNECT ========== */
-.contact-section {
-  background: var(--parchment);
-  position: relative;
-}
-.contact-section::before {
-  display: none;
-}
-
-.contact-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact-form {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1px solid rgba(140,104,72,0.3);
-  background: rgba(244,232,204,0.9);
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  color: var(--cream-text);
-  border-radius: 2px;
-  outline: none;
-  transition: border-color 0.2s;
-  appearance: none;
-}
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  border-color: var(--terracotta);
-}
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: var(--brown-muted);
-  opacity: 0.7;
-}
-.form-field textarea { height: 130px; resize: vertical; }
-
-.form-submit {
-  align-self: center;
-  margin-top: 0.5rem;
-}
-
-.contact-alt {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-.contact-alt-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-}
-.contact-alt-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--brown-muted);
-  font-weight: 700;
-}
-.contact-alt-value {
-  font-family: var(--serif);
-  font-size: 0.95rem;
-  color: var(--brown);
-  text-decoration: none;
-}
-.contact-alt-value:hover { color: var(--terracotta); }
-
-/* ========== FOOTER ========== */
-footer {
-  background: var(--terracotta);
-  padding: 4rem 6vw 2.5rem;
-  position: relative;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto 3rem;
-}
-
-.footer-brand-name {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--parchment);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.3rem;
-  display: block;
-}
-.footer-brand-tagline {
-  font-size: 0.65rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(244,232,204,0.35);
-  margin-bottom: 1.2rem;
-  display: block;
-}
-.footer-about {
-  font-size: 0.85rem;
-  color: rgba(244,232,204,0.45);
-  line-height: 1.75;
-}
-
-.footer-col-title {
-  font-size: 0.6rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--saffron);
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-  display: block;
-}
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-.footer-links a {
-  font-size: 0.85rem;
-  color: rgba(244,232,204,0.5);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: var(--parchment); }
-
-.footer-bottom {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(244,232,204,0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.footer-copy {
-  font-size: 0.75rem;
-  color: rgba(244,232,204,0.25);
-  letter-spacing: 0.05em;
-}
-.footer-domains {
-  display: flex;
-  gap: 1.5rem;
-}
-.footer-domains a {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  color: rgba(244,232,204,0.3);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-domains a:hover { color: var(--saffron-light); }
-
-/* ========== TEAM DUO ========== */
-.team-duo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  margin-top: 3.5rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.team-duo-photo-wrap {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-.team-duo-photo-wrap::before {
-  content: '';
-  position: absolute;
-  top: -8px; left: -8px;
-  right: 8px; bottom: 8px;
-  border: 1px solid rgba(196,144,21,0.3);
-  border-radius: 2px;
-  z-index: 0;
-}
-.team-duo-photo {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  border-radius: 2px;
-  position: relative;
-  z-index: 1;
-  box-shadow: 4px 8px 32px rgba(46,26,8,0.15);
-}
-
-.team-duo-bios {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.team-bio-card {
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--parchment-dark);
-}
-.team-bio-card:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-/* ========== SCROLL REVEAL ========== */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-
-/* ========== MOBILE ========== */
-@media (max-width: 900px) {
-  .nav-links { display: none; }
-  nav { height: 60px; }
-
-  .mobile-menu {
-    position: fixed;
-    top: 60px; left: 0; right: 0;
-    background: rgba(244,232,204,0.98);
-    backdrop-filter: blur(12px);
-    padding: 1.5rem 6vw 2rem;
-    border-bottom: 1px solid var(--parchment-dark);
-    z-index: 199;
-    display: none;
-    flex-direction: column;
-    gap: 0.2rem;
+  var RAW_WRAP = {
+    select: "sc-raw-select",
+    table: "sc-raw-table",
+    tbody: "sc-raw-tbody",
+    thead: "sc-raw-thead",
+    tfoot: "sc-raw-tfoot",
+    tr: "sc-raw-tr",
+    td: "sc-raw-td",
+    th: "sc-raw-th",
+    caption: "sc-raw-caption"
+  };
+  var RAW_UNWRAP = Object.fromEntries(
+    Object.entries(RAW_WRAP).map(([k, v]) => [v, k])
+  );
+  var EVENT_MAP = {
+    onclick: "onClick",
+    onchange: "onChange",
+    oninput: "onInput",
+    onsubmit: "onSubmit",
+    onkeydown: "onKeyDown",
+    onkeyup: "onKeyUp",
+    onkeypress: "onKeyPress",
+    onmousedown: "onMouseDown",
+    onmouseup: "onMouseUp",
+    onmouseenter: "onMouseEnter",
+    onmouseleave: "onMouseLeave",
+    onfocus: "onFocus",
+    onblur: "onBlur",
+    ondoubleclick: "onDoubleClick",
+    oncontextmenu: "onContextMenu",
+    onmousemove: "onMouseMove",
+    onmouseover: "onMouseOver",
+    onmouseout: "onMouseOut",
+    onpointerdown: "onPointerDown",
+    onpointerup: "onPointerUp",
+    onpointermove: "onPointerMove",
+    onpointerenter: "onPointerEnter",
+    onpointerleave: "onPointerLeave",
+    onpointercancel: "onPointerCancel",
+    onpointerover: "onPointerOver",
+    onpointerout: "onPointerOut",
+    ongotpointercapture: "onGotPointerCapture",
+    onlostpointercapture: "onLostPointerCapture",
+    ontouchstart: "onTouchStart",
+    ontouchend: "onTouchEnd",
+    ontouchmove: "onTouchMove",
+    ontouchcancel: "onTouchCancel",
+    ondragstart: "onDragStart",
+    ondragend: "onDragEnd",
+    ondragenter: "onDragEnter",
+    ondragleave: "onDragLeave",
+    ondragover: "onDragOver",
+    onanimationstart: "onAnimationStart",
+    onanimationend: "onAnimationEnd",
+    onanimationiteration: "onAnimationIteration",
+    ontransitionend: "onTransitionEnd"
+  };
+  var ATTRS = `(?:[^>"']|"[^"]*"|'[^']*')*`;
+  var IMPORT_SELF_CLOSE_RE = new RegExp(
+    "<(x-import|dc-import)(" + ATTRS + ")/>",
+    "gi"
+  );
+  var CAMEL_ATTR_RE = /(\s)([a-z]+[A-Z][A-Za-z0-9]*)(\s*=)/g;
+  function encodeCamelAttrs(html) {
+    return html.replace(
+      CAMEL_ATTR_RE,
+      (_, sp, name, eq) => sp + CAMEL_ATTR + name.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase()) + eq
+    );
   }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    font-size: 0.82rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--brown-muted);
-    text-decoration: none;
-    padding: 0.65rem 0;
-    border-bottom: 1px solid rgba(140,104,72,0.08);
-    font-weight: 400;
+  function encodeCase(html) {
+    html = html.replace(
+      IMPORT_SELF_CLOSE_RE,
+      (_, t, a) => "<" + t + a + "></" + t + ">"
+    );
+    html = html.replace(/<helmet(\s|>)/gi, "<sc-helmet$1");
+    html = html.replace(/<\/helmet\s*>/gi, "</sc-helmet>");
+    html = encodeCamelAttrs(html);
+    for (const [real, alias] of Object.entries(RAW_WRAP)) {
+      html = html.replace(
+        new RegExp("(</?)" + real + "(?=[\\s>])", "gi"),
+        "$1" + alias
+      );
+    }
+    return html;
   }
-  .mobile-menu a:last-child { border-bottom: none; }
-  .mobile-menu a.cta { color: var(--terracotta); font-weight: 700; }
+  function kebabToCamel(s) {
+    return s.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+  }
+  function cssToObj(css) {
+    const o = {};
+    for (const decl of css.split(";")) {
+      const i = decl.indexOf(":");
+      if (i < 0) continue;
+      const prop = decl.slice(0, i).trim();
+      o[prop.startsWith("--") ? prop : kebabToCamel(prop)] = decl.slice(i + 1).trim();
+    }
+    return o;
+  }
+  function compileAttr(raw) {
+    const whole = raw.match(/^\s*\{\{([\s\S]+?)\}\}\s*$/);
+    if (whole) {
+      const path = whole[1];
+      return (vals) => resolve(vals, path);
+    }
+    if (raw.includes("{{")) {
+      const parts = raw.split(/\{\{([\s\S]+?)\}\}/g);
+      return (vals) => parts.map((s, i) => i & 1 ? resolve(vals, s) ?? "" : s).join("");
+    }
+    return () => raw;
+  }
 
-  .hero h1 { font-size: clamp(2.8rem, 11vw, 4.5rem); }
-  .about-grid, .dining-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .about-portrait-frame { max-width: 100%; }
-  .about-portrait-img { max-width: 100%; }
-  .dining-img-stack { height: 320px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .concepts-row { grid-template-columns: 1fr; }
-  .concept-item { border-right: none; border-bottom: 1px solid var(--parchment-dark); }
-  .concept-item:last-child { border-bottom: none; }
-  .team-duo { grid-template-columns: 1fr; gap: 2.5rem; }
-  .team-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-}
+  // src/compile.ts
+  function collectProps(node, kind, host) {
+    const propGetters = [];
+    const pseudoClasses = [];
+    let hintSize = null;
+    for (const { name, value } of [...node.attributes]) {
+      if (name === "sc-name" || name === "data-dc-tpl") continue;
+      let key = name;
+      if (key.startsWith(CAMEL_ATTR))
+        key = kebabToCamel(key.slice(CAMEL_ATTR.length));
+      if (key === "hint-size") {
+        hintSize = value;
+        continue;
+      }
+      if (key.startsWith("style-")) {
+        pseudoClasses.push(host.pseudoClass(key.slice(6), value));
+        continue;
+      }
+      if (kind !== "dom") {
+        if (key.includes("-") && !(kind === "x-import" && (key.startsWith("aria-") || key.startsWith("data-"))))
+          key = kebabToCamel(key);
+      } else {
+        if (key === "class") key = "className";
+        else if (key === "for") key = "htmlFor";
+        else if (key.startsWith("on"))
+          key = EVENT_MAP[key] || "on" + key[2].toUpperCase() + key.slice(3);
+      }
+      propGetters.push([key, compileAttr(value)]);
+    }
+    return { propGetters, pseudoClasses, hintSize };
+  }
+  var HOST_STYLE_PROPS = /* @__PURE__ */ new Set([
+    "position",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "inset",
+    "width",
+    "height",
+    "z-index",
+    "transform"
+  ]);
+  function hostPositionStyle(style) {
+    const all = typeof style === "string" ? cssToObj(style) : style != null && typeof style === "object" ? style : null;
+    if (!all) return void 0;
+    const out = {};
+    for (const [k, v] of Object.entries(all)) {
+      const kebab = k.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase());
+      if (HOST_STYLE_PROPS.has(kebab)) out[k] = v;
+    }
+    return Object.keys(out).length ? out : void 0;
+  }
+  function compileTemplate(html, host) {
+    const tpl = document.createElement("template");
+    //! nosemgrep: direct-inner-html-assignment
+    tpl.innerHTML = encodeCase(html);
+    let tplN = 0;
+    (function stamp(node) {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        node.setAttribute("data-dc-tpl", String(tplN++));
+      }
+      for (const c of node.childNodes) stamp(c);
+    })(tpl.content);
+    const builders = walkChildren(tpl.content, host);
+    const render = ((vals, ctx) => builders.map((b, i) => b(vals || {}, ctx, i)));
+    render.__annotated = tpl.innerHTML;
+    return render;
+  }
+  function walkChildren(node, host) {
+    return [...node.childNodes].map((c) => walk(c, host)).filter((b) => b != null);
+  }
+  function walk(node, host) {
+    if (node.nodeType === Node.TEXT_NODE) return walkText(node);
+    if (node.nodeType !== Node.ELEMENT_NODE) return null;
+    const el = node;
+    const tag = el.tagName.toLowerCase();
+    if (tag === "sc-for") return walkFor(el, host);
+    if (tag === "sc-if") return walkIf(el, host);
+    if (tag === "x-import") return walkXImport(el, host);
+    if (tag === "sc-helmet") return host.helmet(el);
+    if (tag === "dc-import") return walkComponent(el, host);
+    return walkElement(el, host);
+  }
+  var warnedHoles = /* @__PURE__ */ new Set();
+  function warnUnresolved(ctx, what) {
+    const key = (ctx?.__name || "?") + "\0" + what;
+    if (warnedHoles.has(key)) return;
+    warnedHoles.add(key);
+    console.warn("[dc-runtime] " + (ctx?.__name || "template") + ": " + what);
+  }
+  function walkText(node) {
+    const txt = node.nodeValue ?? "";
+    if (!txt.includes("{{")) {
+      if (!txt.trim() && !txt.includes(" ")) return null;
+      return () => txt;
+    }
+    const parts = txt.split(/\{\{([\s\S]+?)\}\}/g);
+    return (vals, ctx, key) => h(
+      getReact().Fragment,
+      { key },
+      ...parts.map((p, i) => {
+        if (!(i & 1)) return p;
+        const v = resolve(vals, p);
+        if (v === void 0) {
+          if (!ctx?.__streamingNow) {
+            if (document.body?.hasAttribute("data-dc-editor-on")) {
+              return h(
+                "span",
+                { key: i, className: "sc-interp sc-unresolved" },
+                "{{ " + p.trim() + " }}"
+              );
+            }
+            warnUnresolved(
+              ctx,
+              "{{ " + p.trim() + " }} never resolved \u2014 rendered as empty"
+            );
+            return null;
+          }
+          return h(
+            "span",
+            { key: i, className: "sc-interp sc-missing" },
+            p.trim()
+          );
+        }
+        if (getReact().isValidElement(v) || Array.isArray(v)) {
+          return h(getReact().Fragment, { key: i }, v);
+        }
+        if (v === null || typeof v === "boolean") return null;
+        return h("span", { key: i, className: "sc-interp" }, String(v));
+      })
+    );
+  }
+  function walkFor(el, host) {
+    const listGet = compileAttr(el.getAttribute("list") || "");
+    const asName = el.getAttribute("as") || "item";
+    const hintN = parseInt(el.getAttribute("hint-placeholder-count") || "0", 10);
+    const kids = walkChildren(el, host);
+    const listSrc = el.getAttribute("list") || "";
+    return (vals, ctx, key) => {
+      let list = listGet(vals);
+      if (!Array.isArray(list)) {
+        if (!ctx?.__streamingNow) {
+          if (list !== void 0 && list !== null) {
+            warnUnresolved(
+              ctx,
+              'sc-for list="' + listSrc + '" is not an array (' + typeof list + ")"
+            );
+          }
+          list = [];
+        } else {
+          list = hintN > 0 ? Array(hintN).fill(void 0) : [];
+        }
+      }
+      return h(
+        getReact().Fragment,
+        { key },
+        list.map((item, i) => {
+          const sub = { ...vals, [asName]: item, $index: i };
+          return h(
+            getReact().Fragment,
+            { key: i },
+            kids.map((b, j) => b(sub, ctx, j))
+          );
+        })
+      );
+    };
+  }
+  function walkIf(el, host) {
+    const valGet = compileAttr(el.getAttribute("value") || "");
+    const hintRaw = el.getAttribute("hint-placeholder-val");
+    const hintGet = hintRaw != null ? compileAttr(hintRaw) : null;
+    const kids = walkChildren(el, host);
+    return (vals, ctx, key) => {
+      let v = valGet(vals);
+      if (v === void 0 && hintGet && ctx?.__streamingNow) v = hintGet(vals);
+      return v ? h(
+        getReact().Fragment,
+        { key },
+        kids.map((b, j) => b(vals, ctx, j))
+      ) : null;
+    };
+  }
+  function walkComponent(el, host) {
+    const name = el.getAttribute("name") || el.getAttribute("component") || "";
+    el.removeAttribute("name");
+    el.removeAttribute("component");
+    const tplId = el.getAttribute("data-dc-tpl");
+    const styleRaw = el.getAttribute("style");
+    el.removeAttribute("style");
+    const styleGet = styleRaw != null ? compileAttr(styleRaw) : null;
+    const { propGetters, hintSize } = collectProps(el, "dc-import", host);
+    const kids = walkChildren(el, host);
+    return (vals, ctx, key) => {
+      const props = {
+        key,
+        __hintSize: hintSize,
+        __tplId: tplId,
+        __hostStyle: styleGet ? hostPositionStyle(styleGet(vals)) : void 0
+      };
+      for (const [k, g] of propGetters) {
+        const v = g(vals);
+        if (k === "dcProps") {
+          if (v && typeof v === "object") Object.assign(props, v);
+          continue;
+        }
+        props[k] = v;
+      }
+      if (kids.length) props.children = kids.map((b, j) => b(vals, ctx, j));
+      return h(host.component(name), props);
+    };
+  }
+  function walkXImport(el, host) {
+    const globalNameGet = compileAttr(
+      el.getAttribute("component-from-global-scope") || ""
+    );
+    const exportNameGet = compileAttr(
+      el.getAttribute("component") || el.getAttribute("name") || ""
+    );
+    const fromRaw = el.getAttribute("from") || (el.getAttribute("component-from-global-scope") ? "" : el.getAttribute("src") || el.getAttribute("import") || "");
+    const urls = fromRaw.trim() ? fromRaw.trim().split(/\s+/) : [];
+    const url = urls.length ? urls[urls.length - 1] : "";
+    const kindOf = (u) => /\.(jsx|tsx)(\?|#|$)/i.test(u) ? "jsx" : "js";
+    const tplId = el.getAttribute("data-dc-tpl");
+    const styleRaw = el.getAttribute("style");
+    el.removeAttribute("style");
+    const styleGet = styleRaw != null ? compileAttr(styleRaw) : null;
+    const wrap = tplId != null || styleGet != null;
+    const { propGetters, hintSize } = collectProps(el, "x-import", host);
+    const hasContent = el.children.length > 0 || !!(el.textContent || "").trim();
+    const kids = hasContent ? walkChildren(el, host) : [];
+    const urlBindable = fromRaw.includes("{{");
+    if (urls.length && !urlBindable) {
+      let prev;
+      for (const u of urls) prev = host.loadExternal(kindOf(u), u, prev);
+    }
+    const evalName = (g, vals) => {
+      const v = g(vals);
+      const s = v == null ? "" : String(v);
+      return s.includes("{{") ? "" : s;
+    };
+    return (vals, ctx, key) => {
+      const globalName = evalName(globalNameGet, vals);
+      const name = globalName || evalName(exportNameGet, vals);
+      const C = !name || urlBindable ? null : globalName ? host.resolveExternalGlobal(url, globalName) : host.resolveExternal(url, name);
+      const hostStyle = styleGet ? hostPositionStyle(styleGet(vals)) : void 0;
+      const wrapper = wrap ? {
+        key,
+        className: "sc-host-x",
+        "data-dc-tpl": tplId,
+        style: hostStyle || { display: "contents" }
+      } : null;
+      if (!C) {
+        const error = urlBindable ? "x-import `from` cannot contain {{ \u2026 }} \u2014 module URLs are resolved at parse time; use a literal URL" : host.resolveExternalError(url, name);
+        const ph = host.placeholder({
+          key: wrapper ? void 0 : key,
+          name,
+          hintSize,
+          error
+        });
+        return wrapper ? h("div", wrapper, ph) : ph;
+      }
+      const props = wrapper ? {} : { key };
+      let unresolvedHole = false;
+      for (const [k, g] of propGetters) {
+        if (k === "component" || k === "componentFromGlobalScope" || k === "from") {
+          continue;
+        }
+        const v = g(vals);
+        if (v === void 0) unresolvedHole = true;
+        if (k === "dcProps") {
+          if (v && typeof v === "object") Object.assign(props, v);
+          continue;
+        }
+        props[k] = v;
+      }
+      if (unresolvedHole && ctx?.__htmlStreamingNow) {
+        const ph = host.placeholder({
+          key: wrapper ? void 0 : key,
+          name,
+          hintSize,
+          error: null
+        });
+        return wrapper ? h("div", wrapper, ph) : ph;
+      }
+      if (kids.length) props.children = kids.map((b, j) => b(vals, ctx, j));
+      return wrapper ? h("div", wrapper, h(C, props)) : h(C, props);
+    };
+  }
+  function contentKey(el) {
+    const clone = el.cloneNode(true);
+    for (const d of clone.querySelectorAll("*")) {
+      while (d.attributes.length) d.removeAttribute(d.attributes[0].name);
+    }
+    const s = clone.innerHTML;
+    let h2 = 5381;
+    for (let i = 0; i < s.length; i++) h2 = (h2 << 5) + h2 + s.charCodeAt(i) | 0;
+    return s.length + "." + (h2 >>> 0).toString(36);
+  }
+  var NEVER_CONTENT_KEYED = new Set(
+    "script style textarea option title select canvas iframe video audio".split(
+      " "
+    )
+  );
+  var NOT_INLINE_SELECTOR = ":not(" + [...INLINE_TEXT_TAGS].join(",") + ")";
+  function walkElement(el, host) {
+    const realTag = RAW_UNWRAP[el.localName] || el.localName;
+    const tplId = el.getAttribute("data-dc-tpl");
+    const inlineOnly = el.childNodes.length > 0 && !NEVER_CONTENT_KEYED.has(realTag) && el.querySelector(NOT_INLINE_SELECTOR) === null;
+    const keySuffix = inlineOnly ? "|" + contentKey(el) : "";
+    const { propGetters, pseudoClasses } = collectProps(el, "dom", host);
+    const kids = walkChildren(el, host);
+    return (vals, ctx, key) => {
+      const props = {
+        key: key + keySuffix,
+        "data-dc-tpl": tplId
+      };
+      for (const [k, g] of propGetters) {
+        let v = g(vals);
+        if (k === "style" && typeof v === "string") v = cssToObj(v);
+        if ((k === "value" || k === "checked") && v === void 0) {
+          v = k === "checked" ? false : "";
+        }
+        props[k] = v;
+      }
+      if (pseudoClasses.length) {
+        props.className = [props.className, ...pseudoClasses].filter(Boolean).join(" ");
+      }
+      return h(realTag, props, ...kids.map((b, j) => b(vals, ctx, j)));
+    };
+  }
 
-@media (max-width: 540px) {
-  .team-grid { grid-template-columns: 1fr; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .footer-grid { grid-template-columns: 1fr; }
-}
+  // src/logic.ts
+  var StreamableLogic = class {
+    constructor(props) {
+      __publicField(this, "props");
+      __publicField(this, "state", {});
+      /** Back-pointer to the wrapper component, installed after construction. */
+      __publicField(this, "__host");
+      this.props = props || {};
+    }
+    setState(update, cb) {
+      this.__host && this.__host.__setLogicState(update, cb);
+    }
+    forceUpdate() {
+      this.__host && this.__host.forceUpdate();
+    }
+    componentDidMount() {
+    }
+    componentDidUpdate(_prevProps) {
+    }
+    componentWillUnmount() {
+    }
+    /** The flat object the template renders against (merged over props). */
+    renderVals() {
+      return {};
+    }
+  };
+  function evalDcLogic(src) {
+    //! nosemgrep: eval-and-function-constructor
+    const fn = new Function(
+      "DCLogic",
+      "StreamableLogic",
+      "React",
+      src + '\n;return (typeof Component!=="undefined"&&Component)||undefined;'
+    );
+    return fn(StreamableLogic, StreamableLogic, getReact());
+  }
 
+  // src/component.ts
+  function shallowEqual(a, b) {
+    if (!b) return false;
+    const ak = Object.keys(a).filter((k) => k !== "children");
+    const bk = Object.keys(b).filter((k) => k !== "children");
+    if (ak.length !== bk.length) return false;
+    for (const k of ak) if (a[k] !== b[k]) return false;
+    return true;
+  }
+  function Placeholder({
+    name,
+    hintSize,
+    streaming,
+    error
+  }) {
+    const [w, hgt] = (hintSize || "100%,60px").split(",");
+    return h(
+      "div",
+      {
+        className: "sc-placeholder" + (streaming ? " sc-streaming" : ""),
+        style: { width: w.trim(), height: hgt && hgt.trim() },
+        title: name
+      },
+      error ? h(
+        "div",
+        { className: "sc-placeholder-error" },
+        (name ? name + ": " : "") + error
+      ) : null
+    );
+  }
+  function hintToMin(hint) {
+    if (!hint) return void 0;
+    const [w, hgt] = hint.split(",");
+    return { minWidth: w.trim(), minHeight: hgt && hgt.trim() };
+  }
+  function createComponentFactory(registry, ensureFetched) {
+    const React = getReact();
+    const AncestorContext = React.createContext([]);
+    class StreamableComponent extends React.Component {
+      constructor(props) {
+        super(props);
+        __publicField(this, "__name");
+        __publicField(this, "__sub");
+        __publicField(this, "__needsDidMount", false);
+        /** Snapshot of the registry's streaming flags taken at render time —
+         *  builders read it off the RenderCtx (this) to pick placeholder vs
+         *  render-nothing for unresolved values. */
+        __publicField(this, "__streamingNow", false);
+        __publicField(this, "__htmlStreamingNow", false);
+        /** When a construct throws, remember the (class, registry.ver, props)
+         *  triple so render-time reconcile doesn't re-attempt it on every parent
+         *  re-render. A registry bump (new class, template, external module
+         *  resolving via bumpAll) changes `ver` and breaks the memo so an
+         *  env-dependent constructor can self-heal. */
+        __publicField(this, "__failedLogic", null);
+        __publicField(this, "__failedUserProps", null);
+        __publicField(this, "__failedVer", -1);
+        /** Per-instance constructor error — kept here (not on the registry entry)
+         *  so one instance's successful construct can't hide a sibling's failure,
+         *  and a construct can never wipe an eval error `updateJs` recorded on
+         *  `r.logicError`. */
+        __publicField(this, "__ctorError", null);
+        __publicField(this, "logic");
+        this.__name = props.__name;
+        this.state = { __v: 0, __err: null };
+        this.__sub = () => {
+          if (this.state.__err) this.setState({ __err: null });
+          this.forceUpdate();
+        };
+        this.__makeLogic(registry.get(this.__name).Logic, null);
+        ensureFetched(this.__name);
+      }
+      /** Error-boundary hook: a render crash anywhere in this DC's subtree
+       *  (its own template, an x-import'd component, a child DC without its
+       *  own deeper boundary) lands here instead of unmounting the page. */
+      static getDerivedStateFromError(e) {
+        return { __err: e instanceof Error && e.message ? e.message : String(e) };
+      }
+      componentDidCatch(e, info) {
+        console.error(
+          "[dc-runtime] render error in <" + this.__name + ">:",
+          e,
+          info?.componentStack || ""
+        );
+      }
+      /** Instantiate the logic class (or the no-op base) and adopt `prevState`
+       *  over its initial state — used both at mount and on hot-swap. */
+      __makeLogic(Logic, prevState) {
+        const L = Logic || StreamableLogic;
+        try {
+          this.logic = new L(this.__userProps());
+          this.__failedLogic = null;
+          this.__failedUserProps = null;
+          this.__ctorError = null;
+        } catch (e) {
+          console.error(e);
+          this.__failedLogic = Logic;
+          this.__failedUserProps = this.__userProps();
+          this.__failedVer = registry.get(this.__name).ver;
+          this.__ctorError = this.__name + ": " + (e instanceof Error && e.message ? e.message : String(e));
+          this.logic = new StreamableLogic(
+            this.__userProps()
+          );
+        }
+        this.logic.__host = this;
+        if (prevState)
+          this.logic.state = { ...this.logic.state || {}, ...prevState };
+      }
+      /** The props the author's logic + template see — internal __-prefixed
+       *  wiring stripped. */
+      __userProps() {
+        const { __name, __hintSize, __tplId, __hostStyle, ...rest } = this.props;
+        return rest;
+      }
+      __setLogicState(update, cb) {
+        const prev = this.logic.state;
+        const patch = typeof update === "function" ? update(prev) : update;
+        this.logic.state = { ...prev, ...patch };
+        this.setState((s) => ({ __v: s.__v + 1 }), cb);
+      }
+      /** Swap the logic instance when the registry's Logic class changed
+       *  (streaming completion, hot reload). State carries over; didMount
+       *  re-fires after the swap commits so refs exist. */
+      __reconcileLogic() {
+        const r = registry.get(this.__name);
+        const Next = r.Logic;
+        const Cur = this.logic.constructor;
+        if (Next === Cur || !Next && Cur === StreamableLogic || Next === this.__failedLogic && r.ver === this.__failedVer && shallowEqual(this.__userProps(), this.__failedUserProps)) {
+          return;
+        }
+        if (!this.__needsDidMount) {
+          try {
+            this.logic.componentWillUnmount();
+          } catch (e) {
+            console.error(e);
+          }
+        }
+        this.__makeLogic(Next, this.logic.state);
+        this.__needsDidMount = true;
+      }
+      componentDidMount() {
+        registry.get(this.__name).subs.add(this.__sub);
+        try {
+          this.logic.componentDidMount();
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      componentDidUpdate(prevProps) {
+        this.logic.props = this.__userProps();
+        if (this.__needsDidMount) {
+          if (this.state.__err || !registry.get(this.__name).tpl) return;
+          this.__needsDidMount = false;
+          try {
+            this.logic.componentDidMount();
+          } catch (e) {
+            console.error(e);
+          }
+        } else {
+          try {
+            this.logic.componentDidUpdate(prevProps);
+          } catch (e) {
+            console.error(e);
+          }
+        }
+      }
+      componentWillUnmount() {
+        registry.get(this.__name).subs.delete(this.__sub);
+        if (!this.__needsDidMount) {
+          try {
+            this.logic.componentWillUnmount();
+          } catch (e) {
+            console.error(e);
+          }
+        }
+      }
+      render() {
+        const r = registry.get(this.__name);
+        const cls = "sc-host" + (r.htmlStreaming ? " sc-streaming-html" : "") + (r.jsStreaming ? " sc-streaming-js" : "");
+        const hintStyle = r.htmlStreaming ? hintToMin(this.props.__hintSize) : void 0;
+        const hostStyle = this.props.__hostStyle || hintStyle ? { ...hintStyle || {}, ...this.props.__hostStyle || {} } : void 0;
+        const hostBase = {
+          className: cls,
+          style: hostStyle,
+          "data-sc-name": this.__name,
+          "data-dc-tpl": this.props.__tplId
+        };
+        const chain = Array.isArray(this.context) ? this.context : [];
+        if (chain.includes(this.__name)) {
+          const cycle = [
+            ...chain.slice(chain.indexOf(this.__name)),
+            this.__name
+          ].join(" \u2192 ");
+          return h(
+            "div",
+            { ...hostBase, className: cls + " sc-has-error" },
+            h(Placeholder, {
+              name: this.__name,
+              hintSize: this.props.__hintSize,
+              error: "circular import: " + cycle
+            })
+          );
+        }
+        if (this.state.__err) {
+          return h(
+            "div",
+            { ...hostBase, className: cls + " sc-has-error" },
+            h(
+              "div",
+              { className: "sc-logic-error", "data-omelette-chrome": "" },
+              this.__name + ": " + this.state.__err
+            ),
+            h(Placeholder, {
+              name: this.__name,
+              hintSize: this.props.__hintSize,
+              error: this.state.__err
+            })
+          );
+        }
+        this.__reconcileLogic();
+        if (!r.tpl) {
+          return h(
+            "div",
+            hostBase,
+            h(Placeholder, { name: this.__name, hintSize: this.props.__hintSize })
+          );
+        }
+        const userProps = this.__userProps();
+        this.logic.props = userProps;
+        let vals = userProps;
+        let renderErr = r.logicError || this.__ctorError;
+        try {
+          vals = { ...userProps, ...this.logic.renderVals() || {} };
+        } catch (e) {
+          console.error(e);
+          renderErr = this.__name + ".renderVals(): " + (e instanceof Error && e.message ? e.message : String(e));
+        }
+        this.__streamingNow = !!(r.htmlStreaming || r.jsStreaming);
+        this.__htmlStreamingNow = !!r.htmlStreaming;
+        return h(
+          "div",
+          { ...hostBase, className: cls + (renderErr ? " sc-has-error" : "") },
+          renderErr && h(
+            "div",
+            { className: "sc-logic-error", "data-omelette-chrome": "" },
+            renderErr
+          ),
+          h(
+            AncestorContext.Provider,
+            { value: [...chain, this.__name] },
+            r.tpl(vals, this)
+          )
+        );
+      }
+    }
+    __publicField(StreamableComponent, "contextType", AncestorContext);
+    const named = /* @__PURE__ */ new Map();
+    function getDC(name) {
+      const hit = named.get(name);
+      if (hit) return hit;
+      function Dispatcher(p) {
+        const [, setTick] = React.useState(0);
+        React.useEffect(() => {
+          const sub = () => setTick((n) => n + 1);
+          registry.get(name).subs.add(sub);
+          return () => {
+            registry.get(name).subs.delete(sub);
+          };
+        }, []);
+        ensureFetched(name);
+        return h(StreamableComponent, { ...p, __name: name });
+      }
+      Dispatcher.displayName = name;
+      named.set(name, Dispatcher);
+      return Dispatcher;
+    }
+    return {
+      getDC,
+      StreamableComponent
+    };
+  }
 
+  // src/bundled.ts
+  function bundledBlob(url) {
+    const blobs = window.__resourceBlobs;
+    const b = blobs ? blobs[url.split("#")[0]] : void 0;
+    return b instanceof Blob ? b : null;
+  }
 
-/* ══ BRONZE HEADINGS ══ */
-:root {
-  --bronze-on-light: linear-gradient(115deg,
-    #5C2E0A 0%, #8C4A14 12%, #B07020 24%, #C88828 38%,
-    #D09030 50%, #C88828 62%, #A05818 76%, #5C2E0A 100%);
-  --bronze-on-dark: linear-gradient(115deg,
-    #8C5218 0%, #B87828 14%, #D4A030 28%, #EAC84A 42%,
-    #F5E070 50%, #EAC84A 58%, #D4A030 72%, #8C5218 100%);
-}
-h1, h2,
-.section-title,
-.service-title,
-.team-name,
-.concept-name,
-.about-signature,
-.footer-brand-name {
-  background: var(--bronze-on-light);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-h1 em, h2 em, .section-title em {
-  background: var(--bronze-on-light);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: italic;
-  display: inline;
-}
-/* Brighter on dark backgrounds */
-.hero h1,
-.hero h1 em,
-.dining-text .section-title,
-.dining-text .section-title em,
-.concept-item.highlight .concept-name,
-.footer-brand-name {
-  background: var(--bronze-on-dark);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero h1 { text-shadow: none; }
-.hero h1 em { font-style: italic; display: inline; }
+  // src/cdn.ts
+  var REACT_URL = "https://unpkg.com/react@18.3.1/umd/react.production.min.js";
+  var REACT_SRI = "sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z";
+  var REACT_DOM_URL = "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js";
+  var REACT_DOM_SRI = "sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1";
+  var BABEL_URL = "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js";
+  var BABEL_SRI = "sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y";
+  function cdnScriptFor(url, sri) {
+    const res = window.__resources;
+    const v = res ? res[url] : void 0;
+    return typeof v === "string" && v ? { src: v } : { src: url, integrity: sri };
+  }
 
-/* Prevent bronze bleeding into nav and body text */
-.nav-links a,
-.nav-links a:hover,
-.mobile-menu a,
-.nav-logo-wordmark,
-.nav-logo-sub {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-  -webkit-text-fill-color: unset !important;
-}
-.nav-logo-sub { color: var(--saffron) !important; }
-.nav-links a { color: var(--brown-muted); }
-.nav-links a:hover { color: var(--terracotta); }
-.nav-cta {
-  background: var(--terracotta) !important;
-  color: var(--parchment) !important;
-  -webkit-text-fill-color: var(--parchment) !important;
-}
-/* Identity strip quote — white on black background */
-.identity-strip blockquote { color: #ffffff; }
-.identity-strip blockquote em {
-  color: #C4936A !important;
-  -webkit-text-fill-color: #C4936A !important;
-  background: none !important;
-}
-/* Drawer links */
-#menuDrawer a {
-  background: none !important;
-  -webkit-text-fill-color: unset !important;
-  color: #6B6860 !important;
-}
-#menuDrawer a.drawer-cta { color: #0D2C22 !important; }
-/* Scroll offset for fixed nav */
-#about, #services, #dining, #team, #concepts, #contact {
-  scroll-margin-top: 68px;
-}
+  // src/external.ts
+  var isCustomElementName = (n) => !n.includes(".") && n.includes("-");
+  function isRenderableType(g) {
+    if (typeof g === "function") return !isElementClass(g);
+    return typeof g === "object" && g !== null && typeof g.$$typeof === "symbol";
+  }
+  function resolveDottedPath(root, name) {
+    let cur = root;
+    for (const seg of name.split(".")) {
+      if (cur == null) return void 0;
+      cur = cur[seg];
+    }
+    return cur;
+  }
+  var GLOBAL_POLL_INTERVAL_MS = 50;
+  var GLOBAL_POLL_TIMEOUT_MS = 3e4;
+  function createExternalModules(onResolved) {
+    const cache = /* @__PURE__ */ new Map();
+    let babelLoading = null;
+    const reportedMissing = /* @__PURE__ */ new Map();
+    const polling = /* @__PURE__ */ new Set();
+    function ensureBabel() {
+      if (window.Babel) return Promise.resolve();
+      if (babelLoading) return babelLoading;
+      const babel = cdnScriptFor(BABEL_URL, BABEL_SRI);
+      babelLoading = new Promise((res, rej) => {
+        const s = document.createElement("script");
+        s.src = babel.src;
+        if (babel.integrity) {
+          s.integrity = babel.integrity;
+          s.crossOrigin = "anonymous";
+        }
+        s.onload = () => res();
+        s.onerror = rej;
+        document.head.appendChild(s);
+      });
+      return babelLoading;
+    }
+    const pending = /* @__PURE__ */ new Map();
+    function load(kind, url, after) {
+      const existing = pending.get(url);
+      if (existing) return existing;
+      cache.set(url, null);
+      console.info("[dc-runtime] x-import: loading", url, "(" + kind + ")");
+      const ready = Promise.all([
+        kind === "jsx" ? ensureBabel() : Promise.resolve(),
+        after ?? Promise.resolve()
+      ]);
+      const p = ready.then(() => {
+        const pre = bundledBlob(url);
+        if (pre) return pre.text();
+        return fetch(url).then((r) => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        });
+      }).then((src) => {
+        const code = kind === "jsx" ? window.Babel.transform(src, {
+          filename: url,
+          presets: ["react", "typescript"]
+        }).code : src;
+        const module = { exports: {} };
+        const before = new Set(Object.keys(window));
+        //! nosemgrep: eval-and-function-constructor
+        new Function("React", "module", "exports", "require", code)(
+          getReact(),
+          module,
+          module.exports,
+          () => ({})
+        );
+        const globals = {};
+        for (const k of Object.keys(window)) {
+          if (!before.has(k) && typeof window[k] === "function") {
+            globals[k] = window[k];
+          }
+        }
+        cache.set(url, { mod: module.exports, globals });
+        console.info(
+          "[dc-runtime] x-import: loaded",
+          url,
+          "\u2014 exports:",
+          Object.keys(module.exports),
+          "window globals:",
+          Object.keys(globals)
+        );
+        onResolved();
+      }).catch((e) => {
+        cache.set(url, {
+          mod: {},
+          globals: {},
+          error: "failed to load: " + (e instanceof Error && e.message ? e.message : String(e))
+        });
+        console.error(
+          "[dc-runtime] x-import: FAILED to load",
+          url,
+          "(" + kind + ")",
+          e
+        );
+        onResolved();
+      });
+      pending.set(url, p);
+      return p;
+    }
+    function resolve2(url, name) {
+      const entry = cache.get(url);
+      if (!entry) return null;
+      const { mod, globals } = entry;
+      const C = mod && mod[name] || globals && globals[name] || typeof window !== "undefined" && window[name] || mod && mod.default;
+      if (typeof C === "function") return C;
+      const key = url + "\0" + name;
+      if (!reportedMissing.has(key)) {
+        reportedMissing.set(
+          key,
+          entry.error || 'no export named "' + name + '" (has: ' + Object.keys(mod).join(", ") + ")"
+        );
+        console.error(
+          "[dc-runtime] x-import: module",
+          url,
+          "loaded but has no component named",
+          JSON.stringify(name),
+          "\u2014 available exports:",
+          Object.keys(mod),
+          "window globals:",
+          Object.keys(globals),
+          ". The module must `module.exports = {" + name + "}` or set `window." + name + "`."
+        );
+      }
+      return null;
+    }
+    function waitForGlobal(name) {
+      if (polling.has(name)) return;
+      polling.add(name);
+      const started = Date.now();
+      const isCE = isCustomElementName(name);
+      const tick = () => {
+        const found = isCE ? customElements.get(name) : isRenderableType(resolveDottedPath(window, name));
+        if (found) {
+          polling.delete(name);
+          onResolved();
+          return;
+        }
+        if (Date.now() - started >= GLOBAL_POLL_TIMEOUT_MS) {
+          console.warn(
+            "[dc-runtime] x-import: global",
+            JSON.stringify(name),
+            "never appeared on window after " + GLOBAL_POLL_TIMEOUT_MS + "ms"
+          );
+          return;
+        }
+        setTimeout(tick, GLOBAL_POLL_INTERVAL_MS);
+      };
+      setTimeout(tick, GLOBAL_POLL_INTERVAL_MS);
+    }
+    function resolveGlobal(url, name) {
+      const isCE = isCustomElementName(name);
+      if (!url) {
+        if (isCE) {
+          if (customElements.get(name)) return name;
+          waitForGlobal(name);
+          return null;
+        }
+        const g2 = resolveDottedPath(window, name);
+        if (isRenderableType(g2)) return g2;
+        waitForGlobal(name);
+        return null;
+      }
+      const entry = cache.get(url);
+      if (!entry) return null;
+      if (isCE && customElements.get(name)) return name;
+      const g = entry.globals[name] ?? resolveDottedPath(window, name);
+      if (isRenderableType(g)) return g;
+      if (name.includes(".")) return null;
+      const key = url + "\0global\0" + name;
+      if (!reportedMissing.has(key)) {
+        reportedMissing.set(key, null);
+        if (isCE && !customElements.get(name)) {
+          console.warn(
+            "[dc-runtime] x-import:",
+            url,
+            "loaded but no custom element",
+            JSON.stringify(name),
+            "is registered and window." + name + " is not a function \u2014 rendering <" + name + "> as an unknown element."
+          );
+        }
+      }
+      return name;
+    }
+    function getError(url, name) {
+      const entry = cache.get(url);
+      if (entry?.error) return entry.error;
+      return reportedMissing.get(url + "\0" + name) || null;
+    }
+    return { load, resolve: resolve2, resolveGlobal, getError };
+  }
+  function isElementClass(g) {
+    try {
+      return typeof g === "function" && typeof HTMLElement !== "undefined" && g.prototype instanceof HTMLElement;
+    } catch {
+      return false;
+    }
+  }
 
+  // src/atomics.ts
+  var ATOMIC_CSS = (
+    // layout
+    ".fx{display:flex}.col{display:flex;flex-direction:column}.grid{display:grid}.ac{align-items:center}.jc{justify-content:center}.jb{justify-content:space-between}.f1{flex:1}.noshrink{flex-shrink:0}.wrap{flex-wrap:wrap}.fw5{font-weight:500}.fw6{font-weight:600}.fw7{font-weight:700}.fw8{font-weight:800}.fs11{font-size:11px}.fs12{font-size:12px}.fs13{font-size:13px}.fs14{font-size:14px}.fs15{font-size:15px}.fs16{font-size:16px}.fs20{font-size:20px}.fs22{font-size:22px}.upper{text-transform:uppercase}.tc{text-align:center}.nowrap{white-space:nowrap}.gap8{gap:8px}.gap10{gap:10px}.gap12{gap:12px}.gap16{gap:16px}.gap24{gap:24px}.m0{margin:0}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mb8{margin-bottom:8px}.mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.posrel{position:relative}.posabs{position:absolute}.round{border-radius:50%}.ohide{overflow:hidden}.bbox{box-sizing:border-box}.pointer{cursor:pointer}.w100{width:100%}.b0{border:none}"
+  );
 
-/* ══════════════════════════════════════
-   HAMBURGER DROPDOWN MENU
-══════════════════════════════════════ */
+  // src/helmet.ts
+  var DESIGN_DOC_MODE_RE = /<meta\b[^>]*\bname\s*=\s*["']design_doc_mode["'][^>]*\b(?:content|value)\s*=\s*["'](\w+)["']/i;
+  var CANVAS_BG_LIGHT = "#f0eee6";
+  var CANVAS_BG_DARK = "#2e2c26";
+  function createHelmetManager(doc, isStreaming) {
+    const mounted = /* @__PURE__ */ new Set();
+    const live = /* @__PURE__ */ new Map();
+    let designDocMode = null;
+    let canvasStyleEl = null;
+    let appTheme = "light";
+    try {
+      const ds = doc.documentElement.dataset.theme;
+      appTheme = ds === "dark" || ds === "light" ? ds : new URLSearchParams(doc.defaultView?.location.search ?? "").get(
+        "theme"
+      ) === "dark" ? "dark" : "light";
+    } catch {
+    }
+    function applyCanvasBg() {
+      if (!canvasStyleEl) return;
+      const bg = appTheme === "dark" ? CANVAS_BG_DARK : CANVAS_BG_LIGHT;
+      canvasStyleEl.textContent = `html,body{background:${bg}}#dc-root>.sc-host{position:relative}`;
+    }
+    function postDesignMode(mode) {
+      if (window.parent === window) return;
+      try {
+        window.parent.postMessage({ type: "__dc_design_mode", mode }, "*");
+      } catch {
+      }
+    }
+    function setDesignDocMode(mode) {
+      if (mode === designDocMode) return;
+      designDocMode = mode;
+      postDesignMode(mode);
+      if (mode === "canvas") {
+        doc.documentElement.setAttribute("data-dc-canvas", "");
+        canvasStyleEl = doc.createElement("style");
+        canvasStyleEl.setAttribute("data-dc-canvas", "");
+        applyCanvasBg();
+        doc.head.appendChild(canvasStyleEl);
+      } else {
+        doc.documentElement.removeAttribute("data-dc-canvas");
+        canvasStyleEl?.remove();
+        canvasStyleEl = null;
+      }
+    }
+    window.addEventListener("message", (e) => {
+      const type = e.data && e.data.type;
+      if (type === "__dc_theme") {
+        const t = e.data.theme;
+        if (t === "light" || t === "dark") {
+          appTheme = t;
+          applyCanvasBg();
+        }
+        return;
+      }
+      if (!designDocMode || type !== "__dc_probe") return;
+      postDesignMode(designDocMode);
+    });
+    function compile(node) {
+      const raw = [...node.children];
+      const helmetClosed = node.nextSibling != null || node.parentNode?.nextSibling != null;
+      if (node.hasAttribute("data-dc-atomics") && !mounted.has("__dc-atomics")) {
+        mounted.add("__dc-atomics");
+        const el = doc.createElement("style");
+        el.id = "__dc-atomics";
+        el.textContent = ATOMIC_CSS;
+        doc.head.appendChild(el);
+      }
+      return (_vals, ctx) => {
+        const name = ctx && ctx.__name || "";
+        const streaming = !!(name && isStreaming(name));
+        for (let i = 0; i < raw.length; i++) {
+          const child = raw[i];
+          const tag = child.tagName;
+          const mayBePartial = streaming && !helmetClosed && i === raw.length - 1;
+          if (tag === "SCRIPT") {
+            if (mayBePartial) continue;
+            const key = "SCRIPT|" + (child.getAttribute("src") || child.textContent || "");
+            if (mounted.has(key)) continue;
+            mounted.add(key);
+            const el = doc.createElement("script");
+            for (const { name: an, value } of [...child.attributes])
+              el.setAttribute(an, value);
+            if (child.textContent) el.textContent = child.textContent;
+            doc.head.appendChild(el);
+          } else if (tag === "LINK" || tag === "META") {
+            if (mayBePartial) continue;
+            const key = tag + "|" + (child.getAttribute("href") || child.getAttribute("src") || child.outerHTML);
+            if (mounted.has(key)) continue;
+            mounted.add(key);
+            if (tag === "LINK") {
+              const rel = (child.getAttribute("rel") || "").toLowerCase().split(/\s+/);
+              const href = (child.getAttribute("href") || "").trim();
+              const res = window.__resources;
+              const pre = res && rel.includes("stylesheet") && !rel.includes("alternate") ? res[href] : void 0;
+              const blob = typeof pre === "string" && pre ? bundledBlob(pre) : null;
+              if (blob) {
+                const el = doc.createElement("style");
+                if (child.hasAttribute("disabled")) {
+                  el.setAttribute("media", "not all");
+                } else if (child.getAttribute("media")) {
+                  el.setAttribute("media", child.getAttribute("media"));
+                }
+                if (child.getAttribute("title"))
+                  el.setAttribute("title", child.getAttribute("title"));
+                void blob.text().then((css) => {
+                  el.textContent = css;
+                });
+                doc.head.appendChild(el);
+                continue;
+              }
+            }
+            doc.head.appendChild(child.cloneNode(true));
+          } else {
+            const key = name + "|" + i;
+            let el = live.get(key);
+            if (!el || el.tagName !== tag) {
+              if (el) el.remove();
+              el = doc.createElement(tag.toLowerCase());
+              live.set(key, el);
+              doc.head.appendChild(el);
+            }
+            for (const { name: an, value } of [...child.attributes]) {
+              if (el.getAttribute(an) !== value) el.setAttribute(an, value);
+            }
+            if (el.textContent !== child.textContent)
+              el.textContent = child.textContent;
+          }
+        }
+        return null;
+      };
+    }
+    return { compile, setDesignDocMode };
+  }
 
-/* Dark overlay behind menu */
-#menuOverlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(10,10,8,0.45);
-  z-index: 198;
-  cursor: pointer;
-}
-#menuOverlay.open { display: block; }
+  // src/pseudo.ts
+  function createPseudoSheet(doc) {
+    let el = null;
+    const cache = /* @__PURE__ */ new Map();
+    let n = 0;
+    return (pseudo, css) => {
+      const k = pseudo + "|" + css;
+      const hit = cache.get(k);
+      if (hit) return hit;
+      if (!el) {
+        el = doc.createElement("style");
+        doc.head.appendChild(el);
+      }
+      const cls = "scp" + (n++).toString(36);
+      const sel = pseudo === "before" || pseudo === "after" ? "." + cls + "::" + pseudo : "." + cls + ":" + pseudo;
+      el.sheet.insertRule(sel + "{" + css + "}", el.sheet.cssRules.length);
+      cache.set(k, cls);
+      return cls;
+    };
+  }
 
-/* Dropdown panel — falls from the nav bar */
-#menuDrawer {
-  position: fixed;
-  top: 68px;
-  right: 0;
-  width: 280px;
-  background: #F5F0E6;
-  border-left: 1px solid #D5CFC2;
-  border-bottom: 1px solid #D5CFC2;
-  border-bottom-left-radius: 6px;
-  padding: 0.5rem 0 1.5rem;
-  z-index: 199;
-  box-shadow: 0 8px 32px rgba(13,44,34,0.15);
-  /* Hidden state — slides up and fades out */
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
-              opacity   0.25s cubic-bezier(0.4,0,0.2,1);
-}
+  // src/registry.ts
+  function createRegistry() {
+    const entries = /* @__PURE__ */ Object.create(null);
+    function get(name) {
+      return entries[name] || (entries[name] = {
+        html: "",
+        tpl: null,
+        Logic: null,
+        jsStreaming: false,
+        htmlStreaming: false,
+        ver: 0,
+        subs: /* @__PURE__ */ new Set(),
+        fetched: false
+      });
+    }
+    function bump(name) {
+      const r = get(name);
+      r.ver++;
+      for (const fn of r.subs) fn();
+    }
+    return {
+      entries,
+      get,
+      bump,
+      bumpAll() {
+        for (const n in entries) bump(n);
+      }
+    };
+  }
 
-/* Open state — drops down and fades in */
-#menuDrawer.open {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
+  // src/runtime.ts
+  var COMPONENT_DIR = ".";
+  function createRuntime(doc = document) {
+    const registry = createRegistry();
+    const pseudoClass = createPseudoSheet(doc);
+    const helmet = createHelmetManager(
+      doc,
+      (name) => registry.get(name).htmlStreaming
+    );
+    const external = createExternalModules(() => registry.bumpAll());
+    const factory = createComponentFactory(registry, ensureFetched);
+    const host = {
+      component: (name) => factory.getDC(name),
+      placeholder: (props) => h(Placeholder, props),
+      helmet: (node) => helmet.compile(node),
+      loadExternal: (kind, url, after) => external.load(kind, url, after),
+      resolveExternal: (url, name) => external.resolve(url, name),
+      resolveExternalGlobal: (url, name) => external.resolveGlobal(url, name),
+      resolveExternalError: (url, name) => external.getError(url, name),
+      pseudoClass
+    };
+    function ensureFetched(name) {
+      const r = registry.get(name);
+      if (r.fetched) return;
+      r.fetched = true;
+      const url = COMPONENT_DIR + "/" + encodeURIComponent(name) + ".dc.html";
+      const res = window.__resources;
+      const pre = res ? res[url] : void 0;
+      const target = typeof pre === "string" && pre ? pre : url;
+      const blob = bundledBlob(target);
+      (blob ? blob.text() : fetch(target).then((res2) => {
+        if (!res2.ok) {
+          console.error(
+            '[dc-runtime] sibling fetch for "' + name + '" failed:',
+            url,
+            "returned",
+            res2.status,
+            "\u2014 the reference renders as an empty placeholder."
+          );
+          return "";
+        }
+        return res2.text();
+      })).then((t) => {
+        if (!t) return;
+        const parsed = parseDcText(t);
+        if (!parsed) {
+          console.error(
+            '[dc-runtime] sibling fetch for "' + name + '":',
+            url,
+            "has no <x-dc> block \u2014 not a Design Component."
+          );
+          return;
+        }
+        if (parsed.props) r.propsMeta = parsed.props;
+        if (parsed.preview) r.preview = parsed.preview;
+        if (parsed.template && !r.html) updateHtml(name, parsed.template);
+        if (parsed.js && !r.Logic) updateJs(name, parsed.js);
+      }).catch(
+        (e) => console.error(
+          '[dc-runtime] sibling fetch for "' + name + '" threw:',
+          url,
+          e
+        )
+      );
+    }
+    let rootName = null;
+    function updateHtml(name, html) {
+      const r = registry.get(name);
+      r.html = html;
+      if (name === rootName) {
+        const mode = DESIGN_DOC_MODE_RE.exec(html)?.[1] ?? null;
+        if (mode || !r.htmlStreaming) helmet.setDesignDocMode(mode);
+      }
+      try {
+        r.tpl = compileTemplate(html, host);
+      } catch (e) {
+        console.error("[dc-runtime] template compile FAILED for", name, e);
+      }
+      registry.bump(name);
+    }
+    function updateJs(name, src) {
+      const r = registry.get(name);
+      const seq = r.jsSeq = (r.jsSeq || 0) + 1;
+      try {
+        const Cls = evalDcLogic(src);
+        if (r.jsSeq !== seq) return;
+        if (typeof Cls !== "function") {
+          r.logicError = name + ".dc.html: <script data-dc-script> must define `class Component extends DCLogic`";
+        } else {
+          r.logicError = null;
+          r.Logic = Cls;
+        }
+      } catch (e) {
+        if (r.jsSeq !== seq) return;
+        console.error(
+          "[dc-runtime] logic class eval FAILED for",
+          name,
+          "\u2014 the template renders with props only.",
+          e
+        );
+        r.logicError = name + ": " + (e instanceof Error && e.message ? e.message : String(e));
+      }
+      registry.bump(name);
+    }
+    function setStreaming(name, kind, on) {
+      const r = registry.get(name);
+      if (kind === "html") r.htmlStreaming = !!on;
+      else r.jsStreaming = !!on;
+      let any = false;
+      for (const n in registry.entries) {
+        const e = registry.entries[n];
+        if (e && (e.htmlStreaming || e.jsStreaming)) {
+          any = true;
+          break;
+        }
+      }
+      doc.documentElement.classList.toggle("sc-dc-streaming", any);
+      registry.bump(name);
+    }
+    function dcUpdate(name, kind, content, streaming) {
+      if (streaming) registry.get(name).fetched = true;
+      if (kind === "html") {
+        setStreaming(name, "html", !!streaming);
+        updateHtml(name, content);
+      } else if (kind === "js") {
+        setStreaming(name, "js", !!streaming);
+        if (!streaming) updateJs(name, content);
+      } else if (kind === "props") {
+        const { props, preview } = parseDataProps(content);
+        const r = registry.get(name);
+        r.propsMeta = props ?? void 0;
+        r.preview = preview;
+        registry.bump(name);
+      }
+    }
+    function setProps(name, overrides) {
+      registry.get(name).propOverrides = overrides && typeof overrides === "object" ? { ...overrides } : null;
+      registry.bump(name);
+    }
+    function adoptParsed(name, parsed) {
+      if (!parsed) return;
+      const r = registry.get(name);
+      if (parsed.props) r.propsMeta = parsed.props;
+      if (parsed.preview) r.preview = parsed.preview;
+      if (parsed.template) updateHtml(name, parsed.template);
+      if (parsed.js) updateJs(name, parsed.js);
+    }
+    return {
+      registry,
+      getDC: factory.getDC,
+      updateHtml,
+      updateJs,
+      dcUpdate,
+      setProps,
+      adoptParsed,
+      setRootName: (name) => {
+        rootName = name;
+      },
+      markFetched: (name) => {
+        registry.get(name).fetched = true;
+      },
+      annotatedTemplate: (name) => {
+        const r = registry.get(name);
+        return r.tpl && r.tpl.__annotated || null;
+      },
+      templateSource: (name) => registry.get(name).html || null,
+      StreamableLogic
+    };
+  }
 
-/* Section label at top of menu */
-#menuDrawer::before {
-  content: 'MENU';
-  display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.35em;
-  color: #A3704C;
-  font-weight: 600;
-  padding: 1.2rem 2rem 0.8rem;
-  border-bottom: 1px solid rgba(140,104,72,0.12);
-  margin-bottom: 0.5rem;
-}
+  // src/stream-state.ts
+  function createStreamTracker(staleMs = 6e4, now = Date.now) {
+    const since = /* @__PURE__ */ new Map();
+    const liveOne = (n) => {
+      const t = since.get(n);
+      if (t === void 0) return false;
+      if (now() - t > staleMs) {
+        since.delete(n);
+        return false;
+      }
+      return true;
+    };
+    return {
+      push(name, streaming, viewportKey) {
+        if (viewportKey === "dc-model") return;
+        if (streaming) since.set(name, now());
+        else since.delete(name);
+      },
+      live(name) {
+        if (name !== void 0) return liveOne(name);
+        for (const n of [...since.keys()]) if (liveOne(n)) return true;
+        return false;
+      }
+    };
+  }
 
-/* Menu links */
-#menuDrawer a {
-  display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #4A4642 !important;
-  -webkit-text-fill-color: #4A4642 !important;
-  background: none !important;
-  text-decoration: none;
-  padding: 0.85rem 2rem;
-  border-bottom: 1px solid rgba(140,104,72,0.08);
-  font-weight: 400;
-  transition: background 0.15s, color 0.15s;
-}
-#menuDrawer a:last-child { border-bottom: none; }
-#menuDrawer a:hover {
-  background: rgba(163,112,76,0.08) !important;
-  color: #0D2C22 !important;
-  -webkit-text-fill-color: #0D2C22 !important;
-}
+  // src/index.ts
+  function hideRawTemplate() {
+    const s = document.createElement("style");
+    s.textContent = "x-dc{display:none!important}";
+    document.head.appendChild(s);
+  }
+  function loadScript(src, integrity) {
+    return new Promise((resolve2, reject) => {
+      //! nosemgrep: create-script-element
+      const s = document.createElement("script");
+      s.src = src;
+      if (integrity) {
+        s.integrity = integrity;
+        s.crossOrigin = "anonymous";
+      }
+      s.async = false;
+      s.onload = () => resolve2();
+      s.onerror = () => reject(new Error(`failed to load ${src}`));
+      document.head.appendChild(s);
+    });
+  }
+  function loadReactUmd() {
+    const w = window;
+    if (w.React && w.ReactDOM) return Promise.resolve();
+    const react = cdnScriptFor(REACT_URL, REACT_SRI);
+    const reactDom = cdnScriptFor(REACT_DOM_URL, REACT_DOM_SRI);
+    return Promise.all([
+      loadScript(react.src, react.integrity),
+      loadScript(reactDom.src, reactDom.integrity)
+    ]).then(() => void 0);
+  }
+  function init() {
+    const runtime = createRuntime(document);
+    let rootName = "Root";
+    const baseCss = document.createElement("style");
+    baseCss.textContent = BASE_CSS;
+    document.head.prepend(baseCss);
+    const notifyHost = () => {
+      if (window.parent === window) return;
+      const r = runtime.registry.entries[rootName];
+      try {
+        window.parent.postMessage(
+          {
+            type: "__dc_booted",
+            rootName,
+            propsMeta: r && r.propsMeta || null,
+            preview: r && r.preview || null
+          },
+          "*"
+        );
+      } catch {
+      }
+    };
+    const streams = createStreamTracker();
+    const api = {
+      __dcUpdate: (name, kind, content, streaming, viewportKey) => {
+        streams.push(name, streaming, viewportKey);
+        runtime.dcUpdate(name, kind, content, streaming);
+        if (name === rootName && !streaming && kind === "props") notifyHost();
+      },
+      __dcStreaming: (name) => streams.live(name),
+      __dcSetProps: (name, overrides) => runtime.setProps(name, overrides),
+      /** Name of the component currently mounted as the page root — DC tools
+       *  push their template-stream here when targeting "the open page". */
+      __dcRootName: () => rootName,
+      /** Editor bridge — the encoded, `data-dc-tpl`-annotated template source.
+       *  The host editor parses this into its own template DOM so it can map a
+       *  rendered node (carrying the same `data-dc-tpl`) back to the source
+       *  node that emitted it. Returns the encoded form (`sc-camel-*` attrs,
+       *  `<sc-raw-*>`/`<sc-helmet>` tags); the editor decodes on serialize. */
+      __dcAnnotatedTemplate: (name) => runtime.annotatedTemplate(name),
+      /** Editor bridge — the *original* (decoded) template source. */
+      __dcTemplateSource: (name) => runtime.templateSource(name),
+      __dcBoot: () => {
+        rootName = boot(runtime, document) ?? rootName;
+        notifyHost();
+      },
+      __dcRegistry: runtime.registry.entries,
+      getDC: (name) => runtime.getDC(name),
+      // `DCLogic` is the documented base class name; `StreamableLogic` is the
+      // implementation alias kept for any project that already references it.
+      DCLogic: runtime.StreamableLogic,
+      StreamableLogic: runtime.StreamableLogic
+    };
+    Object.assign(window, api);
+    window.__dcContentKeyed = true;
+    if (document.readyState !== "loading") api.__dcBoot();
+    else document.addEventListener("DOMContentLoaded", () => api.__dcBoot());
+  }
+  hideRawTemplate();
+  loadReactUmd().then(init).catch((err) => {
+    console.error("[dc] failed to load React or boot:", err);
+    throw err;
+  });
+})();
 
-/* Get in Touch — highlighted CTA */
-#menuDrawer a.drawer-cta {
-  margin: 0.8rem 1.5rem 0;
-  padding: 0.8rem 1.5rem;
-  background: #0D2C22 !important;
-  color: #F5F0E6 !important;
-  -webkit-text-fill-color: #F5F0E6 !important;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-align: center;
-  border: none;
-  border-radius: 3px;
-  border-bottom: none !important;
-  transition: background 0.2s !important;
-}
-#menuDrawer a.drawer-cta:hover {
-  background: #1A4535 !important;
-}
-
-/* Hamburger ✕ animation */
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-</style>
+</script>
 </head>
 <body>
-
-<!-- NAV -->
-<nav id="mainNav">
-  <a href="#" class="nav-logo">
-    <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yunic-logo.png" alt="Yunic Hospitality" class="nav-logo-img">
-    <span class="nav-logo-wordmark">Yunic<span class="nav-logo-sub">Hospitality</span></span>
-  </a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MENU OVERLAY -->
-<div id="menuOverlay" onclick="closeMobile()"></div>
-
-<!-- MOBILE MENU DRAWER -->
-<div id="menuDrawer">
-  <a href="#about"    onclick="closeMobile()">Our Story</a>
-  <a href="#services" onclick="closeMobile()">What We Do</a>
-  <a href="#dining"   onclick="closeMobile()">Private Dining</a>
-  <a href="#team"     onclick="closeMobile()">The Team</a>
-  <a href="#concepts" onclick="closeMobile()">Our Brands</a>
-  <a href="#contact"  class="drawer-cta" onclick="closeMobile()">Get in Touch</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-brand-mark">
-      <div class="hero-brand-mark-line"></div>
-      <span class="hero-eyebrow">Bali, Indonesia · Since 2026</span>
-    </div>
-    <h1>Yunic<br><em>Hospitality</em></h1>
-    <span class="hero-hospitality">Indonesian Food Culture, Shared with the World</span>
-    <p class="hero-tagline">
-      We are a Bali-based hospitality company working across private dining, culinary events, chef collaborations, pop-ups, and consulting, all rooted in the food and flavour of the Indonesian archipelago.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-terra">Get in Touch</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- IDENTITY STRIP -->
-<div class="identity-strip">
-  <div class="identity-strip-inner">
-    <blockquote>
-      "Indonesian food has 17,000 islands worth of stories.<br>
-      We think the world deserves to taste <em>all of them.</em>"
-    </blockquote>
-    <span class="identity-strip-meta">Yunic Hospitality &nbsp;·&nbsp; Bali, Indonesia &nbsp;·&nbsp; Since 2026</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="inner">
-    <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-portrait-frame">
-          <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-and-nic-story.png"
-            alt="Yuli and Nic — Founder and Culinary Director, Yunic Hospitality Bali"
-            class="about-portrait-img"
-            style="aspect-ratio:4/5; object-position: top center;"
-          >
-          <div class="about-badge">
-            <span class="about-badge-num">17K+</span>
-            <span class="about-badge-label">Islands of<br>Inspiration</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-text reveal reveal-delay-2">
-        <span class="section-eyebrow">Our Story</span>
-        <h2 class="section-title">Born from a love of<br><em>Indonesian food</em></h2>
-        <div class="section-divider"><div class="sd-diamond"></div></div>
-        <p>
-          Yunic Hospitality started with a simple idea, that Indonesian cuisine is one of the most layered, diverse, and generous food cultures in the world, and not enough people outside of Indonesia really know it yet.
-        </p>
-        <p>
-          Founded by Yuli, who grew up surrounded by the food traditions of the archipelago, and led in the kitchen by Culinary Director Nic, whose cooking career has taken him across Europe and Asia. Yunic brings these two worlds together in a way that feels honest and personal.
-        </p>
-        <p>
-          We are based in Bali and work across private dining, culinary events, pop-ups, chef collaborations, and consulting. Everything we do is built around one question: how do we share Indonesian food culture in a way that genuinely connects with people?
-        </p>
-        <span class="about-signature">Yuli & Nic</span>
-        <span class="about-sig-title">Founder & Culinary Director, Yunic Hospitality · Bali</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services-section" id="services">
-  <div class="services-header reveal">
-    <span class="section-eyebrow">What We Do</span>
-    <h2 class="section-title">Six ways we work<br>with <em>food and people</em></h2>
-    <p class="section-body">
-      Yunic Hospitality is a Bali-based culinary company. We run private dining experiences, produce food events, consult for restaurants and hotels, host chef collaborations, create pop-up dinners, and sell Indonesian pantry products through Yunic Shop.
-    </p>
-  </div>
-
-  <div class="services-grid">
-    <!-- Events -->
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
-      </div>
-      <span class="service-number">01</span>
-      <div class="service-title">Culinary Events</div>
-      <p class="service-body">
-        We plan and produce food events in Bali and beyond, from small dinner series to culinary festivals when requested. Every event is built around Indonesian flavours, good storytelling, and the kind of hosting that makes guests feel genuinely welcome.
-      </p>
-      <a href="#contact" class="service-link">
-        Enquire
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Private Dining -->
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <path d="M3 11l19-9-9 19-2-8-8-2z"/>
-        </svg>
-      </div>
-      <span class="service-number">02</span>
-      <div class="service-title">Private Dining</div>
-      <p class="service-body">
-        Yunic Dining is our private dining experience in Bali. Yuli and Nic soul cooking, Indonesian dishes rooted in memory and place, cooked together for small groups in intimate settings across Bali.
-      </p>
-      <a href="https://yunicdining.com" class="service-link" target="_blank" rel="noopener">
-        Visit Yunic Dining
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Consulting -->
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v6l4 2"/>
-        </svg>
-      </div>
-      <span class="service-number">03</span>
-      <div class="service-title">Culinary Consulting</div>
-      <p class="service-body">
-        We work with restaurants, hotels, and food businesses in Bali and across Indonesia. Every engagement starts with listening, understanding the business, and identifying where we can genuinely add value. We prefer long-term B2B consulting relationships, focused on steady, consistent growth until the operation is solid.
-      </p>
-      <a href="#contact" class="service-link">
-        Let's Talk
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Dive &amp; Dine -->
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-          <circle cx="12" cy="9" r="2.5"/>
-        </svg>
-      </div>
-      <span class="service-number">04</span>
-      <div class="service-title">Dive &amp; Dine</div>
-      <p class="service-body">
-        For divers who appreciate good food. We bring together the best dive spots and the best local food in one experience, connecting you with dive operators and restaurants we trust across the Indonesian archipelago. More locations coming soon.
-      </p>
-      <a href="#contact" class="service-link">
-        Join a Journey
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Food Tours -->
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <path d="M3 12h18M3 6h18M3 18h12"/>
-          <circle cx="19" cy="18" r="2"/>
-          <path d="M17 18V9"/>
-        </svg>
-      </div>
-      <span class="service-number">05</span>
-      <div class="service-title">Bali Food Tours</div>
-      <p class="service-body">
-        Small-group food tours around Bali, led by Yuli. We visit the wet market and fish market in the early morning, walk through the stalls, talk about what we see, and end with a proper meal at a local warung. Other tours take you to farms we work with directly, finishing with babi guling or whatever is best that day. Or up to Kintamani to visit coffee farms and understand where the flavour actually starts. Real Bali, no tourist filter.
-      </p>
-      <a href="#contact" class="service-link">
-        Book a Tour
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Shop -->
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5">
-          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <path d="M16 10a4 4 0 01-8 0"/>
-        </svg>
-      </div>
-      <span class="service-number">06</span>
-      <div class="service-title">Yunic Shop</div>
-      <p class="service-body">
-        A small, carefully chosen selection of Indonesian spices, pantry staples, and food products, things we actually use and believe in. Sourced from across the archipelago and available through Yunic Shop.
-      </p>
-      <a href="https://yunicshop.com" class="service-link" target="_blank" rel="noopener">
-        Visit Yunic Shop
-        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 6h10M7 2l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- PRIVATE DINING FEATURE -->
-<section class="dining-section" id="dining">
-  <div class="dining-grid">
-    <div class="dining-text reveal">
-      <span class="section-eyebrow">Private Dining in Bali</span>
-      <h2 class="section-title">Yunic Dining —<br><em>Yuli & Nic, soul cooking</em></h2>
-      <div class="section-divider" style="margin-left:0; justify-content:flex-start; max-width:200px;">
-        <div class="sd-diamond" style="background:var(--saffron-light);"></div>
-        <div style="flex:1;height:1px;background:rgba(244,232,204,0.2);"></div>
-      </div>
-      <p class="section-body">
-        Yunic Dining is our private dining experience based in Bali. Chef Nic designs multi-course menus that draw on Indonesian ingredients and cooking traditions, shaped by his background in European technique. Yuli hosts — and she makes everyone feel at home from the first moment. Seats are limited. The food is personal. There is nothing quite like it in Bali.
-      </p>
-      <ul class="dining-features">
-        <li>Multi-course menus built around Indonesian ingredients and seasonal produce from Bali</li>
-        <li>Soul cooking by Yuli and Nic; Indonesian dishes rooted in memory, cooked with heart in intimate private settings</li>
-        <li>Wine pairing suggestions, advised by a professional sommelier with years of experience</li>
-        <li>Available for private occasions, corporate dinners, and small group experiences</li>
-        <li>Based in Bali, with select international dates throughout the year</li>
-      </ul>
-      <a href="https://yunicdining.com" class="btn-terra" target="_blank" rel="noopener" style="margin-top:1rem; display:inline-block;">
-        Visit Yunic Dining
-      </a>
-    </div>
-    <div class="dining-visual reveal reveal-delay-2">
-      <div class="dining-img-stack">
-        <div class="dining-img main">
-          <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/market-main.png" alt="Indonesian market ingredients — Yunic Hospitality Bali private dining">
-        </div>
-        <div class="dining-img accent">
-          <img src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/market.png" alt="Fresh Indonesian market ingredients — Yunic Dining Bali">
-        </div>
-        <span class="dining-label">Private Dining</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="team-section" id="team">
-  <div class="inner">
-    <span class="section-eyebrow reveal">The People Behind Yunic</span>
-    <h2 class="section-title reveal reveal-delay-1">A founder who knows<br>the food. A chef who <em>loves it.</em></h2>
-    <p class="section-body reveal reveal-delay-2" style="margin: 0 auto; text-align:center;">
-      Yunic Hospitality was built by two people with very different backgrounds and one shared obsession; Indonesian food and what it can mean for the people who taste it.
-    </p>
-
-    <div class="team-grid">
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-photo-wrap">
-          <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/yuli-portrait.png"
-            alt="Yuli — Founder & Owner, Yunic Hospitality Bali"
-            class="team-photo"
-          >
-        </div>
-        <div class="team-name">Yuli</div>
-        <div class="team-role">Founder & Owner</div>
-        <p class="team-bio">
-          Yuli grew up in Indonesia, surrounded by food that was cooked with care and eaten with family. She founded Yunic Hospitality to share that culture, not as a tourist version, but as it really is. She hosts every private dinner personally and makes sure every guest feels like they belong there.
-        </p>
-      </div>
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-photo-wrap">
-          <img
-            src="https://raw.githubusercontent.com/nicvdb80-cell/yunichospitality/main/images/nic-portrait.png"
-            alt="Nic — Culinary Director, Yunic Hospitality Bali"
-            class="team-photo"
-          >
-        </div>
-        <div class="team-name">Nic</div>
-        <div class="team-role">Culinary Director</div>
-        <p class="team-bio">
-          Nic has cooked in kitchens across Europe and Asia. At Yunic, he works with Indonesian ingredients and flavour traditions, not to replicate traditional dishes, but to understand them deeply and cook from that place honestly. The result is food that tastes like Indonesia, with a technique that makes every element count.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUR CONCEPTS -->
-<section class="concepts-section" id="concepts">
-  <div class="inner">
-    <div class="concepts-header reveal">
-      <span class="section-eyebrow">The Yunic Family</span>
-      <h2 class="section-title">One idea,<br><em>three ways to experience it</em></h2>
-      <p class="section-body" style="margin: 0 auto;">
-        Yunic Hospitality is the parent brand behind three connected concepts, each one a different entry point into Indonesian food culture, all built around the same commitment to quality and honesty.
-      </p>
-    </div>
-
-    <div class="concepts-row reveal reveal-delay-1">
-      <div class="concept-item" style="background: rgba(184,82,42,0.04);">
-        <span class="concept-tag">You Are Here</span>
-        <div class="concept-name">Yunic Hospitality</div>
-        <p class="concept-desc">The main brand. We run culinary events, private dining, B2B consulting, chef collaborations, and pop-up dinners, all rooted in Indonesian food and based in Bali.</p>
-        <span class="concept-arrow">→</span>
-      </div>
-      <div class="concept-item highlight">
-        <span class="concept-tag">Private Dining · Bali</span>
-        <div class="concept-name">Yunic Dining</div>
-        <p class="concept-desc">Multi-course private dining experiences in Bali. Indonesian ingredients, European technique, and genuine hospitality, cooked by Chef Nic, hosted by Yuli.</p>
-        <a href="https://yunicdining.com" target="_blank" rel="noopener" class="concept-arrow" style="opacity:1; text-decoration:none; position:absolute; bottom:1.8rem; right:1.8rem;">→</a>
-      </div>
-      <div class="concept-item">
-        <span class="concept-tag">Indonesian Pantry</span>
-        <div class="concept-name">Yunic Shop</div>
-        <p class="concept-desc">Indonesian spices, cooking staples, and pantry products sourced from across the archipelago, for home cooks who want the real thing.</p>
-        <a href="https://yunicshop.com" target="_blank" rel="noopener" class="concept-arrow" style="position:absolute; bottom:1.8rem; right:1.8rem; text-decoration:none; opacity:1;">→</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <span class="section-eyebrow reveal">Get in Touch</span>
-    <h2 class="section-title reveal reveal-delay-1">Tell us what<br>you're <em>thinking about</em></h2>
-    <p class="section-body reveal reveal-delay-2" style="margin: 0 auto; text-align:center;">
-      Whether you want to book a private dinner in Bali, talk about a collaboration, or find out what we can do for your restaurant or event — just send us a message. We'll get back to you personally.
-    </p>
-
-    <form class="contact-form reveal reveal-delay-3" onsubmit="handleForm(event)">
-      <div class="form-row">
-        <div class="form-field">
-          <input type="text" placeholder="Your Name" required>
-        </div>
-        <div class="form-field">
-          <input type="email" placeholder="Email Address" required>
-        </div>
-      </div>
-      <div class="form-field">
-        <select>
-          <option value="" disabled selected>What are you interested in?</option>
-          <option>Private Dining in Bali</option>
-          <option>Culinary Event Production</option>
-          <option>Restaurant or Hotel Consulting</option>
-          <option>Chef Collaboration</option>
-          <option>Bali Food Tour</option>
-          <option>Something Else</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <textarea placeholder="Tell us a bit about what you have in mind — dates, location, group size, or whatever is relevant…"></textarea>
-      </div>
-      <div class="form-submit">
-        <button type="submit" class="btn-terra">Send Message</button>
-      </div>
-      <div id="formMsg" style="display:none; text-align:center; margin-top:1rem; font-family:var(--serif); font-style:italic; color:var(--terracotta);">
-        Thank you, Yuli or Nic will be in touch soon. ✦
-      </div>
-    </form>
-
-    <div class="contact-alt reveal">
-      <div class="contact-alt-item">
-        <span class="contact-alt-label">Email</span>
-        <a href="mailto:yunicdining@gmail.com" class="contact-alt-value">yunicdining@gmail.com</a>
-      </div>
-      <div class="contact-alt-item">
-        <span class="contact-alt-label">WhatsApp</span>
-        <a href="https://wa.me/6281994807407" target="_blank" rel="noopener" class="contact-alt-value">+62 819 9480 7407</a>
-      </div>
-      <div class="contact-alt-item">
-        <span class="contact-alt-label">Based In</span>
-        <span class="contact-alt-value">Bali, Indonesia</span>
-      </div>
-      <div class="contact-alt-item">
-        <span class="contact-alt-label">Instagram</span>
-        <a href="https://instagram.com/yunichospitality" target="_blank" rel="noopener" class="contact-alt-value">@yunichospitality</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <span class="footer-brand-name">Yunic Hospitality</span>
-      <span class="footer-brand-tagline">Indonesian Food Culture, Shared with the World</span>
-      <p class="footer-about">
-        Yunic Hospitality is a Bali-based culinary company founded by Yuli and led in the kitchen by Culinary Director Nic. We run private dining, culinary events, consulting, chef collaborations, and pop-up dinners, all rooted in the food and flavour of Indonesia.
-      </p>
-    </div>
-    <div>
-      <span class="footer-col-title">Navigate</span>
-      <ul class="footer-links">
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#services">What We Do</a></li>
-        <li><a href="#dining">Private Dining</a></li>
-        <li><a href="#team">The Team</a></li>
-        <li><a href="#contact">Get in Touch</a></li>
-      </ul>
-    </div>
-    <div>
-      <span class="footer-col-title">Our Brands</span>
-      <ul class="footer-links">
-        <li><a href="https://yunicdining.com" target="_blank" rel="noopener">Yunic Dining</a></li>
-        <li><a href="https://yunicshop.com" target="_blank" rel="noopener">Yunic Shop</a></li>
-      </ul>
-    </div>
-    <div>
-      <span class="footer-col-title">Connect</span>
-      <ul class="footer-links">
-        <li><a href="mailto:yunicdining@gmail.com">Email Us</a></li>
-        <li><a href="https://wa.me/6281994807407" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://instagram.com/yunichospitality" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="#contact">Send an Enquiry</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Yunic Hospitality. All rights reserved.</span>
-    <div class="footer-domains">
-      <a href="https://yunichospitality.com">yunichospitality.com</a>
-      <a href="https://yunicdining.com">yunicdining.com</a>
-      <a href="https://yunicshop.com">yunicshop.com</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-// Nav scroll
-const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-});
-
-// Hamburger drawer
-const hamburger   = document.getElementById('hamburger');
-const menuDrawer  = document.getElementById('menuDrawer');
-const menuOverlay = document.getElementById('menuOverlay');
-
-hamburger.addEventListener('click', () => {
-  const open = menuDrawer.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  menuOverlay.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-
-function closeMobile() {
-  menuDrawer.classList.remove('open');
-  hamburger.classList.remove('open');
-  menuOverlay.classList.remove('open');
-  document.body.style.overflow = '';
+<x-dc>
+<helmet>
+<meta name="description" content="Yunic Hospitality — private chefs and culinary experiences by Fryana Yuli Azhar and Chef Nic Vanderbeeken. Bali, Indonesia and wherever you take us.">
+<meta property="og:title" content="Yunic Hospitality — We become part of your table.">
+<meta property="og:description" content="Private chefs and culinary experiences. Bali, Indonesia and beyond.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("ad76e9fc-f264-4094-8b8f-b105995f5a00") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("03c81884-fe75-4dbb-b31d-cfe0340d293a") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("d3d78ab2-fb75-4f8a-a325-46dfc458dcb0") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("081f0237-3537-4d23-925d-7a31d5ac1855") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("31612695-e61d-47aa-ab5a-d2c939c1339d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ad76e9fc-f264-4094-8b8f-b105995f5a00") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("03c81884-fe75-4dbb-b31d-cfe0340d293a") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d3d78ab2-fb75-4f8a-a325-46dfc458dcb0") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("081f0237-3537-4d23-925d-7a31d5ac1855") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("31612695-e61d-47aa-ab5a-d2c939c1339d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("1b908196-895e-4fbd-87bc-435afee9cb34") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("5106574d-fa53-4726-ae88-4c19119dd06f") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("4c4b910b-5c32-41e9-807b-8d960611da46") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("f7fa2410-fb60-4461-be5d-dc895f1933a9") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("931012d9-2c0e-4faf-b3bc-3e60ab94b4e8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("1b908196-895e-4fbd-87bc-435afee9cb34") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("5106574d-fa53-4726-ae88-4c19119dd06f") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4c4b910b-5c32-41e9-807b-8d960611da46") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f7fa2410-fb60-4461-be5d-dc895f1933a9") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("931012d9-2c0e-4faf-b3bc-3e60ab94b4e8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("bdbb42cf-ca5f-42d4-bfbd-ab2a7d83d542") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("2603dd3f-8518-40e2-8be7-ca971b232318") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("a75eeb97-dfd8-4cd7-9316-f4f904f0dd7e") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("2680d003-a67f-436e-ab88-9d5da9448565") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("a96d6015-329d-4860-9e91-2a56be1dae54") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("1402c2ff-64f0-4d3c-bcf1-7c8cf2a150cd") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bdbb42cf-ca5f-42d4-bfbd-ab2a7d83d542") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2603dd3f-8518-40e2-8be7-ca971b232318") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a75eeb97-dfd8-4cd7-9316-f4f904f0dd7e") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2680d003-a67f-436e-ab88-9d5da9448565") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a96d6015-329d-4860-9e91-2a56be1dae54") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("1402c2ff-64f0-4d3c-bcf1-7c8cf2a150cd") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bdbb42cf-ca5f-42d4-bfbd-ab2a7d83d542") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2603dd3f-8518-40e2-8be7-ca971b232318") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("a75eeb97-dfd8-4cd7-9316-f4f904f0dd7e") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2680d003-a67f-436e-ab88-9d5da9448565") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("a96d6015-329d-4860-9e91-2a56be1dae54") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("1402c2ff-64f0-4d3c-bcf1-7c8cf2a150cd") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  a { color: inherit; }
+  .yn { font-family: 'Manrope', sans-serif; color: #344147; background: #F6F4EF; overflow-x: hidden; }
+  .cg { font-family: 'Cormorant Garamond', serif; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 900ms ease, transform 900ms ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (max-width: 820px) {
+    .nav-links { display: none !important; }
+    .two-col { grid-template-columns: 1fr !important; gap: 44px !important; }
+    .proc-grid { grid-template-columns: 1fr 1fr !important; }
+    .founder-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+    .contact-links { flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; }
+    .svc-desc { display: none !important; }
+    .svc-row { grid-template-columns: auto 1fr auto !important; }
+    .sec-pad { padding-top: 84px !important; padding-bottom: 84px !important; }
+    .hero-h1 { font-size: 54px !important; }
+    .footer-bottom { flex-direction: column !important; gap: 16px !important; }
+  }
+</style>
+</helmet>
 
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-reveals.forEach(el => observer.observe(el));
+<div class="yn">
 
-// Form
-function handleForm(e) {
-  e.preventDefault();
-  document.getElementById('formMsg').style.display = 'block';
-  e.target.querySelectorAll('input,select,textarea').forEach(f => f.value = '');
+  <!-- ================= NAV ================= -->
+  <nav style="position:absolute;top:0;left:0;right:0;z-index:20;height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;border-bottom:1px solid rgba(255,255,255,0.18);color:#FFFFFF;">
+    <a href="#top" style="text-decoration:none;line-height:1;">
+      <div class="cg" style="font-size:22px;font-weight:400;letter-spacing:0.14em;">YUNIC</div>
+      <div style="font-size:9px;letter-spacing:0.28em;font-weight:400;margin-top:5px;opacity:0.9;">HOSPITALITY</div>
+    </a>
+    <div class="nav-links" style="display:flex;gap:40px;font-size:10px;letter-spacing:0.16em;">
+      <a href="#experiences" style="text-decoration:none;">EXPERIENCES</a>
+      <a href="#approach" style="text-decoration:none;">OUR APPROACH</a>
+      <a href="#people" style="text-decoration:none;">ABOUT US</a>
+    </div>
+    <a href="#contact" style="text-decoration:none;font-size:10px;letter-spacing:0.16em;">PLAN AN EXPERIENCE&nbsp;↗</a>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header id="top" style="position:relative;height:100svh;min-height:720px;display:flex;align-items:flex-end;background-image:linear-gradient(to bottom, rgba(31,44,50,0.15) 0%, rgba(31,44,50,0.05) 40%, rgba(31,44,50,0.55) 100%), url(&quot;26b5a464-ccea-4bf1-93d2-327f95a86c83&quot;);background-size:cover;background-position:center;color:#FFFFFF;">
+    <div style="width:100%;padding:0 7vw 8vh;">
+      <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#D4C5AE;margin-bottom:32px;font-weight:400;">PRIVATE DINING&nbsp;·&nbsp;CULINARY EVENTS&nbsp;·&nbsp;BALI &amp; BEYOND</div>
+      <h1 class="cg hero-h1" style="font-weight:300;font-size:clamp(54px,7.6vw,116px);line-height:1.0;letter-spacing:-0.02em;margin:0;max-width:14ch;">
+        We become part<br><span style="font-style:italic;font-weight:300;">of your table.</span>
+      </h1>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:44px;flex-wrap:wrap;">
+        <p style="font-size:15px;font-weight:300;line-height:1.75;max-width:34ch;margin:0;opacity:0.94;">
+          Private chefs. Culinary experiences.<br>Bali, Indonesia and wherever you take us.
+        </p>
+        <a href="#experiences" aria-label="Scroll to experiences" style="text-decoration:none;flex:none;width:54px;height:54px;border:1px solid rgba(255,255,255,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:18px;transition:background 300ms ease;" style-hover="background:rgba(255,255,255,0.12);">↓</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 2 · INTRODUCTION ================= -->
+  <section class="sec-pad reveal" style="background:#F6F4EF;padding:140px 7vw;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:56px;">YUNIC HOSPITALITY</div>
+    <div class="two-col" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:8vw;align-items:start;">
+      <h2 class="cg" style="font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.05;letter-spacing:-0.02em;color:#1F2C32;margin:0;">
+        We listen first.<br>Then we decide<br>what belongs<br><span style="font-style:italic;">at your table.</span>
+      </h2>
+      <div style="max-width:520px;">
+        <p style="font-size:15px;font-weight:300;line-height:1.75;margin:0 0 26px;">Yunic is built around two people. Nic leads the kitchen. Yuli makes every moment feel natural and personal.</p>
+        <p style="font-size:15px;font-weight:300;line-height:1.75;margin:0;">We do not arrive with a fixed answer. We become part of your holiday, your weekend or your occasion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 · FIVE SERVICES ================= -->
+  <section id="experiences" class="sec-pad reveal" style="background:#FFFFFF;padding:140px 7vw;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:40px;">WHAT WE CHOOSE TO DO</div>
+    <h2 class="cg" style="font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.02em;color:#1F2C32;margin:0 0 72px;">Five ways<br>to work with us.</h2>
+    <div>
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+        <a href="{{ svc.href }}" class="svc-row" style="text-decoration:none;color:#344147;display:grid;grid-template-columns:64px 1fr 1.15fr auto;gap:32px;align-items:baseline;padding:34px 0;border-top:1px solid rgba(52,65,71,0.16);transition:transform 300ms ease,color 300ms ease;" style-hover="transform:translateX(14px);color:#A48760;">
+          <span style="font-size:11px;letter-spacing:0.12em;padding-top:6px;">{{ svc.num }}</span>
+          <span class="cg" style="font-size:clamp(24px,2.6vw,34px);font-weight:300;letter-spacing:-0.01em;color:#1F2C32;">{{ svc.title }}</span>
+          <span class="svc-desc" style="font-size:14px;font-weight:300;line-height:1.7;max-width:44ch;">{{ svc.desc }}</span>
+          <span style="font-size:16px;justify-self:end;padding-top:4px;">↗</span>
+        </a>
+      </sc-for>
+      <div style="border-top:1px solid rgba(52,65,71,0.16);"></div>
+    </div>
+  </section>
+
+  <!-- ================= 4 · HOW WE WORK ================= -->
+  <section id="approach" class="sec-pad reveal" style="background:#1F2C32;color:#FFFFFF;padding:140px 7vw;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:40px;">HOW WE WORK</div>
+    <h2 class="cg" style="font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.02em;margin:0 0 72px;">Not a package.<br>A conversation.</h2>
+    <div class="proc-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+      <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+        <div style="border:1px solid rgba(255,255,255,0.14);padding:40px 32px 60px;transition:transform 300ms ease,background 300ms ease;" style-hover="transform:translateY(-8px);background:rgba(255,255,255,0.04);">
+          <div style="font-size:11px;letter-spacing:0.12em;color:#D4C5AE;margin-bottom:36px;">{{ p.num }}</div>
+          <div class="cg" style="font-size:30px;font-weight:300;letter-spacing:-0.01em;margin-bottom:18px;">{{ p.title }}</div>
+          <div style="font-size:14px;font-weight:300;line-height:1.7;opacity:0.82;">{{ p.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p class="cg" style="text-align:center;font-style:italic;font-weight:300;font-size:clamp(22px,2.6vw,32px);line-height:1.3;color:#D4C5AE;max-width:24ch;margin:72px auto 0;">If we cannot do it at our best, we say no. And point you to someone who can.</p>
+  </section>
+
+  <!-- ================= 5 · PRIVATE DINNER FEATURE ================= -->
+  <section class="sec-pad reveal" style="background:#F6F4EF;padding:140px 7vw;">
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center;">
+      <div style="max-width:480px;">
+        <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:36px;">PRIVATE DINNER EVENTS</div>
+        <h2 class="cg" style="font-weight:300;font-size:clamp(38px,4.8vw,64px);line-height:1.0;letter-spacing:-0.02em;color:#1F2C32;margin:0 0 34px;">You bring<br>the reason.</h2>
+        <p style="font-size:15px;font-weight:300;line-height:1.75;margin:0 0 40px;">An extraordinary bottle. A truffle dinner. A birthday in a private villa. We build the evening around what brought you together. No packages. No standard menu.</p>
+        <a href="#contact" style="text-decoration:none;font-size:10px;letter-spacing:0.16em;color:#1F2C32;border-bottom:1px solid #A48760;padding-bottom:6px;transition:color 300ms ease;" style-hover="color:#A48760;">TELL US WHAT YOU HAVE IN MIND&nbsp;↗</a>
+      </div>
+      <div style="aspect-ratio:4/5;background-image:url(&quot;da6dd7e6-1e8b-40d4-aca6-30426da4aa12&quot;);background-size:cover;background-position:center;"></div>
+    </div>
+  </section>
+
+  <!-- ================= 6 · FOUNDERS ================= -->
+  <section id="people" class="sec-pad reveal" style="background:#FFFFFF;padding:140px 7vw;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:56px;">TWO PEOPLE. ONE STANDARD.</div>
+    <div class="founder-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:6vw;">
+      <div>
+        <div style="aspect-ratio:4/3;background:linear-gradient(140deg,#D4C5AE 0%,#c3b199 60%,#b6a184 100%);display:flex;align-items:center;justify-content:center;margin-bottom:32px;">
+          <span class="cg" style="font-size:150px;font-weight:300;color:rgba(255,255,255,0.34);">Y</span>
+        </div>
+        <h3 class="cg" style="font-weight:400;font-size:30px;letter-spacing:-0.01em;color:#1F2C32;margin:0 0 10px;">Fryana Yuli Azhar</h3>
+        <div style="font-size:10px;letter-spacing:0.2em;color:#A48760;margin-bottom:24px;">FOUNDER&nbsp;·&nbsp;HOST</div>
+        <p style="font-size:15px;font-weight:300;line-height:1.75;max-width:46ch;margin:0;">Yuli knows when a guest needs attention and when a table should simply be left to enjoy itself. She makes the evening feel effortless.</p>
+      </div>
+      <div>
+        <div style="aspect-ratio:4/3;background:linear-gradient(140deg,#3a4750 0%,#2c383e 60%,#232f34 100%);display:flex;align-items:center;justify-content:center;margin-bottom:32px;">
+          <span class="cg" style="font-size:150px;font-weight:300;color:rgba(255,255,255,0.22);">N</span>
+        </div>
+        <h3 class="cg" style="font-weight:400;font-size:30px;letter-spacing:-0.01em;color:#1F2C32;margin:0 0 10px;">Chef Nic Vanderbeeken</h3>
+        <div style="font-size:10px;letter-spacing:0.2em;color:#A48760;margin-bottom:24px;">CULINARY DIRECTOR&nbsp;·&nbsp;EXECUTIVE CHEF</div>
+        <p style="font-size:15px;font-weight:300;line-height:1.75;max-width:46ch;margin:0;">Nic has led kitchens and culinary teams for more than three decades. He no longer cooks to impress. He cooks what is right for the table.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7 · WHAT WE ARE NOT ================= -->
+  <section class="sec-pad reveal" style="background:#F6F4EF;padding:140px 7vw;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:56px;">WHAT WE ARE NOT</div>
+    <div style="border-top:1px solid rgba(52,65,71,0.16);">
+      <sc-for list="{{ nots }}" as="n" hint-placeholder-count="3">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:44px 0;border-bottom:1px solid rgba(52,65,71,0.16);flex-wrap:wrap;">
+          <span class="cg" style="font-size:clamp(34px,4.6vw,60px);font-weight:300;letter-spacing:-0.02em;color:#1F2C32;">{{ n.title }}</span>
+          <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#344147;">{{ n.sub }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ================= 8 · CONTACT FOOTER ================= -->
+  <footer id="contact" class="sec-pad" style="background:#1F2C32;color:#FFFFFF;padding:140px 7vw 64px;">
+    <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A48760;margin-bottom:44px;">TELL US WHAT YOU HAVE IN MIND</div>
+    <h2 class="cg" style="font-weight:300;font-size:clamp(44px,6vw,92px);line-height:1.0;letter-spacing:-0.02em;margin:0 0 64px;">Perhaps we are<br><span style="font-style:italic;color:#D4C5AE;">right for your table.</span></h2>
+    <div class="contact-links" style="display:flex;gap:44px;margin-bottom:120px;">
+      <a href="https://wa.me/6281994807407" target="_blank" rel="noopener" style="text-decoration:none;font-size:11px;letter-spacing:0.16em;border-bottom:1px solid #A48760;padding-bottom:6px;transition:color 300ms ease;" style-hover="color:#D4C5AE;">WHATSAPP&nbsp;↗</a>
+      <a href="mailto:yunicdining@gmail.com" style="text-decoration:none;font-size:11px;letter-spacing:0.16em;border-bottom:1px solid #A48760;padding-bottom:6px;transition:color 300ms ease;" style-hover="color:#D4C5AE;">EMAIL&nbsp;↗</a>
+      <a href="https://instagram.com/yunichospitality" target="_blank" rel="noopener" style="text-decoration:none;font-size:11px;letter-spacing:0.16em;border-bottom:1px solid #A48760;padding-bottom:6px;transition:color 300ms ease;" style-hover="color:#D4C5AE;">INSTAGRAM&nbsp;↗</a>
+    </div>
+    <div class="footer-bottom" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.14);font-size:10px;letter-spacing:0.16em;opacity:0.78;">
+      <span>YUNIC HOSPITALITY&nbsp;·&nbsp;BALI &amp; WORLDWIDE</span>
+      <span>WE ONLY DO WHAT WE CAN DO AT OUR BEST.</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { num: "01", title: "Private Chef", desc: "Your holiday, villa, yacht or remote escape. We learn what you love. Then we cook.", href: "#contact" },
+        { num: "02", title: "Dive & Dine", desc: "For dive resorts, liveaboards and yachts. Food made for the rhythm of days at sea.", href: "#contact" },
+        { num: "03", title: "Yunic Dining", desc: "Indonesia told at the table. Its flavours, memories and many regional voices.", href: "https://yunicdining.com" },
+        { num: "04", title: "Private Dinner Events", desc: "A rare wine. Truffles. Caviar. An occasion that deserves its own menu.", href: "#contact" },
+        { num: "05", title: "Culinary Consulting", desc: "Honest direction for restaurants, resorts, teams and new openings.", href: "#contact" },
+      ],
+      process: [
+        { num: "01", title: "Talk", desc: "Tell us where, when and who is coming." },
+        { num: "02", title: "Listen", desc: "We learn what matters—and what does not." },
+        { num: "03", title: "Decide", desc: "We propose only what we believe will work." },
+        { num: "04", title: "Deliver", desc: "Quietly, personally and without theatre." },
+      ],
+      nots: [
+        { title: "Not catering", sub: "Every menu begins again" },
+        { title: "Not a restaurant", sub: "We come to your place" },
+        { title: "Not for everyone", sub: "And that is intentional" },
+      ],
+    };
+  }
+
+  componentDidMount() {
+    const els = this.el ? this.el.querySelectorAll('.reveal') : document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(e => io.observe(e));
+  }
 }
 </script>
 
 
-
-</body>
-</html>
-
-/* ══ BRONZE HEADINGS — inserted after main stylesheet ══ */
-:root {
-  --bg: linear-gradient(115deg,#5C2E0A 0%,#8C4A14 12%,#B07020 24%,#C88828 38%,#D09030 50%,#C88828 62%,#A05818 76%,#7A3E10 88%,#5C2E0A 100%);
-  --bgl: linear-gradient(115deg,#8C5218 0%,#B87828 14%,#D4A030 28%,#EAC84A 42%,#F5E070 50%,#EAC84A 58%,#D4A030 72%,#B87828 86%,#8C5218 100%);
-}
-h1,h2,.section-title,.service-title,.team-name,.concept-name,.about-signature,.footer-brand-name {
-  background:var(--bg) !important; -webkit-background-clip:text !important;
-  background-clip:text !important; -webkit-text-fill-color:transparent !important; }
-h1 em,h2 em,.section-title em {
-  background:var(--bg) !important; -webkit-background-clip:text !important;
-  background-clip:text !important; -webkit-text-fill-color:transparent !important;
-  font-style:italic; display:inline; }
-/* Brighter on dark backgrounds */
-.hero h1,.hero h1 em,.dining-text .section-title,.dining-text .section-title em,
-.concept-item.highlight .concept-name,.footer-brand-name {
-  background:var(--bgl) !important; -webkit-background-clip:text !important;
-  background-clip:text !important; -webkit-text-fill-color:transparent !important; }
-.hero h1 { text-shadow:none !important; }
-.hero h1 em { font-style:italic; display:inline; }
-/* Nav elements must NOT get bronze */
-.nav-links a,.nav-links a:hover,.mobile-menu a,.nav-logo-wordmark,
-p,li,span.nav-logo-sub,blockquote,small,.section-eyebrow,.section-body,
-.hero-tagline,.hero-eyebrow,.hero-hospitality,.service-body,.service-link,
-.about-text p,.team-bio,.team-role,.concept-desc,.concept-tag,
-.contact-alt-label,.contact-alt-value,.footer-about,.footer-col-title,
-.footer-links a,.footer-copy,.footer-domains a,.footer-brand-tagline,
-.identity-strip-meta,.dining-features li,.dining-label,.about-sig-title,
-.about-badge-num,.about-badge-label,.service-number,.hero-scroll {
-  background:none !important; -webkit-background-clip:unset !important;
-  background-clip:unset !important; -webkit-text-fill-color:unset !important; }
-/* Restore correct colours after reset */
-.nav-links a { color:var(--brown-muted) !important; }
-.nav-links a:hover { color:var(--terracotta) !important; }
-.nav-cta { background:var(--terracotta) !important; color:var(--parchment) !important;
-            -webkit-text-fill-color:var(--parchment) !important; }
-.mobile-menu a { color:var(--brown-muted) !important; }
-.mobile-menu a.cta { color:var(--terracotta) !important; -webkit-text-fill-color:var(--terracotta) !important; }
-.nav-logo-sub,.nav-logo-wordmark .nav-logo-sub { color:var(--saffron) !important; -webkit-text-fill-color:var(--saffron) !important; }
-.identity-strip blockquote { color:#ffffff !important; }
-.identity-strip blockquote em { color:#C4936A !important; -webkit-text-fill-color:#C4936A !important; }
-.identity-strip-meta { color:rgba(245,240,230,0.3) !important; }
-.section-eyebrow { color:var(--saffron); }
-.service-link { color:var(--terracotta); }
-.team-role { color:var(--terracotta); }
-.concept-tag { color:var(--saffron); }
-.about-badge-num { color:var(--saffron-light) !important; -webkit-text-fill-color:var(--saffron-light) !important; }
-.dining-features li { color:rgba(244,232,204,0.8); }
-.concept-item.highlight .concept-tag { color:rgba(244,232,204,0.6); }
-.concept-item.highlight .concept-desc { color:rgba(244,232,204,0.75); }
-.footer-col-title { color:var(--saffron); }
-.footer-links a { color:rgba(244,232,204,0.55); }
-.footer-about { color:rgba(244,232,204,0.55); }
-.footer-copy { color:rgba(244,232,204,0.3); }
-.footer-domains a { color:rgba(244,232,204,0.35); }
-.footer-brand-tagline { color:rgba(244,232,204,0.4); }
-/* Scroll anchors */
-#about,#services,#dining,#team,#concepts,#contact { scroll-margin-top:68px; }
-
-
+</body></html>
