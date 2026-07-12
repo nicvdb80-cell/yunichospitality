@@ -5,6 +5,9 @@
     { "src": "/private-dinner", "dest": "/private-dinner.html" },
     { "src": "/consulting",     "dest": "/consulting.html"     },
     { "src": "/media",          "dest": "/media.html"          },
+    { "src": "/gallery",        "dest": "/gallery.html"        },
+    { "src": "/journey",        "dest": "/journey.html"        },
+    { "src": "/people-behind-the-plate", "dest": "/people-behind-the-plate.html" },
     { "src": "/",               "dest": "/index.html"          }
   ]
 }
